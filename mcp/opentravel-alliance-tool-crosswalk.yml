@@ -1,0 +1,64 @@
+generated: '2026-07-28'
+method: derived
+source: mcp/opentravel-alliance-mcp.yml + openapi/*.json
+summary: >-
+  OpenTravel has both an MCP surface and OpenAPI (Swagger 2.0) contracts, but they are
+  DISJOINT — this crosswalk exists to record that divergence rather than to paper over it.
+  The MCP servers are mounted on the opentravel.org WordPress content site and are OAuth
+  gated. The eight Swagger 2.0 documents are OTM-generated specification artifacts that
+  declare placeholder hosts (127.0.0.1, example.com) and that OpenTravel does not operate.
+  No MCP tool can be bound to an OpenAPI operationId, because no MCP tool name is public and
+  no OpenAPI operation is served by OpenTravel. Every binding below is therefore empty by
+  evidence, not by omission.
+surfaces:
+  openapi:
+    files:
+    - openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+    - openapi/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json
+    - openapi/opentravel-2020a-facility-resource-openapi.json
+    - openapi/opentravel-2020a-facility-resource-defs-openapi.json
+    - openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
+    - openapi/opentravel-2018a-hospitality-offers-resource-defs-openapi.json
+    - openapi/opentravel-2018a-facility-resource-openapi.json
+    - openapi/opentravel-2018a-facility-resource-defs-openapi.json
+    format: Swagger 2.0
+    runtime: none — specification artifacts with placeholder hosts
+  graphql:
+    endpoint: null
+    note: no GraphQL surface published or discovered
+  mcp:
+    servers:
+    - https://opentravel.org/wp-json/mcp/mcp-oauth-server
+    - https://opentravel.org/wp-json/mcp/mcp-adapter-default-server
+    gated: true
+    note: anonymous tools/list returns 401; tool names and inputSchemas are not public
+crosswalk: []
+mcp_only:
+- tool: unknown
+  reason: >-
+    Tool list is OAuth-gated (401 on tools/list, 401 on wp-abilities/v1/abilities). Names,
+    descriptions and input schemas require an authenticated introspection with scope `mcp`.
+    Recorded as unknown rather than guessed.
+rest_only:
+- capability: Hotel descriptive content (2020A)
+  file: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+  operations: [Get, Query, Notification]
+- capability: Facility (2020A, global)
+  file: openapi/opentravel-2020a-facility-resource-openapi.json
+  operations: [Post, Get]
+- capability: Hospitality offers (2018A)
+  file: openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
+  operations: [FindSinglePropertyOffers, FindMultiPropertyOffers]
+- capability: Hospitality facility availability (2018A)
+  file: openapi/opentravel-2018a-facility-resource-openapi.json
+  operations: [FindHospitalityAvailability, RetrieveHospitalityAvailability, HospitalityFacilitySearch]
+coverage:
+  tools_named: 0
+  tools_bound: 0
+  mcp_only: 0
+  rest_operations_total: 10
+  rest_operations_with_tool: 0
+  note: >-
+    rest_operations_total counts the 10 distinct operations across the four interface-variant
+    documents; the four `.defs` siblings restate the same operations with the model
+    definitions inlined and are not double counted.

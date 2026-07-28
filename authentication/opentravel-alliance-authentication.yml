@@ -1,0 +1,65 @@
+generated: '2026-07-28'
+method: searched
+source: https://opentravel.org/.well-known/oauth-authorization-server
+docs: https://opentravel.org/.well-known/oauth-protected-resource
+summary:
+  types: [oauth2]
+  api_key_in: []
+  oauth2_flows: [authorizationCode]
+  note: >-
+    Two distinct authentication stories sit under one organization. (1) The published
+    OpenTravel 2.0 Swagger contracts declare NO securityDefinitions at all — authentication is
+    left entirely to the implementer that hosts the resource. (2) opentravel.org itself runs a
+    real OAuth 2.1 authorization server in front of its Model Context Protocol endpoints.
+schemes:
+- name: opentravel-mcp-oauth
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://opentravel.org/oauth/authorize
+    tokenUrl: https://opentravel.org/oauth/token
+    revocationUrl: https://opentravel.org/oauth/revoke
+    scopes:
+      mcp: Access the OpenTravel Model Context Protocol server
+  pkce:
+    required_methods: [S256]
+  grant_types_supported: [authorization_code, refresh_token]
+  token_endpoint_auth_methods_supported: [none]
+  client_registration: >-
+    No registration_endpoint is advertised; the authorization server sets
+    client_id_metadata_document_supported=true (client ID metadata documents, the OAuth
+    client-id-as-URL pattern) instead of RFC 7591 dynamic client registration.
+  bearer_methods_supported: [header]
+  protects:
+  - https://opentravel.org/wp-json/mcp/mcp-oauth-server
+  - https://opentravel.org/wp-json/mcp/mcp-adapter-default-server
+  sources: [well-known/opentravel-alliance-oauth-authorization-server.json]
+spec_declared_security:
+  schemes: []
+  evidence: >-
+    All eight harvested Swagger 2.0 documents were parsed on 2026-07-28: securityDefinitions is
+    absent and no operation carries a security requirement. The OTM compiler that generated
+    them emits the message contract only; 401 and 403 responses are declared on every
+    operation but no scheme is named to satisfy them.
+  files:
+  - openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+  - openapi/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json
+  - openapi/opentravel-2020a-facility-resource-openapi.json
+  - openapi/opentravel-2020a-facility-resource-defs-openapi.json
+  - openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
+  - openapi/opentravel-2018a-hospitality-offers-resource-defs-openapi.json
+  - openapi/opentravel-2018a-facility-resource-openapi.json
+  - openapi/opentravel-2018a-facility-resource-defs-openapi.json
+other_account_surfaces:
+- surface: OTM Library Repository console
+  url: https://opentravelmodel.net/
+  mechanism: User ID / password form login
+  api: none documented
+- surface: OpenTravel Developers Network (ODN)
+  url: https://www.opentraveldevelopersnetwork.com/user
+  mechanism: free site account (register at /user/register); member-only sections
+  api: none documented
+- surface: WordPress REST API on opentravel.org
+  url: https://opentravel.org/wp-json/
+  mechanism: application passwords (authorization at /wp-admin/authorize-application.php)
+  api: CMS plumbing, not an OpenTravel product API

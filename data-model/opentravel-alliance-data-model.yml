@@ -1,0 +1,105 @@
+generated: '2026-07-28'
+method: derived
+source: openapi/*.json + json-schema/*.json (harvested 2026-07-28)
+note: >-
+  Derived from the OTM-generated Swagger 2.0 contracts and the seven JSON Schema modules they
+  $ref. The OTM compiler emits "_Trim" modules — one JSON Schema document per OTM library —
+  and every operation payload is a $ref into one of them. Relationships below are read from
+  those $ref links and from the id-bearing types (`*ID` suffix = an OTM identity view of an
+  object). Only entities that appear in the harvested artifacts are listed; the full 2020A
+  Object Suite is far larger and lives in the public mirror.
+modules:
+- id: Common_5_0_0
+  file: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+  definitions: 89
+  role: shared primitives, enumerations, address/contact/name types, and BaseResponse
+  key_types: [BaseResponse, NameType, CompanyName, Country, AddressBldgRoom, AddressStreetNumber, TextFormatType, OptInStatus_Enum, YesNoInherit_Enum]
+- id: Organization_4_1_0
+  file: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
+  definitions: 8
+  role: global (cross-sector) facility entity and its query views
+  key_types: [FacilityID, Facility, FacilityGolf, FacilityHotel, FacilityMeeting, FacilityQueryHotel, FacilityQueryHotelAvail, FacilityQueryHotelAvailRetrieve]
+- id: FacilityResource_1_0_0
+  file: json-schema/opentravel-2020a-facility-resource-trim.schema.json
+  definitions: 1
+  role: collection wrapper for the 2020A global Facility resource
+  key_types: [FacilityList]
+- id: OrganizationHospitality_4_0_0
+  file: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+  definitions: 54
+  role: hotel descriptive content entities
+  key_types: [HotelDescriptiveContentID, HotelDescriptiveContent, HotelDescriptiveContentQueryHotels, GuestRoomInfo, Recreation, CategoryCodes, Service, ServiceBusiness]
+- id: HospitalityContent_HospitalityResources_1_0_0
+  file: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+  definitions: 3
+  role: request/response views for the 2020A hotel descriptive content resource
+  key_types: [HotelDescriptiveContentListResponse, HotelDescriptiveContentQueryInfo, HotelDescriptiveContentQueryGet]
+- id: HospitalityFacility_1_0_0
+  file: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
+  definitions: 5
+  role: 2018A hospitality facility availability queries and results
+  key_types: [HospitalityFacilities, HospitalityRetrieveFacilityAvailability, FacilityQueryFacilitySearch, FacilityQueryFindHospitalityAvailability, FacilityQueryRetrieveHospitalityAvailability]
+- id: HospitalityOffers_1_0_0
+  file: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
+  definitions: 3
+  role: 2018A hospitality offer search
+  key_types: [HospitalityOffersQueryFindHospitalityOffers, SinglePropertyHospitalityOffers, MultiPropertyHospitalityOffers]
+entities:
+- name: Facility
+  module: Organization_4_1_0
+  identity_view: FacilityID
+  description: >-
+    A facility (hotel, conference, golf). Must have a single address and a single geolocation.
+  specializations: [FacilityHotel, FacilityGolf, FacilityMeeting]
+  operations: [openapi/opentravel-2020a-facility-resource-openapi.json#Post, openapi/opentravel-2020a-facility-resource-openapi.json#Get]
+- name: HotelDescriptiveContent
+  module: OrganizationHospitality_4_0_0
+  identity_view: HotelDescriptiveContentID
+  description: Descriptive content for a hotel property — rooms, services, recreation, category codes.
+  operations:
+  - openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json#Get
+  - openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json#Query
+  - openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json#Notification
+- name: HospitalityOffer
+  module: HospitalityOffers_1_0_0
+  views: [SinglePropertyHospitalityOffers, MultiPropertyHospitalityOffers]
+  operations:
+  - openapi/opentravel-2018a-hospitality-offers-resource-openapi.json#FindSinglePropertyOffers
+  - openapi/opentravel-2018a-hospitality-offers-resource-openapi.json#FindMultiPropertyOffers
+- name: HospitalityFacility
+  module: HospitalityFacility_1_0_0
+  views: [HospitalityFacilities]
+  operations:
+  - openapi/opentravel-2018a-facility-resource-openapi.json#HospitalityFacilitySearch
+  - openapi/opentravel-2018a-facility-resource-openapi.json#FindHospitalityAvailability
+  - openapi/opentravel-2018a-facility-resource-openapi.json#RetrieveHospitalityAvailability
+- name: BaseResponse
+  module: Common_5_0_0
+  description: The shared error/status envelope every 2020A operation returns on 4xx/5xx.
+relationships:
+- {from: FacilityList, to: Facility, kind: has_many, via: '$ref FacilityResource_1_0_0 -> Organization_4_1_0'}
+- {from: FacilityID, to: Facility, kind: has_one, via: OTM identity view of the same object}
+- {from: FacilityHotel, to: Facility, kind: specializes, via: OTM substitution group}
+- {from: FacilityGolf, to: Facility, kind: specializes, via: OTM substitution group}
+- {from: FacilityMeeting, to: Facility, kind: specializes, via: OTM substitution group}
+- {from: HotelDescriptiveContentListResponse, to: HotelDescriptiveContent, kind: has_many, via: '$ref HospitalityContent_HospitalityResources_1_0_0 -> OrganizationHospitality_4_0_0'}
+- {from: HotelDescriptiveContentID, to: HotelDescriptiveContent, kind: has_one, via: OTM identity view}
+- {from: HotelDescriptiveContent, to: GuestRoomInfo, kind: has_many, via: OrganizationHospitality_4_0_0}
+- {from: HotelDescriptiveContent, to: Recreation, kind: has_many, via: OrganizationHospitality_4_0_0}
+- {from: HotelDescriptiveContent, to: Service, kind: has_many, via: OrganizationHospitality_4_0_0}
+- {from: MultiPropertyHospitalityOffers, to: SinglePropertyHospitalityOffers, kind: has_many, via: HospitalityOffers_1_0_0}
+- {from: HospitalityOffersQueryFindHospitalityOffers, to: SinglePropertyHospitalityOffers, kind: produces, via: 'POST /HospitalityPropertyOffers'}
+- {from: HospitalityOffersQueryFindHospitalityOffers, to: MultiPropertyHospitalityOffers, kind: produces, via: 'POST /HospitalityOffers'}
+- {from: FacilityQueryFacilitySearch, to: HospitalityFacilities, kind: produces, via: 'POST /Facilities (2018A)'}
+- {from: FacilityQueryFindHospitalityAvailability, to: HospitalityFacilities, kind: produces, via: 'POST /HospitalityFindHospitalityAvailability'}
+- {from: FacilityQueryRetrieveHospitalityAvailability, to: HospitalityFacilities, kind: produces, via: 'POST /HospitalityRetrieveFacilityAvailability'}
+- {from: 'every operation (4xx/5xx, 2020A)', to: BaseResponse, kind: returns, via: Common_5_0_0}
+identifiers:
+  style: implementer-assigned strings
+  fields:
+  - {field: Identifier, in: 'path of GET /Facilities/{Identifier}', maxLength: 128, description: a unique identifier defined by an external authority for this object}
+  external_code_systems: [IATA city/location codes, hotel chain codes, hotel brand codes, TTI hotel codes, ISO 4217 currency]
+  code_lists: https://opentravel.org/download-code-list/
+  note: OpenTravel mints no identifiers of its own for commercial entities.
+render: null
+render_note: no subway/ or ERD visual exists in this repo yet

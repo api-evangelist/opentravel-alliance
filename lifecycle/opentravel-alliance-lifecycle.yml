@@ -1,0 +1,87 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://opentravel.org/download-the-opentravel-specification/,
+  https://opentravel.org/announcements/,
+  https://www.opentraveldevelopersnetwork.com/all-active-work-public,
+  https://github.com/OpenTravel/OpenTravel-Specifications, openapi/*.json
+versioning:
+  scheme: dated release suites plus per-library semantic versions
+  current:
+    ota_1_0: 2024A
+    ota_2_0_object_suite: 2020A (latest present in the public mirror)
+  releases:
+    ota_1_0: 2001A through 2024A (per the download form)
+    ota_2_0: 2016A, 2017A, 2017B, 2018A, 2020A present in the public mirror; the download form lists 2016A through 2019A
+  library_versions:
+    detail: >-
+      Each OTM library carries its own semver, surfaced in info.x-otm-library and in the schema
+      filename — HospitalityFacility 1.0.0, HospitalityOffers 1.0.0, FacilityResource 1.0.0,
+      HospitalityContent 1.0.0, Common 5.0.0, Organization 4.1.0, OrganizationHospitality 4.0.0.
+  library_status:
+    FINAL: [HospitalityFacility 1.0.0 (2018A), HospitalityOffers 1.0.0 (2018A)]
+    DRAFT: [FacilityResource 1.0.0 (2020A), HospitalityContent 1.0.0 (2020A)]
+    note: >-
+      DRAFT libraries are published in the public mirror next to FINAL ones with no visible
+      warning on the artifact. LibraryStatus is the only signal.
+  docs: https://opentravel.org/about-2-0-object-model/
+deprecation:
+  policy_url: null
+  policy_published: false
+  sunset_header: false
+  detail: >-
+    No deprecation policy, no end-of-life schedule, no Sunset/Deprecation header contract
+    (RFC 8594), and no operation in any of the eight Swagger documents carries
+    `deprecated: true`. Old release suites are simply left in place. The de facto signal is
+    supersession: the OTM-DE repository states "Maintenance Release ONLY, please use DEX from
+    utilities", and the otm-dex repo is marked "MOVED to utilities".
+  superseded_tooling:
+  - {from: 'https://github.com/OpenTravel/OTM-DE', to: 'https://github.com/OpenTravel/OTM-DE-Utilities', signal: repo description}
+  - {from: 'https://github.com/OpenTravel/otm-dex', to: 'https://github.com/OpenTravel/OTM-DE-Utilities', signal: repo description}
+deprecated_operations: []
+sla:
+  url: null
+  uptime_target: null
+  detail: >-
+    OpenTravel operates no runtime API, so no SLA exists or could apply. The two services it
+    does host — opentravelmodel.net (OTM Library Repository) and
+    opentraveldevelopersnetwork.com (ODN) — publish no availability commitment.
+status_page: null
+status_page_detail: >-
+  Probed 2026-07-28: https://status.opentravel.org fails TLS validation (no valid certificate,
+  no status service); https://opentravel.org/status/ is a WordPress soft 404 that redirects to
+  the homepage. No status page exists.
+review_process:
+  member_review: >-
+    Membership buys early access during member review periods and work-group priority
+    influence; the OTA-Publication-Site repo is described as "OpenTravel web site application
+    for the publication and comment submission of OTA technical" material.
+  public_review: >-
+    Public review periods are announced on /announcements/ — e.g. "OpenTravel 2018A 2.0 Hotel
+    Specification Object Suite Public Review by March 1" (2018-02-22).
+  current_work: https://www.opentraveldevelopersnetwork.com/all-active-work-public
+  change_request: https://opentravel.org/how-to-request-a-change-to-the-opentravel-alliance-codelist/
+  assistance: https://opentravel.org/spec-assistance/
+forward_direction:
+  open_travel_foundation:
+    url: https://opentravel.org/open-travel-foundation-preview/
+    detail: >-
+      "The Open Travel Alliance is working with the Linux Foundation to form an open-source
+      foundation to revolutionize travel retail." No date, governance structure or scope of
+      transfer is published as of 2026-07-28. Recorded as announced intent.
+  offer_order_workgroup:
+    url: https://opentravel.org/offer-order/
+    detail: >-
+      Active workgroup proposing a cross-sector Offer/Order standard — the same retailing
+      model IATA NDC targets, positioned as the open-standard alternative.
+staleness:
+  public_mirror:
+    repo: https://github.com/OpenTravel/OpenTravel-Specifications
+    commits: single commit "Initial commit", 2024-11-26
+    gap: >-
+      The mirror's OTA 1.0 tree stops at 2017B while the download form offers releases through
+      2024A — roughly seven years of OTA 1.0 releases exist only behind the lead-capture form.
+    license: none — no LICENSE file present
+  tooling:
+    last_release: '2025-01-15 (ota2-exporter-utility 1.1)'
+    compiler_last_release: '2024-01-31 (OTM-DE-Compiler 5.0-SNAPSHOT-20240131)'

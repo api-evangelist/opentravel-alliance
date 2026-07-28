@@ -1,0 +1,124 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  api.github.com/orgs/OpenTravel (12 repositories, releases API), search.maven.org,
+  registry.npmjs.org, pypi.org, azuresearch-usnc.nuget.org — all probed 2026-07-28
+summary: >-
+  OpenTravel publishes NO client SDK in any language package registry. There is no
+  org.opentravel group on Maven Central (numFound 0), no npm result for "opentravel"
+  (total 0), and no PyPI project named opentravel or opentravel-alliance (404). What it does
+  ship first-party are TOOLING distributions attached to GitHub Releases in the OpenTravel
+  org: the OTM model compiler / repository service, the DEx modelling application launchers,
+  and an export utility. Everything a developer would call an "SDK" for OpenTravel messages
+  is third-party (JiBX generated schema bindings, Liquid Technologies object models,
+  community NuGet DTO packages) and is recorded as official:false.
+packages:
+- language: java
+  registry: github-releases
+  name: ota2-repository-service
+  repo: https://github.com/OpenTravel/OTM-DE-Compiler
+  url: https://github.com/OpenTravel/OTM-DE-Compiler/releases
+  latest: 5.0-SNAPSHOT-20240131
+  released: '2024-01-31'
+  assets: [ota2-repository-service.war, ota2-indexing-service.zip, nagios-jmx-plugin.zip]
+  install: download the .war and deploy to a servlet container
+  official: true
+  description: >-
+    OTM Model Compiler and Repository — the server side of the OTM Library Repository that
+    opentravelmodel.net runs, plus its Lucene indexing service.
+  license: NOASSERTION
+- language: java
+  registry: github-releases
+  name: ota2-app-launcher
+  repo: https://github.com/OpenTravel/OTM-DE-Utilities
+  url: https://github.com/OpenTravel/OTM-DE-Utilities/releases
+  latest: 5.0-SNAPSHOT-20240131
+  released: '2024-01-31'
+  assets: [ota2-app-launcher-win.zip, ota2-app-launcher-mac.zip, ota2-app-launcher-linux.zip]
+  install: download the platform zip and run the launcher (requires Java)
+  official: true
+  description: >-
+    Applications and utilities for OTM model developers — the DEx (OTM Development
+    Environment) launcher set. Downloadable from https://opentravel.org/download-otm-tool/
+- language: java
+  registry: github-releases
+  name: ota2-exporter-utility
+  repo: https://github.com/OpenTravel/ota2-exporter-utility
+  url: https://github.com/OpenTravel/ota2-exporter-utility/releases
+  latest: '1.1'
+  released: '2025-01-15'
+  assets: [ota2-exporter-utility-bin.zip]
+  official: true
+  description: Exporter utility for OTM model content.
+- language: java
+  registry: github-releases
+  name: OTM-DE
+  repo: https://github.com/OpenTravel/OTM-DE
+  url: https://github.com/OpenTravel/OTM-DE/releases
+  latest: 4.0-SNAPSHOT-20201123
+  released: '2020-11-23'
+  assets:
+  - OTM-DE-4.0.0-win32.win32.x86_64.zip
+  - OTM-DE-4.0.0-macosx.cocoa.x86_64.zip
+  - OTM-DE-4.0.0-linux.gtk.x86_64.zip
+  official: true
+  superseded_by: ota2-app-launcher (OTM-DE-Utilities)
+  description: >-
+    Eclipse-based OpenTravel Development Environment. The repo itself states
+    "Maintenance Release ONLY, please use DEX from utilities."
+- language: ansible
+  registry: github
+  name: ota2-repository-playbooks
+  url: https://github.com/OpenTravel/ota2-repository-playbooks
+  official: true
+  license: Apache-2.0
+  description: Ansible playbooks that install and maintain OTM repositories.
+third_party_packages:
+- language: java
+  registry: maven-central
+  group: org.jibx.schema.org.opentravel
+  name: opentravel-all
+  url: https://central.sonatype.com/search?q=g:org.jibx.schema.org.opentravel
+  official: false
+  description: >-
+    JiBX-generated Java bindings for the OTA 1.0 schema releases. Per-release groupIds exist
+    for 2010B, 2011A/B, 2013A/B, 2014A/B and 2014B (x2014B), latest versions 1.1.4-1.2.4.
+- language: dotnet
+  registry: nuget
+  name: LiquidTechnologies.XmlObjects.OpenTravel2018A
+  url: https://www.nuget.org/packages/LiquidTechnologies.XmlObjects.OpenTravel2018A
+  version: 18.0.8
+  official: false
+  description: Strongly-typed .NET object model for the OpenTravel (OTA) 2018A standard.
+- language: dotnet
+  registry: nuget
+  name: LiquidTechnologies.XmlObjects.OpenTravel2008B
+  url: https://www.nuget.org/packages/LiquidTechnologies.XmlObjects.OpenTravel2008B
+  version: 18.0.8
+  official: false
+- language: dotnet
+  registry: nuget
+  name: OpenTravel.OTA2021A.DTOs
+  url: https://www.nuget.org/packages/OpenTravel.OTA2021A.DTOs
+  version: 1.0.0
+  official: false
+  description: Community-published OpenTravel 2021A DTOs.
+- language: php
+  registry: packagist
+  name: davispeixoto/opentravel-alliance
+  url: https://packagist.org/packages/davispeixoto/opentravel-alliance
+  official: false
+- language: php
+  registry: packagist
+  name: recranet/ota-php
+  url: https://packagist.org/packages/recranet/ota-php
+  official: false
+registries_probed:
+- {registry: maven-central, query: 'g:org.opentravel', result: 0 artifacts}
+- {registry: npm, query: opentravel, result: 0 packages}
+- {registry: pypi, query: opentravel, result: 404}
+- {registry: pypi, query: opentravel-alliance, result: 404}
+- {registry: nuget, query: opentravel, result: 5 packages, all third-party}
+- {registry: rubygems, query: opentravel, result: 0 gems}
+- {registry: packagist, query: opentravel, result: 4 packages, all third-party}
+- {registry: crates.io, query: opentravel, result: 0 crates}

@@ -1,0 +1,42 @@
+generated: '2026-07-28'
+method: derived
+source: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+spec_type: none
+asyncapi_published: false
+asyncapi_note: >-
+  OpenTravel publishes no AsyncAPI document. The public mirror contains 22 WSDL files (SOAP
+  request/response), 10,848 XSD and 5,823 XML samples, but no event or streaming contract in
+  any machine-readable event format. Nothing was fabricated to fill this gap.
+webhooks:
+  published: true
+  shape: notification operation defined in the resource contract, hosted by the implementer
+  caveat: >-
+    IMPORTANT — this is NOT a webhook service OpenTravel operates. OpenTravel runs no runtime.
+    What it publishes is the notification half of the OTM resource contract: a POST endpoint
+    the receiving system exposes so a counterparty can push a changed object to it. The
+    subscription mechanism, delivery guarantees, retry policy, signing and replay protection
+    are all left entirely to the trading partners — none of them is specified.
+  events:
+  - name: HotelDescriptiveContent notification
+    operationId: Notification
+    method: POST
+    path: /HotelDescriptiveContents/Notifications
+    source: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+    direction: inbound to the implementer
+    payload_schema: 'OrganizationHospitality_4_0_0_Trim.schema.json#/definitions/HotelDescriptiveContentID'
+    local_payload_schema: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+    media_types: [application/json, application/xml]
+    success: 201
+    errors: [400, 401, 402, 403, 404, 500]
+    library: HospitalityContent 1.0.0 (LibraryStatus DRAFT)
+    release: 2020A Object Suite
+    description: >-
+      Push a hotel descriptive content object to a subscribing system. This is the only
+      notification-shaped operation in the eight harvested Swagger contracts.
+  not_specified:
+  - subscription / registration mechanism
+  - delivery retry and backoff policy
+  - payload signing or authentication (no securityDefinitions exist)
+  - event ordering, deduplication or idempotency key
+  - replay / catch-up endpoint
+  - event type registry beyond this single operation

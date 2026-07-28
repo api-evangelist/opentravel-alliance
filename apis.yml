@@ -11,8 +11,10 @@ description: >-
   OpenTravel does not operate a booking service or sit in the distribution chain itself; it supplies the
   message vocabulary that suppliers, GDSs, channel managers and OTAs implement between each other, which
   makes it a switching-cost reducer rather than a switching-cost holder. Its API posture is honest but thin:
-  there is no self-serve developer portal, no OpenTravel-operated runtime API and no public certification
-  registry. Specifications are royalty-free and free of charge, but the canonical download is behind a
+  there is no OpenTravel-operated runtime API and no public certification registry, though it does run a free
+  self-serve developer portal — the OpenTravel Developers Network at opentraveldevelopersnetwork.com — and,
+  as of 2026, an OAuth 2.1 protected Model Context Protocol server on opentravel.org.
+  Specifications are royalty-free and free of charge, but the canonical download is behind a
   name/company/email lead-capture form with terms acceptance, and the OTM repository and member review
   periods are membership-gated ($950–$11,250/yr by revenue band). A public, unlicensed GitHub mirror at
   github.com/OpenTravel/OpenTravel-Specifications carries the bulk of the corpus — including eight Swagger 2.0
@@ -63,6 +65,22 @@ apis:
     url: https://opentravel.org/about-2-0-object-model/
   - type: Repository
     url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+    name: HospitalityContent 1.0.0 resource views (JSON Schema draft-04)
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+    name: OrganizationHospitality 4.0.0 model (JSON Schema draft-04)
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+    name: Common 5.0.0 shared model (JSON Schema draft-04)
+  - type: Overlay
+    url: overlays/opentravel-alliance-2020a-hotel-descriptive-content-resource-overlay.yaml
+  - type: AgentSkill
+    url: skills/opentravel-alliance-hotel-descriptive-content.md
+  - type: Webhooks
+    url: asyncapi/opentravel-alliance-notifications-webhooks.yml
+    name: Notification operation catalog derived from the resource contract
 - aid: opentravel-alliance:opentravel-2020a-facility-resource
   name: OpenTravel 2020A Facility Resource
   description: >-
@@ -84,6 +102,19 @@ apis:
     url: https://opentravel.org/about-2-0-object-model/
   - type: Repository
     url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-facility-resource-trim.schema.json
+    name: FacilityResource 1.0.0 collection wrapper (JSON Schema draft-04)
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
+    name: Organization 4.1.0 facility model (JSON Schema draft-04)
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+    name: Common 5.0.0 shared model (JSON Schema draft-04)
+  - type: Overlay
+    url: overlays/opentravel-alliance-2020a-facility-resource-overlay.yaml
+  - type: AgentSkill
+    url: skills/opentravel-alliance-facility-resource.md
 - aid: opentravel-alliance:opentravel-2018a-hospitality-offers-resource
   name: OpenTravel 2018A Hospitality Offers Resource
   description: >-
@@ -106,6 +137,21 @@ apis:
     url: https://opentravel.org/about-2-0-object-model/
   - type: Repository
     url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
+    name: HospitalityOffers 1.0.0 model (JSON Schema draft-04)
+  - type: Overlay
+    url: overlays/opentravel-alliance-2018a-hospitality-offers-resource-overlay.yaml
+  - type: AgentSkill
+    url: skills/opentravel-alliance-hospitality-offers.md
+  - type: Examples
+    url: examples/_index.yml
+    name: >-
+      OpenTravel-published request/response payloads for FindSinglePropertyOffers and
+      FindMultiPropertyOffers
+  - type: APIReference
+    url: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+    name: OTM-generated model reference for the 2018A Object Suite
 - aid: opentravel-alliance:opentravel-2018a-facility-resource
   name: OpenTravel 2018A Facility Resource
   description: >-
@@ -129,7 +175,103 @@ apis:
     url: https://opentravel.org/about-2-0-object-model/
   - type: Repository
     url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
+    name: HospitalityFacility 1.0.0 model (JSON Schema draft-04)
+  - type: Overlay
+    url: overlays/opentravel-alliance-2018a-facility-resource-overlay.yaml
+  - type: AgentSkill
+    url: skills/opentravel-alliance-hospitality-facility-availability.md
+  - type: Examples
+    url: examples/_index.yml
+    name: >-
+      OpenTravel-published request/response payloads for HospitalityFacilitySearch,
+      FindHospitalityAvailability and RetrieveHospitalityAvailability
+  - type: APIReference
+    url: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+    name: OTM-generated model reference for the 2018A Object Suite
 common:
+- type: AgenticAccess
+  url: agentic-access/opentravel-alliance-agentic-access.yml
+- type: DeveloperPortal
+  url: https://www.opentraveldevelopersnetwork.com/
+  name: OpenTravel Developers Network (ODN) — free self-serve portal for all implementers
+- type: GettingStarted
+  url: https://opentravel.org/download-otm-tool/
+  name: Download OTM Tool — DEx overview, walkthrough videos and install instructions
+- type: Support
+  url: https://opentravel.org/spec-assistance/
+  name: Specification Assistance — question and comment form by travel domain
+- type: HelpCenter
+  url: https://www.opentraveldevelopersnetwork.com/schema-support
+  name: ODN Implementer Support
+- type: Roadmap
+  url: https://www.opentraveldevelopersnetwork.com/all-active-work-public
+  name: ODN Current Work — active workgroup and publication activity
+- type: Login
+  url: https://www.opentraveldevelopersnetwork.com/user
+  name: ODN member log in (free registration at /user/register)
+- type: Download
+  url: https://www.opentraveldevelopersnetwork.com/schema-products-page
+  name: ODN Schema Products — publications and publication artifacts
+- type: MCPServer
+  url: mcp/opentravel-alliance-mcp.yml
+  name: OAuth 2.1 protected MCP server at https://opentravel.org/wp-json/mcp/mcp-oauth-server
+- type: ToolCrosswalk
+  url: mcp/opentravel-alliance-tool-crosswalk.yml
+- type: WellKnown
+  url: well-known/opentravel-alliance-well-known.yml
+- type: Authentication
+  url: authentication/opentravel-alliance-authentication.yml
+- type: OAuthScopes
+  url: scopes/opentravel-alliance-scopes.yml
+- type: Packages
+  url: packages/opentravel-alliance-packages.yml
+- type: LLMsTxt
+  url: llms/opentravel-alliance-llms.txt
+- type: Conformance
+  url: conformance/opentravel-alliance-conformance.yml
+- type: ErrorCatalog
+  url: errors/opentravel-alliance-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/opentravel-alliance-lifecycle.yml
+- type: Conventions
+  url: conventions/opentravel-alliance-conventions.yml
+- type: ChangeLog
+  url: changelog/opentravel-alliance-changelog.yml
+- type: DataModel
+  url: data-model/opentravel-alliance-data-model.yml
+- type: Webhooks
+  url: asyncapi/opentravel-alliance-notifications-webhooks.yml
+  name: OTM notification operation catalog (no AsyncAPI is published)
+- type: AgentSkill
+  url: skills/_index.yml
+  name: Four packaged agent skills grounded in the published OTM resource contracts
+- type: DomainSecurity
+  url: security/opentravel-alliance-domain-security.yml
+- type: Vocabulary
+  url: vocabulary/opentravel-alliance-vocabulary.yml
+  name: OpenTravel Code Lists — 193 code lists / 4,052 enumerated terms across three OTM CodeList libraries
+- type: CLI
+  url: cli/opentravel-alliance-cli.yml
+  name: ota2compile — the OTA2 Type Library Compiler command line (schema-compiler-cli)
+- type: Examples
+  url: examples/_index.yml
+  name: OpenTravel-published JSON example payloads bound 1:1 to the 2018A resource operations
+- type: JSONSchema
+  url: json-schema/opentravel-2020a-codelist-4-0-0.schema.json
+  name: CodeList 4.0.0 (2020A) — 108 code lists, 2,341 terms (JSON Schema draft-04)
+- type: JSONSchema
+  url: json-schema/opentravel-2020a-codelist-4-1-0.schema.json
+  name: CodeList 4.1.0 (2020A) — DeadlineDropTime_Enum_Copy extension library
+- type: JSONSchema
+  url: json-schema/opentravel-2018a-codelist-3-0-0.schema.json
+  name: CodeList 3.0.0 (2018A) — 84 code lists, 1,705 terms (JSON Schema draft-04)
+- type: APIReference
+  url: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+  name: >-
+    OTM-generated model and resource reference for the 2018A Object Suite (619 HTML pages,
+    compiler -H/--compileHTML output). The only generated reference in the public mirror.
 - type: Website
   url: https://opentravel.org/
 - type: About

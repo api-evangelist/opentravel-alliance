@@ -1,0 +1,28 @@
+generated: '2026-07-28'
+method: searched
+source: https://opentravel.org/.well-known/oauth-authorization-server
+docs: https://opentravel.org/.well-known/oauth-protected-resource
+note: >-
+  The published OpenTravel Swagger 2.0 contracts declare no oauth2 security schemes, so
+  derive-oauth-scopes.py returned nothing for this provider. The scope surface below is the
+  real one advertised by the OAuth 2.1 authorization server that opentravel.org runs in front
+  of its Model Context Protocol endpoints. It is a single coarse scope; there is no per-tool
+  or per-resource scope decomposition published, and none is invented here.
+schemes:
+- name: opentravel-mcp-oauth
+  source: well-known/opentravel-alliance-oauth-authorization-server.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://opentravel.org/oauth/authorize
+    tokenUrl: https://opentravel.org/oauth/token
+scopes:
+- scope: mcp
+  description: >-
+    Access the OpenTravel Model Context Protocol server at
+    https://opentravel.org/wp-json/mcp/mcp-oauth-server. Advertised as scopes_supported by
+    both the RFC 8414 authorization-server metadata and the RFC 9728 protected-resource
+    metadata.
+  flows: [authorizationCode]
+  sources:
+  - well-known/opentravel-alliance-oauth-authorization-server.json
+  - well-known/opentravel-alliance-oauth-protected-resource.json

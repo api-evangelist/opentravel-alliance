@@ -1,0 +1,104 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://github.com/OpenTravel/OTM-DE-Compiler/tree/master/schema-compiler-cli —
+  src/main/java/org/opentravel/schemacompiler/cli/Main.java and
+  src/main/resources/org/opentravel/schemacompiler/cli/cli-messages.properties, read 2026-07-28
+name: OTA2 Type Library Compiler CLI
+summary: >-
+  OpenTravel ships one first-party command-line tool: the OTA2 Type Library Compiler. It is not
+  an API client — OpenTravel operates no runtime API — it is the MODEL COMPILER. You hand it an
+  OTM library file and it emits the artifacts this repository harvests: XML Schema, WSDL, JSON
+  Schema, Swagger 2.0, OpenAPI, HTML documentation and example payloads. The eight Swagger 2.0
+  documents in openapi/, the JSON Schema modules in json-schema/ and the published payloads in
+  examples/ are all output of this compiler (`-S`, `-J` and `-E` respectively).
+binaries:
+  unix: ota2compile.sh
+  windows: ota2compile.bat
+syntax: 'ota2compile.sh [options] <library-file>'
+help_header: >-
+  If neither of the 'compileXSD' or 'compileWSDL' flags are specified, both will be assumed to be
+  implied by default.
+arguments:
+- name: library-file
+  required: true
+  cardinality: exactly one
+  description: >-
+    Path to the OTM library to compile. Resolved relative to the working directory first, then
+    as an absolute path. Supplying zero or more than one filename prints help and exits.
+option_groups:
+- group: output targets
+  options:
+  - {short: X, long: compileXSD, takes_value: false, description: Enables the compilation of XML schema files}
+  - {short: W, long: compileWSDL, takes_value: false, description: Enables the compilation of any required WSDL files}
+  - {short: J, long: compileJSON, takes_value: false, description: Enables the compilation of JSON schema files}
+  - {short: S, long: compileSwagger, takes_value: false, description: Enables the compilation of Swagger documents}
+  - {short: O, long: compileOpenApi, takes_value: false, description: Enables the compilation of OpenAPI documents}
+  - {short: H, long: compileHTML, takes_value: false, description: Enables the compilation of HTML documentation}
+  - {short: E, long: generateExamples, takes_value: false, description: Generates example XML files for all library artifacts}
+- group: example generation
+  options:
+  - {short: C, long: exampleContext, takes_value: true, description: the preferred context to use when producing example values for simple data types}
+  - {short: M, long: exampleMaxDetails, takes_value: false, description: 'Boolean flag indicating the maximum amount of detail is to be included in generated example data (default is true)'}
+  - {short: r, long: exampleMaxRepeat, takes_value: true, description: 'the maximum number of times that repeating elements should be displayed in generated example output (default is 3)'}
+  - {short: D, long: exampleMaxDepth, takes_value: true, description: 'the maximum depth that should be included for nested elements in generated example output (default is 2)'}
+  - {short: o, long: suppressOptional, takes_value: false, description: Suppress optional fields from generated examples}
+- group: service and resource binding
+  options:
+  - {short: b, long: bindingStyle, takes_value: true, description: "Specifies the binding style for generated schemas and services (default is 'OTA2')"}
+  - {short: s, long: serviceEndpoint, takes_value: true, description: The URL of the root service endpoint for WSDL services}
+  - {short: p, long: resourceBasePath, takes_value: true, description: The base URL path for all generated REST resources}
+  - {short: e, long: suppressOtmExtensions, takes_value: false, description: Suppress OTM extensions from swagger and JSON schema documents}
+- group: input and output locations
+  options:
+  - {short: d, long: dir, takes_value: true, description: Output folder for compiled artifacts (same folder as source file if omitted)}
+  - {short: c, long: catalog, takes_value: true, description: Location of the library catalog file (optional)}
+undocumented_in_help:
+  note: >-
+    The message bundle also defines `lineWidth` (max line width for output formatting, default
+    120) and `lineIndent` (indentation, default 4). Neither is registered as a command-line
+    option in Main.getCommandLineOptions(), so they are not reachable from the CLI as shipped.
+behaviour:
+  parser: GNU-style (Apache Commons CLI GnuParser)
+  validation: >-
+    Runs the OTM validator and prints "Errors/Warnings Encountered:" followed by each finding in
+    IDENTIFIED_FORMAT. Findings are printed, not exit-coded.
+  binding_style: >-
+    Rejected with "Invalid binding style specified: {style}" if the id is not in the compiler
+    extension registry. Default extension is OTA2 (schema-compiler-ext-ota2).
+  errors:
+  - 'Library File Not Found: {filename}'
+  - 'Unexpected Error During Compilation: {message}'
+install:
+  method: build from source
+  requirements: [Java >= 1.8, Maven 3.x]
+  build: mvn clean install
+  artifact: >-
+    schema-compiler-cli produces a `bin` zip assembly containing src/main/bin (the ota2compile
+    launch scripts) plus lib/*.jar.
+  note: >-
+    No pre-built CLI archive is attached to any GitHub Release, and no org.opentravel artifact
+    exists on Maven Central (probed 2026-07-28, numFound 0). The CLI must be built from source.
+    The published GitHub Release assets are the repository service .war and the DEx launchers —
+    see packages/opentravel-alliance-packages.yml.
+license: Apache-2.0 (apache2-license.txt at the repository root; header on every source file)
+repository: https://github.com/OpenTravel/OTM-DE-Compiler
+module: schema-compiler-cli
+gui_alternative:
+  name: OTM Development Environment (DEx)
+  url: https://opentravel.org/download-otm-tool/
+  repository: https://github.com/OpenTravel/OTM-DE-Utilities
+  note: >-
+    The same compiler tasks are exposed through the JavaFX DEx application, which IS distributed
+    as a pre-built launcher zip for Windows, macOS and Linux. Most implementers use DEx; the CLI
+    is the headless/CI path.
+observations:
+- >-
+  `-O/--compileOpenApi` means the compiler can emit OpenAPI 3.x, yet every document OpenTravel
+  actually publishes in the mirror is Swagger 2.0 (`-S`). The OpenAPI output path exists in
+  schema-compiler/src/main/java/org/opentravel/schemacompiler/codegen/openapi/ but has never
+  been used for a published Object Suite.
+- >-
+  `-p/--resourceBasePath` and `-s/--serviceEndpoint` are why the published contracts carry
+  placeholder hosts (127.0.0.1, example.com): the implementer supplies the real values at
+  compile time. See conventions/opentravel-alliance-conventions.yml.

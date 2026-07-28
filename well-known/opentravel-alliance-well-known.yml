@@ -1,0 +1,88 @@
+generated: '2026-07-28'
+method: searched
+source: live probes of every apis.yml host on 2026-07-28
+note: >-
+  opentravel.org runs WordPress behind nginx on WP Engine. Unknown paths under the WordPress
+  rewrite return HTTP 200 with the homepage (a soft 404), so a 200 alone is not evidence a
+  document exists — every entry below was confirmed by content type and body. Paths served
+  directly by nginx (llms.txt, security.txt) return a real nginx 404.
+  The two OAuth documents are REAL: they are emitted by the WordPress MCP adapter running on
+  the site and they advertise a hosted Model Context Protocol server at
+  https://opentravel.org/wp-json/mcp/mcp-oauth-server. This was not present at the 2026-07-28
+  first-round review, which recorded "/.well-known/ soft 404, no well-known documents".
+hosts:
+- host: https://opentravel.org
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    spec: RFC 8414
+    status: 200
+    content_type: application/json
+    file: opentravel-alliance-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    spec: RFC 9728
+    status: 200
+    content_type: application/json
+    file: opentravel-alliance-oauth-protected-resource.json
+  - path: /.well-known/security.txt
+    spec: RFC 9116
+    status: 404
+    note: nginx 404, no security.txt published
+  - path: /security.txt
+    status: 404
+  - path: /llms.txt
+    status: 404
+    note: nginx 404 — generated one saved at llms/opentravel-alliance-llms.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: soft 404 — WordPress homepage HTML, not OIDC discovery JSON
+  - path: /.well-known/api-catalog
+    spec: RFC 9727
+    status: 200
+    note: soft 404 — WordPress homepage HTML
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: soft 404 — WordPress homepage HTML
+  - path: /openapi.json
+    status: 200
+    note: soft 404 — WordPress homepage HTML
+  - path: /swagger.json
+    status: 200
+    note: soft 404 — WordPress homepage HTML
+  - path: /api-docs
+    status: 200
+    note: soft 404 — WordPress homepage HTML
+  - path: /robots.txt
+    status: 200
+    note: 82 bytes, WordPress default, Crawl-delay 10; no AI/agent directives
+- host: https://opentravelmodel.net
+  note: Apache Tomcat; returns a real HTTP 404 for every probed path
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /robots.txt
+    status: 404
+not_probed:
+- host: 127.0.0.1
+  reason: >-
+    placeholder host declared by the published Swagger 2.0 contracts; OpenTravel operates no
+    runtime endpoint for them
+- host: example.com
+  reason: placeholder host declared by the 2020A FacilityResource contract

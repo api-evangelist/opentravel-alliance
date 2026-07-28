@@ -1,0 +1,2554 @@
+generated: '2026-07-28'
+method: searched
+source: https://github.com/OpenTravel/OpenTravel-Specifications — OTM CodeList JSON Schema modules, fetched
+  2026-07-28
+name: OpenTravel Code Lists
+note: The OpenTravel Code Lists are the enumerated vocabulary the OpenTravel message suites share — bed
+  types, booking channels, distribution types, meeting-room formats, cuisine types and so on. The canonical
+  distribution is a macro-enabled Excel workbook behind the lead-capture form at https://opentravel.org/download-code-list/,
+  which is not machine readable. The MACHINE-READABLE form harvested here is the OTM `CodeList` library
+  compiled to JSON Schema draft-04, published ungated in the public GitHub mirror. Every code list below
+  was read out of those files verbatim; no term was invented. `EnumerationOpen` lists carry an `Other_`
+  escape value and an `_Extension` sibling definition so implementers can add values; `EnumerationClosed`
+  lists do not.
+canonical_download: https://opentravel.org/download-code-list/
+canonical_download_note: Excel (.xlsm) workbook, lead-capture form with terms acceptance; not machine
+  readable.
+change_request: https://opentravel.org/how-to-request-a-change-to-the-opentravel-alliance-codelist/
+formats_published:
+- JSON Schema draft-04 (OTM CodeList library)
+- XML Schema (CodeList_*_Trim.xsd)
+- Excel .xlsm / .xls workbook
+- XML code table (OTA 1.0, through 2010B)
+summary:
+  libraries: 3
+  code_lists_total: 193
+  terms_total: 4052
+  newest_machine_readable: CodeList 4.0.0 (2020A Object Suite)
+  newest_published_overall: OpenTravel_CodeList_2024_9_4.xlsm (CodeLists/OTA_CodeLists_2024_09_04/) —
+    Excel only
+external_authorities_deferred_to:
+- IATA airline, airport and city codes
+- ISO 3166 country codes
+- ISO 4217 currency codes
+- TTI hotel reference codes
+- hotel chain and brand codes
+libraries:
+- library: CodeList 4.0.0
+  release: 2020A
+  file: json-schema/opentravel-2020a-codelist-4-0-0.schema.json
+  upstream: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2020A_ObjectSuite/OpenTravel_2020A_ObjectSuite_Resources/json/CodeList_4_0_0.schema.json
+  encoding: utf-8
+  definitions: 184
+  code_lists: 108
+  terms_total: 2341
+  open_enumerations: 76
+  closed_enumerations: 32
+  code_lists_detail:
+  - name: AccommodationClass_Enum
+    definition: AccommodationClass_Enum_Base
+    kind: EnumerationOpen
+    term_count: 17
+    description: Rail accommodation types with an \"Other\" value to support open enumeration list.
+    terms_sample:
+    - HardCompartmentClass
+    - SoftCompartmentClass
+    - MixedSoftClass
+    - MixedHardClass
+    - HighGradeSoftClass
+    - SpecialClass
+    - HardClass
+    - SoftClass
+  - name: AdditionalDetailType_Enum
+    definition: AdditionalDetailType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 74
+    description: Identifies the type of detail being sent.
+    terms_sample:
+    - Advanced booking information
+    - Amenity information
+    - Areas served
+    - Booking guidelines
+    - Cancellation information
+    - Catering description
+    - Check in check out information
+    - Check-in policy
+  - name: AddressUse_Enum
+    definition: AddressUse_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: Describes how an address is to be used.
+    terms_sample:
+    - Billing
+    - Chain
+    - Contact
+    - Credit card
+    - Delivery
+    - Deposit
+    - Mailing
+    - Physical
+  - name: AgeQualifyingCode_Enum
+    definition: AgeQualifyingCode_Enum_Base
+    kind: EnumerationOpen
+    term_count: 20
+    description: 'A code representing a business rule that determines the charges for a guest based upon
+      age range (e.g. Adult, Child, Senior, Child With Adult, Child Without Adult). This attribute allows
+      for an increase in rate by occupant class.\nPerson age categories.\nNote: Age categories  are typically
+      used to qualify pricing and\/or eligibility.'
+    terms_sample:
+    - Junior
+    - Under 10
+    - Younger driver
+    - Young driver
+    - Free adult
+    - Free child
+    - Additional occupant without adult
+    - Additional occupant with adult
+  - name: AmountDetermination_Enum
+    definition: AmountDetermination_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: Used to indicate if an amount is inclusive or exclusive of other charges, such as taxes,
+      or is cumulative (amounts have been added to each other).
+    terms_sample:
+    - Inclusive
+    - Exclusive
+    - Cumulative
+  - name: ArchitecturalStyle_Enum
+    definition: ArchitecturalStyle_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: Describes the architectural style of the building or room.
+    terms_sample:
+    - Art deco
+    - Contemporary
+    - Historic
+    - Mediterranean
+    - Modern
+    - Southwest
+    - Traditional
+    - Victorian
+  - name: AttractionCategory_Enum
+    definition: AttractionCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 97
+    description: Specifies a type of attraction.
+    terms_sample:
+    - Agricultural
+    - Airport
+    - Amusement park
+    - Aquarium
+    - Archeological
+    - Arena
+    - Auditorium
+    - Bar
+  - name: AudioVisual_Enum
+    definition: AudioVisual_Enum_Base
+    kind: EnumerationOpen
+    term_count: 29
+    description: null
+    terms_sample:
+    - Audio recording
+    - AV Technician
+    - Background music
+    - Copier
+    - Disc player
+    - Dry erase board with eraser and markers
+    - DVD player
+    - Easel
+  - name: AvailableMealCategory_Enum
+    definition: AvailableMealCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 9
+    description: The high level types of meal options available at a dining facility.
+    terms_sample:
+    - Breakfast
+    - Brunch
+    - Dinner
+    - Happy hour
+    - Lunch
+    - Snack
+    - Afternoon tea
+    - Reception
+  - name: BankAccountType_Enum
+    definition: BankAccountType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 4
+    description: 'Source: OpenTravel'
+    terms_sample:
+    - Savings
+    - Investment
+    - Checking
+    - Other_
+  - name: BasisType
+    definition: BasisType_Base
+    kind: EnumerationOpen
+    term_count: 7
+    description: Provides basis for how an amount was calculated.
+    terms_sample:
+    - Days
+    - Entire
+    - First
+    - First and last
+    - Last
+    - Nights
+    - Other_
+  - name: BedType_Enum
+    definition: BedType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: The type(s) of sleeping option(s) in a guest accommodation.
+    terms_sample:
+    - Dorm bed
+    - Double/full
+    - Futon
+    - King
+    - Murphy bed
+    - Queen
+    - Run of the house
+    - Sofa bed
+  - name: BerthPosition_Enum
+    definition: BerthPosition_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: Identifies the position of a berth, e.g. upper, lower, middle.
+    terms_sample:
+    - Upper
+    - Middle
+    - Lower
+  - name: Beverage_Enum
+    definition: Beverage_Enum_Base
+    kind: EnumerationOpen
+    term_count: 27
+    description: Specifies beverage types.
+    terms_sample:
+    - Bourbon
+    - Bordeaux
+    - Brandy
+    - Cabernet Sauvignon
+    - Chardonnay
+    - Chianti
+    - Coffee
+    - Hot tea
+  - name: BookingChannel_Enum
+    definition: BookingChannel_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: Specifies a type of booking channel.
+    terms_sample:
+    - Agent
+    - Alternative distribution system (ADS)
+    - Central reservation system (CRS)
+    - Global distribution system (GDS)
+    - Internet
+    - Kiosk
+    - Property management system (PMS)
+    - Sales and catering system (SCS)
+  - name: BusinessService_Enum
+    definition: BusinessService_Enum_Base
+    kind: EnumerationOpen
+    term_count: 54
+    description: Services, equipment, or supplies provided by the hotel that are generally supportive
+      of work-related activities.
+    terms_sample:
+    - Audio visual equipment
+    - Blackboard
+    - Business center
+    - Business services
+    - Calling card calls
+    - Cellular phone rental
+    - Computer
+    - Computer rental
+  - name: BusinessType_Enum
+    definition: BusinessType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: null
+    terms_sample:
+    - Contract
+    - Group
+    - In-House Meeting
+    - Local
+    - Other_
+  - name: ChargeUnit_Enum
+    definition: ChargeUnit_Enum_Base
+    kind: EnumerationOpen
+    term_count: 39
+    description: 'Source: Charge Type (CHG) OpenTravel codelist.'
+    terms_sample:
+    - Per unit
+    - Per order
+    - Per tray
+    - Per dozen
+    - Per gallon
+    - Round trip
+    - Per room
+    - Per item
+  - name: Commission_Enum
+    definition: Commission_Enum
+    kind: EnumerationClosed
+    term_count: 6
+    description: null
+    terms_sample:
+    - Full
+    - Partial
+    - Non-paying
+    - No-show
+    - Adjustment
+    - Commissionable
+  - name: CommunicationLocation_Enum
+    definition: CommunicationLocation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 4
+    description: Specifies a location for communication.
+    terms_sample:
+    - Business
+    - Destination
+    - Home
+    - Other_
+  - name: CompartmentPosition_Enum
+    definition: CompartmentPosition_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: Identifies the position of a compartment, such as upper and lower.
+    terms_sample:
+    - CloseToRestaurantCar
+    - CloseToExit
+    - CloseToToilet
+    - MiddleOfCar
+  - name: ContactLocation_Enum
+    definition: ContactLocation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 16
+    description: Specifies where the contact is located.
+    terms_sample:
+    - Central reservation office
+    - Corporate headquarters
+    - Corporate office
+    - Divisional office
+    - Global sales office
+    - Hotel direct
+    - Local reservation office
+    - Sales office
+  - name: CourseType_Enum
+    definition: CourseType_Enum
+    kind: EnumerationClosed
+    term_count: 6
+    description: The guest policy at the facility.
+    terms_sample:
+    - DailyFee
+    - Municipal/Government/Military
+    - Private
+    - Private Limited Access
+    - Resort
+    - SemiPrivate
+  - name: CuisineType_Enum
+    definition: CuisineType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 75
+    description: The type of food for which the establishment is known; the style\/manner in which the
+      food is prepared and\/or served.
+    terms_sample:
+    - Afghan
+    - American
+    - Argentinean
+    - Asian
+    - Asian-Fusion
+    - Austrian
+    - Barbeque
+    - Bavarian
+  - name: DayOfWeek_Enum
+    definition: DayOfWeek_Enum
+    kind: EnumerationClosed
+    term_count: 7
+    description: Day of the Week types.
+    terms_sample:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+  - name: Deck_Enum
+    definition: Deck_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: Identifies the train deck, such as lower level and upper level.
+    terms_sample:
+    - Regular-OneLevelOnly
+    - LowerLevel
+    - UpperLevel
+  - name: DisabilityFeature_Enum
+    definition: DisabilityFeature_Enum_Base
+    kind: EnumerationOpen
+    term_count: 164
+    description: Specifies information about a facility, amenity or service that is relevant to people
+      with a disability.
+    terms_sample:
+    - Accessibility to goods and services
+    - Accessible baths
+    - Accessible entrance
+    - Accessible parking
+    - Accessible platform lifts available
+    - Accessible rooms
+    - Accessible self parking available
+    - Accessible van parking
+  - name: DiscountsAvailable_Enum
+    definition: DiscountsAvailable_Enum_Base
+    kind: EnumerationOpen
+    term_count: 41
+    description: This is used for discounts that may be applied.
+    terms_sample:
+    - AAA
+    - AARP
+    - Convention
+    - Corporate
+    - Family
+    - Government
+    - Group
+    - Military
+  - name: DistributionType_Enum
+    definition: DistributionType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 17
+    description: Defines the preferred method of communication or the method of distribution for the material.
+    terms_sample:
+    - Fax
+    - Email
+    - Mail
+    - Courier
+    - Airport collection
+    - City office
+    - Hotel desk
+    - Will call
+  - name: DocumentType_Enum
+    definition: DocumentType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 23
+    description: Defines the specific type of identification or certification document.
+    terms_sample:
+    - NaturalizationCertificate
+    - PassportCard
+    - CrewMemberCertificate
+    - AirNexusCard
+    - MerchantMariner
+    - Non-standard
+    - KnownTravelerNumber
+    - RedressNumber
+  - name: DrivingRangeType_Enum
+    definition: DrivingRangeType_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: Describes the type of driving range.
+    terms_sample:
+    - Covered
+    - Indoor
+    - Outdoor
+  - name: DurationUnit_Enum
+    definition: DurationUnit_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: Defines the 'Units' that can be applied to Stay restrictions.
+    terms_sample:
+    - SUN
+    - SAT
+    - FRI
+    - THU
+    - WED
+    - TUES
+    - MON
+    - Months
+  - name: EmailAddressType_Enum
+    definition: EmailAddressType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 8
+    description: Specifies a type of email address.
+    terms_sample:
+    - Business
+    - Listserve
+    - Managing company
+    - Personal
+    - Property
+    - Reservation office
+    - Sales office
+    - Other_
+  - name: EmployeeStatus_Enum
+    definition: EmployeeStatus_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: 'OTA Codelist: Employee Status\tEMP\t\n\t1\tActive\n\t2\tRetired\n\t3\tLeave\n\t4\tTerminated'
+    terms_sample:
+    - Active
+    - Retired
+    - Leave
+    - Terminated
+  - name: ErrorWarningType_Enum
+    definition: ErrorWarningType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: Tthe category of error or warning.
+    terms_sample:
+    - Advisory
+    - Application error
+    - Authentication
+    - Authentication timeout
+    - Authorization
+    - Business rule
+    - No implementation
+    - Processing exception
+  - name: EventFunction_Enum
+    definition: EventFunction_Enum_Base
+    kind: EnumerationOpen
+    term_count: 42
+    description: A list of functions that may take place during an event.
+    terms_sample:
+    - Board Meeting
+    - Box Lunch
+    - Breakfast
+    - Breakfast Buffet
+    - Breakout
+    - Brunch
+    - Ceremony
+    - Changing Room
+  - name: EventStatus_Enum
+    definition: EventStatus_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: Describes the status of planning for an event.
+    terms_sample:
+    - Event Planned
+    - Event Scheduled (no details at this time)
+    - No Event
+    - Off Site Event
+    - Other_
+  - name: EventType_Enum
+    definition: EventType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 56
+    description: null
+    terms_sample:
+    - Anniversary
+    - Ball/Gala
+    - Banquet
+    - Bar/Bat Mitzvah
+    - Board meeting
+    - Cast/Crew Accommodations
+    - Committee meeting
+    - Concert
+  - name: FeeType_Enum
+    definition: FeeType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 31
+    description: Describes the type of fee or tax.
+    terms_sample:
+    - Adult rollaway fee
+    - Application Fee
+    - Banquet service fee
+    - Beverage with alcohol
+    - Beverage without alcohol
+    - Child rollaway charge
+    - City hotel fee
+    - Crib fee
+  - name: FlightDistanceQualifier_Enum
+    definition: FlightDistanceQualifier_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: null
+    terms_sample:
+    - LongHaul
+    - ShortHaul
+  - name: Frequency_Enum
+    definition: Frequency_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: 'Source: Charge Type (CHG) OpenTravel codelist.'
+    terms_sample:
+    - Weekly
+    - Stay
+    - PerDozen
+    - Occurrence
+    - Minute
+    - Night
+    - Hourly
+    - HalfDay
+  - name: Gender_Enum
+    definition: Gender_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: null
+    terms_sample:
+    - Male
+    - Female
+    - Unknown
+  - name: GuestRoomInfo_Enum
+    definition: GuestRoomInfo_Enum_Base
+    kind: EnumerationOpen
+    term_count: 58
+    description: Identifies a property's accommodation\/inventory types for which it is useful to specify
+      a property-level count or availability status.
+    terms_sample:
+    - 1 room cabin
+    - Accessible rooms
+    - Accommodations with balcony
+    - Adjoining rooms or suites
+    - Apartments
+    - Available rooms
+    - Available suites
+    - Buildings
+  - name: GuestType_Enum
+    definition: GuestType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: Category of guest.
+    terms_sample:
+    - Contractor
+    - Corporate employee
+    - Corporate transient
+    - Frequent guest
+    - Government
+    - Leisure
+    - Meeting attendee
+    - Retired
+  - name: HotelStatus_Enum
+    definition: HotelStatus_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: Describes the legal status\/operating status of a given hotel in relation to the contracting
+      company.  It may also be used to describe the system record status.
+    terms_sample:
+    - Closed
+    - Deflagged
+    - Deleted
+    - Inactive
+    - Locked
+    - Open
+    - Pre-opening
+    - Reactivated
+  - name: InformationType_Enum
+    definition: InformationType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 26
+    description: Identifies the type of information being sent.
+    terms_sample:
+    - Address
+    - Advisory
+    - Alias name
+    - Amenities
+    - Attractions
+    - Awards
+    - Contact
+    - Corporate locations
+  - name: InventoryBlockType_Enum
+    definition: InventoryBlockType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 22
+    description: null
+    terms_sample:
+    - AirlineCrew
+    - Complimentary
+    - Contract
+    - Corporate group
+    - Corporate lease
+    - Education
+    - Fraternity
+    - Government/military
+  - name: LocationCategory_Enum
+    definition: LocationCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: null
+    terms_sample:
+    - Airport
+    - Bay
+    - Beach
+    - Beachfront
+    - Buisness district
+    - City
+    - Downtown
+    - Entertainment district
+  - name: MaritalStatus_Enum
+    definition: MaritalStatus_Enum
+    kind: EnumerationClosed
+    term_count: 9
+    description: The marital status of a person.
+    terms_sample:
+    - Annulled
+    - Co-habiting
+    - Divorced
+    - Engaged
+    - Married
+    - Separated
+    - Single
+    - Widowed
+  - name: MealPlan_Enum
+    definition: MealPlan_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: Different meal plans
+    terms_sample:
+    - Breakfast & lunch
+    - Dinner
+    - Lunch
+    - Modified
+    - Breakfast
+    - Family American
+    - Dinner bed and breakfast plan
+    - Bermuda
+  - name: MealType_Enum
+    definition: MealType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 25
+    description: OTA Code List Airline meal types.
+    terms_sample:
+    - RGML
+    - VLML
+    - VGML
+    - SPML
+    - SFML
+    - RVML
+    - PRML
+    - ORML
+  - name: MeetingRoomCode_Enum
+    definition: MeetingRoomCode_Enum_Base
+    kind: EnumerationOpen
+    term_count: 166
+    description: Supplies, facilities, materials, equipment available specifically for meetings and events.
+    terms_sample:
+    - AV Equipment
+    - AV Technician
+    - Blackboards
+    - Bulletin boards
+    - Carpenter
+    - Catered breakfast
+    - Catered dinner
+    - Catered lunch
+  - name: MeetingRoomFormat_Enum
+    definition: MeetingRoomFormat_Enum_Base
+    kind: EnumerationOpen
+    term_count: 46
+    description: null
+    terms_sample:
+    - Ballroom
+    - Banquet
+    - Boardroom
+    - Classroom
+    - Classroom - 2 per 6 ft. tables
+    - Classroom - 3 per 6 ft. tables
+    - Classroom - 3 per 8 ft. tables
+    - Classroom - 4 per 8 ft. tables
+  - name: MonthOfYear_Enum
+    definition: MonthOfYear_Enum
+    kind: EnumerationClosed
+    term_count: 12
+    description: Month of year types
+    terms_sample:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+  - name: NonScheduled_Enum
+    definition: NonScheduled_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: To specify which types of non-scheduled air service should be included.
+    terms_sample:
+    - ChartersOnly
+    - ExcludeCharters
+    - All
+  - name: OfficeLocation_Enum
+    definition: OfficeLocation_Enum
+    kind: EnumerationClosed
+    term_count: 5
+    description: Specifes the location type of an office (e.g. main, field, division).
+    terms_sample:
+    - Main
+    - Field
+    - Division
+    - Regional
+    - Remote
+  - name: OffsetDropTime_Enum
+    definition: OffsetDropTime_Enum
+    kind: EnumerationClosed
+    term_count: 5
+    description: An enumerated type indicating when the deadline drop time goes into effect.
+    terms_sample:
+    - Before arrival
+    - After booking
+    - After confirmation
+    - After arrival
+    - After departure
+  - name: OptionType_Enum
+    definition: OptionType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 8
+    description: null
+    terms_sample:
+    - 'Yes'
+    - 'No'
+    - Not applicable
+    - Not available
+    - Substitute
+    - Exceeds limit
+    - Unknown
+    - Other_
+  - name: OrderState_Enum
+    definition: OrderState_Enum
+    kind: EnumerationClosed
+    term_count: 9
+    description: The traveler was not present to receive the product at the specified time. Note, this
+      does not cancel or complete the order.
+    terms_sample:
+    - Order-Pending
+    - Confirmed
+    - Confirmed-Modified
+    - Rejected
+    - Waitlisted
+    - No-Show
+    - Completed
+    - Cancellation-Pending
+  - name: PaymentCardCode_Enum
+    definition: PaymentCardCode_Enum_Base
+    kind: EnumerationOpen
+    term_count: 14
+    description: The 2 digit code that identifies the credit card.
+    terms_sample:
+    - VI
+    - UP
+    - TP
+    - MC
+    - MA
+    - JC
+    - EC
+    - DS
+  - name: PaymentCardIssuer_Enum
+    definition: PaymentCardIssuer_Enum_Base
+    kind: EnumerationOpen
+    term_count: 22
+    description: 'Source: OpenTravel'
+    terms_sample:
+    - VISA
+    - USAirways
+    - UnitedAirlines
+    - StarwoodHotels
+    - SouthwestAirlines
+    - RitzCarlton
+    - Mastercard
+    - Mariott
+  - name: PaymentType_Enum
+    definition: PaymentType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 43
+    description: Specifies a type of payment.
+    terms_sample:
+    - Air travel card
+    - Airline payment card
+    - Barter
+    - Business account
+    - Business check
+    - Cash
+    - Certified check
+    - Check
+  - name: PetPolicy_Enum
+    definition: PetPolicy_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: Specifies the types of animals allowed.
+    terms_sample:
+    - All pets allowed
+    - Cats only
+    - Dogs only
+    - Domestic pets
+    - Large domestic animals
+    - Midsize domestic animals
+    - Service animals
+    - Service animals only
+  - name: PetsAllowed_Enum
+    definition: PetsAllowed_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: Specifies if pets are allowed at a facility and at a high level the type of pets allowed.
+    terms_sample:
+    - Pets allowed
+    - Pets not allowed
+    - Assistive animals only
+    - Pets by arrangement
+    - Other_
+  - name: PhoneLocation_Enum
+    definition: PhoneLocation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: Where the phone is located.
+    terms_sample:
+    - Brand reservations office
+    - Central reservations office
+    - Home
+    - Managing company
+    - Mobile
+    - Office
+    - Property direct
+    - Property reservation Office
+  - name: PhoneTechType_Enum
+    definition: PhoneTechType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: Defines the technology associated with this phone number.
+    terms_sample:
+    - Voice
+    - Fax
+    - Pager
+    - TTY
+    - Other_
+  - name: PhoneUseType_Enum
+    definition: PhoneUseType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: null
+    terms_sample:
+    - Contact
+    - Daytime contact
+    - Emergency contact
+    - Evening contact
+    - Guest use
+    - Mobile
+    - Pickup contact
+    - Toll free number
+  - name: PictureCategory_Enum
+    definition: PictureCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: Specifies the category of the mulitmedia item.
+    terms_sample:
+    - Ballroom
+    - Bar/Lounge
+    - Basics
+    - Beach
+    - Business center
+    - Exterior view
+    - Golf course
+    - Guest room
+  - name: PositionAccuracy_Enum
+    definition: PositionAccuracy_Enum
+    kind: EnumerationClosed
+    term_count: 12
+    description: Specifies the level of accuracy for the positon.
+    terms_sample:
+    - Zip9Code
+    - Zip7Code
+    - Zip5Code
+    - Street
+    - State
+    - Property
+    - Intersection
+    - Exact
+  - name: PowerType_Enum
+    definition: PowerType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 7
+    description: Types of power.
+    terms_sample:
+    - Diesel
+    - Electric
+    - Gas
+    - Oil
+    - Solar
+    - Wind
+    - Other_
+  - name: PreferLevel_Enum
+    definition: PreferLevel_Enum
+    kind: EnumerationClosed
+    term_count: 5
+    description: Used to specify a preference level for something that is or will be requested (e.g. a
+      supplier of a service, a type of service, a form of payment, etc.).
+    terms_sample:
+    - Only
+    - Unacceptable
+    - Preferred
+    - Required
+    - NoPreference
+  - name: ProfileStatus_Enum
+    definition: ProfileStatus_Enum_Base
+    kind: EnumerationOpen
+    term_count: 6
+    description: Status of the profile.
+    terms_sample:
+    - Active
+    - Inactive
+    - Lapsed
+    - Marked for Deletion
+    - Terminated
+    - Other_
+  - name: ProfileType_Enum
+    definition: ProfileType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: Specifies the type of profile.
+    terms_sample:
+    - Airline
+    - Arranger
+    - Association
+    - Authorized signer
+    - Billing contact
+    - Car rental
+    - Corporation
+    - CRO
+  - name: PropertyClassType_Enum
+    definition: PropertyClassType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 37
+    description: Used to specify the hotel property class or type.
+    terms_sample:
+    - All suite
+    - All-Inclusive Resort
+    - Apartment
+    - Bed and breakfast
+    - Boutique
+    - Cabin or bungalow
+    - Castle
+    - Campground
+  - name: PropertyStatus_Enum
+    definition: PropertyStatus_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: null
+    terms_sample:
+    - Closed
+    - Deflagged
+    - Deleted
+    - Inactive
+    - Locked
+    - Open
+    - Pre-opening
+    - Reactivated
+  - name: Proximity_Enum
+    definition: Proximity_Enum_Base
+    kind: EnumerationOpen
+    term_count: 6
+    description: Specifies if the item in question is onsite, offsite, nearby, etc.
+    terms_sample:
+    - Onsite
+    - Offsite
+    - Nearby
+    - Information not available
+    - Onsite and offsite
+    - Other_
+  - name: RatePeriod_Enum
+    definition: RatePeriod_Enum
+    kind: EnumerationClosed
+    term_count: 9
+    description: The RatePeriodSimpleType simple type defines a set of valid values for the type of rate
+      that may be applied.  Typically rates differ based upon the duration, and the actual rate is then
+      expressed in terms of the period of the rental.
+    terms_sample:
+    - Hourly
+    - Daily
+    - Weekly
+    - Monthly
+    - WeekendDay
+    - Other
+    - Package
+    - Bundle
+  - name: RatePlanType_Enum
+    definition: RatePlanType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 30
+    description: 'Note: Typically used for rate plans that may be published, e.g. have no qualifying criteria,
+      or may be restricted or negotiated, e.g. has qualifying criteria for eligibility and\/or has been
+      negotiated between parties.'
+    terms_sample:
+    - Other_
+    - Weekly
+    - Weekend
+    - TravelIndustry
+    - TourWholesale
+    - SeniorCitizen
+    - RegularRack
+    - Published
+  - name: RatingSymbol
+    definition: RatingSymbol
+    kind: EnumerationClosed
+    term_count: 2
+    description: Used to identify a symbol used in a rating (i.e. Diamonds, Stars).
+    terms_sample:
+    - Diamond
+    - Star
+  - name: RecreationFeatures_Enum
+    definition: RecreationFeatures_Enum_Base
+    kind: EnumerationOpen
+    term_count: 96
+    description: Provides further information on a recreation.
+    terms_sample:
+    - Driving range
+    - Golf course total yardage
+    - Number of holes
+    - Par for course
+    - Putting green
+    - Available equipment
+    - Cardiovascular equipment
+    - Free weights
+  - name: RecreationService_Enum
+    definition: RecreationService_Enum_Base
+    kind: EnumerationOpen
+    term_count: 123
+    description: Describes the recreational activities available to a guest which may or may not be operated
+      by or located at the hotel.
+    terms_sample:
+    - Animal watching
+    - Antique shopping
+    - Archery
+    - Badminton court
+    - Baseball diamond
+    - Basketball court
+    - Beach
+    - Bike rental
+  - name: RecycledProducts_Enum
+    definition: RecycledProducts_Enum_Base
+    kind: EnumerationOpen
+    term_count: 8
+    description: Specifies products that are recycled.
+    terms_sample:
+    - Aluminum
+    - Batteries
+    - Computer parts
+    - Glass
+    - Lightbulbs
+    - Paper
+    - Plastic
+    - Other_
+  - name: RecyclingLocations_Enum
+    definition: RecyclingLocations_Enum_Base
+    kind: EnumerationOpen
+    term_count: 7
+    description: Specifies areas where recycling is implemented.
+    terms_sample:
+    - Common areas
+    - Garage
+    - Guest room
+    - Meeting room
+    - Restaurant
+    - Staff area
+    - Other_
+  - name: ReferencePoint_Enum
+    definition: ReferencePoint_Enum_Base
+    kind: EnumerationOpen
+    term_count: 33
+    description: Specifies a point of reference.
+    terms_sample:
+    - Airport
+    - Amusement park
+    - Arena
+    - Bar
+    - Bay
+    - Beach
+    - Bus station
+    - City center
+  - name: RequiredPayments_Enum
+    definition: RequiredPayments_Enum
+    kind: EnumerationClosed
+    term_count: 6
+    description: null
+    terms_sample:
+    - GuaranteeRequired
+    - None
+    - CC/DC/Voucher
+    - Profile
+    - Deposit
+    - PrePay
+  - name: ReservationBookDesignator_Enum
+    definition: ReservationBookDesignator_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: null
+    terms_sample:
+    - Displayable
+    - NonDisplayable
+    - All
+  - name: ReservationMethod_Enum
+    definition: ReservationMethod_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: null
+    terms_sample:
+    - Electronic rooming list
+    - Housing bureau card
+    - Housing bureau web site
+    - GDS
+    - Individual
+    - Manual rooming list
+    - Rooming list
+    - Supplier direct
+  - name: RestaurantBarCategory_Enum
+    definition: RestaurantBarCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 25
+    description: The type of facility in which food and\/or drink is served.
+    terms_sample:
+    - Beverage
+    - Buffet
+    - Cafe
+    - Cafeteria
+    - Casual
+    - Family
+    - Fast food
+    - Fine dining
+  - name: RestaurantPolicy_Enum
+    definition: RestaurantPolicy_Enum_Base
+    kind: EnumerationOpen
+    term_count: 6
+    description: Identifies rules regarding making reservations for a restaurant.
+    terms_sample:
+    - Accepted only for large groups
+    - Not accepted
+    - Recommended
+    - Required
+    - Required for large groups
+    - Other_
+  - name: RestaurantService_Enum
+    definition: RestaurantService_Enum_Base
+    kind: EnumerationOpen
+    term_count: 20
+    description: Type of service(s) offered by the restaurant.
+    terms_sample:
+    - Accommodates diabetic/sugar free requirements
+    - Accommodates gluten free requirements
+    - Accommodates high fiber requirements
+    - Accommodates lactose free requirements
+    - Accommodates low fat requirements
+    - Accommodates low potassium requirements
+    - Accommodates low sodium requirements
+    - Buffet
+  - name: RoomGender_Enum
+    definition: RoomGender_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: null
+    terms_sample:
+    - Male
+    - Female
+    - MaleAndFemale
+    - Unknown
+  - name: RoomLocation_Enum
+    definition: RoomLocation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 27
+    description: Specifies a hotel room location.
+    terms_sample:
+    - Annex room
+    - Away from the elevator
+    - Back of building
+    - Concierge floor
+    - Corner
+    - East
+    - Executive floor
+    - Frequent guest floor
+  - name: RoomViewType_Enum
+    definition: RoomViewType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: Describes room view types
+    terms_sample:
+    - Annex room
+    - Ground floor outside access
+    - Ground floor inside access
+    - Executive floor
+    - Near stairs
+    - Main building
+    - Wing room
+    - Tower room
+  - name: Routing_Enum
+    definition: Routing_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: Specifies the travel routing preference.
+    terms_sample:
+    - Normal
+    - Mirror
+  - name: SeatPosition_Enum
+    definition: SeatPosition_Enum
+    kind: EnumerationClosed
+    term_count: 11
+    description: Identifies the position of a seat, such as Window and Aisle.
+    terms_sample:
+    - None
+    - Together
+    - Aisle
+    - Center
+    - Window
+    - Specific
+    - Exit
+    - Table
+  - name: SecurityFeature_Enum
+    definition: SecurityFeature_Enum_Base
+    kind: EnumerationOpen
+    term_count: 71
+    description: Identifies security features of the services, meeting rooms, guest rooms, and restaurants
+      of a property.
+    terms_sample:
+    - 2nd lock on guest doors
+    - Audible alarm smoke detectors in guest rooms
+    - Audible alarms in hallways
+    - Audible alarms in public areas
+    - Auto link to fire station
+    - Automated External Defibrillator (AED) on-site
+    - Building meets all current local, state and country building codes
+    - Carbon monoxide detector
+  - name: SegmentCategory_Enum
+    definition: SegmentCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 14
+    description: Describes the segment type.
+    terms_sample:
+    - Budget
+    - Deluxe
+    - Economy
+    - First Class
+    - Luxury
+    - Moderate
+    - Tourist
+    - Upscale
+  - name: Status_Enum
+    definition: Status_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: The status condition.
+    terms_sample:
+    - Complete
+    - Incomplete
+    - Not processed
+    - Unknown
+    - Other_
+  - name: TaxType_Enum
+    definition: TaxType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 22
+    description: Describes the type of fee or tax.
+    terms_sample:
+    - Assessment/license tax
+    - Bed tax
+    - City tax
+    - Convention tax
+    - Country tax
+    - County tax
+    - Energy tax
+    - Federal tax
+  - name: TemperatureUnit
+    definition: TemperatureUnit
+    kind: EnumerationClosed
+    term_count: 2
+    description: null
+    terms_sample:
+    - Celsuis
+    - Fahrenheit
+  - name: TimeUnit_Enum
+    definition: TimeUnit_Enum
+    kind: EnumerationClosed
+    term_count: 8
+    description: null
+    terms_sample:
+    - Day
+    - Full duration
+    - Hour
+    - Minute
+    - Month
+    - Second
+    - Week
+    - Year
+  - name: ToFrom_Enum
+    definition: ToFrom_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: Used to indicate whether the context is to a facility or from a facility.
+    terms_sample:
+    - ToFacility
+    - FromFacility
+  - name: Transportation_Enum
+    definition: Transportation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 29
+    description: 'Type of tranportation: Air, Rail, Bus, Boat, Private Auto, Other.'
+    terms_sample:
+    - Bicycle
+    - Boat
+    - Bus
+    - Cable car
+    - Car
+    - Carriage
+    - Courtesy car
+    - Helicopter
+  - name: TravelPurpose_Enum
+    definition: TravelPurpose_Enum_Base
+    kind: EnumerationOpen
+    term_count: 6
+    description: Specifies the reason the person is traveling.
+    terms_sample:
+    - Business
+    - Personal/leisure
+    - Group or meeting
+    - Conference
+    - Charter
+    - Other_
+  - name: TravelSector_Enum
+    definition: TravelSector_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: Specifies the travel sector.
+    terms_sample:
+    - Air
+    - Car
+    - Cruise
+    - Excursion
+    - Ferry
+    - Golf
+    - Hotel
+    - Insurance
+  - name: TripPurpose_Enum
+    definition: TripPurpose_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: Typical trip purposes.
+    terms_sample:
+    - Business
+    - BusinessAndPleasure
+    - Pleasure
+    - Unknown
+  - name: UnitOfMeasure_Enum
+    definition: UnitOfMeasure_Enum
+    kind: EnumerationClosed
+    term_count: 28
+    description: The unit of measure in a code format. Refer to OpenTravel Code List Unit of Measure Code
+      (UOM).
+    terms_sample:
+    - Miles
+    - Kilometers
+    - Meters
+    - Millimeters
+    - Centimeters
+    - Yards
+    - Feet
+    - Inches
+  - name: VoluntaryIndicator_Enum
+    definition: VoluntaryIndicator_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: TODO - why is this payment form instead of Voluntary indicator or boolean?
+    terms_sample:
+    - voluntary
+    - involuntary
+- library: CodeList 4.1.0
+  release: 2020A
+  file: json-schema/opentravel-2020a-codelist-4-1-0.schema.json
+  upstream: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2020A_ObjectSuite/OpenTravel_2020A_ObjectSuite_Resources/json/CodeList_4_1_0.schema.json
+  encoding: utf-8
+  definitions: 1
+  code_lists: 1
+  terms_total: 6
+  open_enumerations: 0
+  closed_enumerations: 1
+  code_lists_detail:
+  - name: DeadlineDropTime_Enum_Copy
+    definition: DeadlineDropTime_Enum_Copy
+    kind: EnumerationClosed
+    term_count: 6
+    description: An enumerated type indicating when the deadline drop time goes into effect.
+    terms_sample:
+    - BeforeArrival
+    - AfterBooking
+    - AfterConfirmation
+    - AfterArrival
+    - AfterDeparture
+    - BeforeDeparture
+- library: CodeList 3.0.0
+  release: 2018A
+  file: json-schema/opentravel-2018a-codelist-3-0-0.schema.json
+  upstream: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/json/CodeList_3_0_0.schema.json
+  encoding: latin-1
+  definitions: 140
+  code_lists: 84
+  terms_total: 1705
+  open_enumerations: 56
+  closed_enumerations: 28
+  code_lists_detail:
+  - name: AccommodationClass_Enum
+    definition: AccommodationClass_Enum_Base
+    kind: EnumerationOpen
+    term_count: 17
+    description: Rail accommodation types with an \"Other\" value to support open enumeration list.
+    terms_sample:
+    - HardCompartmentClass
+    - SoftCompartmentClass
+    - MixedSoftClass
+    - MixedHardClass
+    - HighGradeSoftClass
+    - SpecialClass
+    - HardClass
+    - SoftClass
+  - name: AdditionalDetailType_Enum
+    definition: AdditionalDetailType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 74
+    description: Identifies the type of detail being sent.
+    terms_sample:
+    - Advanced booking information
+    - Amenity information
+    - Areas served
+    - Booking guidelines
+    - Cancellation information
+    - Catering description
+    - Check in check out information
+    - Check-in policy
+  - name: AddressUse_Enum
+    definition: AddressUse_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: Describes how an address is to be used.
+    terms_sample:
+    - Billing
+    - Chain
+    - Contact
+    - Credit card
+    - Delivery
+    - Deposit
+    - Mailing
+    - Physical
+  - name: AgeQualifyingCode_Enum
+    definition: AgeQualifyingCode_Enum_Base
+    kind: EnumerationOpen
+    term_count: 20
+    description: 'A code representing a business rule that determines the charges for a guest based upon
+      age range (e.g. Adult, Child, Senior, Child With Adult, Child Without Adult). This attribute allows
+      for an increase in rate by occupant class.\nPerson age categories.\nNote: Age categories  are typically
+      used to qualify pricing and\/or eligibility.'
+    terms_sample:
+    - Junior
+    - Under 10
+    - Younger driver
+    - Young driver
+    - Free adult
+    - Free child
+    - Additional occupant without adult
+    - Additional occupant with adult
+  - name: AudioVisual_Enum
+    definition: AudioVisual_Enum_Base
+    kind: EnumerationOpen
+    term_count: 29
+    description: null
+    terms_sample:
+    - Audio recording
+    - AV Technician
+    - Background music
+    - Copier
+    - Disc player
+    - Dry erase board with eraser and markers
+    - DVD player
+    - Easel
+  - name: BankAccountType_Enum
+    definition: BankAccountType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 4
+    description: 'Source: OpenTravel'
+    terms_sample:
+    - Savings
+    - Investment
+    - Checking
+    - Other_
+  - name: BasisType
+    definition: BasisType_Base
+    kind: EnumerationOpen
+    term_count: 7
+    description: Provides basis for how an amount was calculated.
+    terms_sample:
+    - Days
+    - Entire
+    - First
+    - First and last
+    - Last
+    - Nights
+    - Other_
+  - name: BedType_Enum
+    definition: BedType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: The type(s) of sleeping option(s) in a guest accommodation.
+    terms_sample:
+    - Dorm bed
+    - Double/full
+    - Futon
+    - King
+    - Murphy bed
+    - Queen
+    - Run of the house
+    - Sofa bed
+  - name: BerthPosition_Enum
+    definition: BerthPosition_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: Identifies the position of a berth, e.g. upper, lower, middle.
+    terms_sample:
+    - Upper
+    - Middle
+    - Lower
+  - name: BookingChannel_Enum
+    definition: BookingChannel_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: Specifies a type of booking channel.
+    terms_sample:
+    - Agent
+    - Alternative distribution system (ADS)
+    - Central reservation system (CRS)
+    - Global distribution system (GDS)
+    - Internet
+    - Kiosk
+    - Property management system (PMS)
+    - Sales and catering system (SCS)
+  - name: BusinessService_Enum
+    definition: BusinessService_Enum_Base
+    kind: EnumerationOpen
+    term_count: 54
+    description: Services, equipment, or supplies provided by the hotel that are generally supportive
+      of work-related activities.\u00A0
+    terms_sample:
+    - Audio visual equipment
+    - Blackboard
+    - Business center
+    - Business services
+    - Calling card calls
+    - Cellular phone rental
+    - Computer
+    - Computer rental
+  - name: BusinessType_Enum
+    definition: BusinessType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: null
+    terms_sample:
+    - Contract
+    - Group
+    - In-House Meeting
+    - Local
+    - Other_
+  - name: ChargeUnit_Enum
+    definition: ChargeUnit_Enum_Base
+    kind: EnumerationOpen
+    term_count: 39
+    description: 'Source: Charge Type (CHG) OpenTravel codelist.'
+    terms_sample:
+    - Per unit
+    - Per order
+    - Per tray
+    - Per dozen
+    - Per gallon
+    - Round trip
+    - Per room
+    - Per item
+  - name: Commission_Enum
+    definition: Commission_Enum
+    kind: EnumerationClosed
+    term_count: 6
+    description: null
+    terms_sample:
+    - Full
+    - Partial
+    - Non-paying
+    - No-show
+    - Adjustment
+    - Commissionable
+  - name: CommunicationLocation_Enum
+    definition: CommunicationLocation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 4
+    description: Specifies a location for communication.
+    terms_sample:
+    - Business
+    - Destination
+    - Home
+    - Other_
+  - name: CompartmentPosition_Enum
+    definition: CompartmentPosition_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: Identifies the position of a compartment, such as upper and lower.
+    terms_sample:
+    - CloseToRestaurantCar
+    - CloseToExit
+    - CloseToToilet
+    - MiddleOfCar
+  - name: CourseType_Enum
+    definition: CourseType_Enum
+    kind: EnumerationClosed
+    term_count: 6
+    description: The guest policy at the facility.
+    terms_sample:
+    - DailyFee
+    - Municipal/Government/Military
+    - Private
+    - Private Limited Access
+    - Resort
+    - SemiPrivate
+  - name: CuisineType_Enum
+    definition: CuisineType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 75
+    description: The type of food for which the establishment is known; the style\/manner in which the
+      food is prepared and\/or served.
+    terms_sample:
+    - Afghan
+    - American
+    - Argentinean
+    - Asian
+    - Asian-Fusion
+    - Austrian
+    - Barbeque
+    - Bavarian
+  - name: DayOfWeek_Enum
+    definition: DayOfWeek_Enum
+    kind: EnumerationClosed
+    term_count: 7
+    description: Day of the Week types.
+    terms_sample:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+  - name: Deck_Enum
+    definition: Deck_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: Identifies the train deck, such as lower level and upper level.
+    terms_sample:
+    - Regular-OneLevelOnly
+    - LowerLevel
+    - UpperLevel
+  - name: DisabilityFeature_Enum
+    definition: DisabilityFeature_Enum_Base
+    kind: EnumerationOpen
+    term_count: 163
+    description: Specifies information about a facility, amenity or service that is relevant to people
+      with a disability.
+    terms_sample:
+    - Accessibility to goods and services
+    - Accessible baths
+    - Accessible entrance
+    - Accessible parking
+    - Accessible platform lifts available
+    - Accessible rooms
+    - Accessible self parking available
+    - Accessible van parking
+  - name: DistributionType_Enum
+    definition: DistributionType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 17
+    description: Defines the preferred method of communication or the method of distribution for the material.
+    terms_sample:
+    - Fax
+    - Email
+    - Mail
+    - Courier
+    - Airport collection
+    - City office
+    - Hotel desk
+    - Will call
+  - name: DocumentType_Enum
+    definition: DocumentType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 23
+    description: Defines the specific type of identification or certification document.
+    terms_sample:
+    - NaturalizationCertificate
+    - PassportCard
+    - CrewMemberCertificate
+    - AirNexusCard
+    - MerchantMariner
+    - Non-standard
+    - KnownTravelerNumber
+    - RedressNumber
+  - name: DrivingRangeType_Enum
+    definition: DrivingRangeType_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: Describes the type of driving range.
+    terms_sample:
+    - Covered
+    - Indoor
+    - Outdoor
+  - name: DurationUnit_Enum
+    definition: DurationUnit_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: Defines the 'Units' that can be applied to Stay restrictions.
+    terms_sample:
+    - SUN
+    - SAT
+    - FRI
+    - THU
+    - WED
+    - TUES
+    - MON
+    - Months
+  - name: EmailAddressType_Enum
+    definition: EmailAddressType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 8
+    description: Specifies a type of email address.
+    terms_sample:
+    - Business
+    - Listserve
+    - Managing company
+    - Personal
+    - Property
+    - Reservation office
+    - Sales office
+    - Other_
+  - name: EmployeeStatus_Enum
+    definition: EmployeeStatus_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: 'OTA Codelist: Employee Status\tEMP\t\n\t1\tActive\n\t2\tRetired\n\t3\tLeave\n\t4\tTerminated'
+    terms_sample:
+    - Active
+    - Retired
+    - Leave
+    - Terminated
+  - name: ErrorWarningType_Enum
+    definition: ErrorWarningType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: Tthe category of error or warning.
+    terms_sample:
+    - Advisory
+    - Application error
+    - Authentication
+    - Authentication timeout
+    - Authorization
+    - Business rule
+    - No implementation
+    - Processing exception
+  - name: EventFunction_Enum
+    definition: EventFunction_Enum_Base
+    kind: EnumerationOpen
+    term_count: 42
+    description: A list of functions that may take place during an event.
+    terms_sample:
+    - Board Meeting
+    - Box Lunch
+    - Breakfast
+    - Breakfast Buffet
+    - Breakout
+    - Brunch
+    - Ceremony
+    - Changing Room
+  - name: EventStatus_Enum
+    definition: EventStatus_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: Describes the status of planning for an event.
+    terms_sample:
+    - Event Planned
+    - Event Scheduled (no details at this time)
+    - No Event
+    - Off Site Event
+    - Other_
+  - name: EventType_Enum
+    definition: EventType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 56
+    description: null
+    terms_sample:
+    - Anniversary
+    - Ball/Gala
+    - Banquet
+    - Bar/Bat Mitzvah
+    - Board meeting
+    - Cast/Crew Accommodations
+    - Committee meeting
+    - Concert
+  - name: FeeType_Enum
+    definition: FeeType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 31
+    description: Describes the type of fee or tax.
+    terms_sample:
+    - Adult rollaway fee
+    - Application Fee
+    - Banquet service fee
+    - Beverage with alcohol
+    - Beverage without alcohol
+    - Child rollaway charge
+    - City hotel fee
+    - Crib fee
+  - name: FlightDistanceQualifier_Enum
+    definition: FlightDistanceQualifier_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: null
+    terms_sample:
+    - LongHaul
+    - ShortHaul
+  - name: Frequency_Enum
+    definition: Frequency_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: 'Source: Charge Type (CHG) OpenTravel codelist.'
+    terms_sample:
+    - Weekly
+    - Stay
+    - PerDozen
+    - Occurrence
+    - Minute
+    - Night
+    - Hourly
+    - HalfDay
+  - name: Gender_Enum
+    definition: Gender_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: null
+    terms_sample:
+    - Male
+    - Female
+    - Unknown
+  - name: GuestRoomInfo
+    definition: GuestRoomInfo_Base
+    kind: EnumerationOpen
+    term_count: 58
+    description: Identifies a property's accommodation\/inventory types for which it is useful to specify
+      a property-level count or availability status.
+    terms_sample:
+    - 1 room cabin
+    - Accessible rooms
+    - Accommodations with balcony
+    - Adjoining rooms or suites
+    - Apartments
+    - Available rooms
+    - Available suites
+    - Buildings
+  - name: GuestType_Enum
+    definition: GuestType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: Category of guest.
+    terms_sample:
+    - Contractor
+    - Corporate employee
+    - Corporate transient
+    - Frequent guest
+    - Government
+    - Leisure
+    - Meeting attendee
+    - Retired
+  - name: InformationType_Enum
+    definition: InformationType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 26
+    description: Identifies the type of information being sent.
+    terms_sample:
+    - Address
+    - Advisory
+    - Alias name
+    - Amenities
+    - Attractions
+    - Awards
+    - Contact
+    - Corporate locations
+  - name: InventoryBlockType_Enum
+    definition: InventoryBlockType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 22
+    description: null
+    terms_sample:
+    - AirlineCrew
+    - Complimentary
+    - Contract
+    - Corporate group
+    - Corporate lease
+    - Education
+    - Fraternity
+    - Government/military
+  - name: LocationCategory_Enum
+    definition: LocationCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: null
+    terms_sample:
+    - Airport
+    - Bay
+    - Beach
+    - Beachfront
+    - Buisness district
+    - City
+    - Downtown
+    - Entertainment district
+  - name: MaritalStatus_Enum
+    definition: MaritalStatus_Enum
+    kind: EnumerationClosed
+    term_count: 9
+    description: The marital status of a person.
+    terms_sample:
+    - Annulled
+    - Co-habiting
+    - Divorced
+    - Engaged
+    - Married
+    - Separated
+    - Single
+    - Widowed
+  - name: MealPlan_Enum
+    definition: MealPlan_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: Different meal plans
+    terms_sample:
+    - Breakfast & lunch
+    - Dinner
+    - Lunch
+    - Modified
+    - Breakfast
+    - Family American
+    - Dinner bed and breakfast plan
+    - Bermuda
+  - name: MealType_Enum
+    definition: MealType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 25
+    description: OTA Code List Airline meal types.
+    terms_sample:
+    - RGML
+    - VLML
+    - VGML
+    - SPML
+    - SFML
+    - RVML
+    - PRML
+    - ORML
+  - name: MeetingRoomFormat_Enum
+    definition: MeetingRoomFormat_Enum_Base
+    kind: EnumerationOpen
+    term_count: 46
+    description: null
+    terms_sample:
+    - Ballroom
+    - Banquet
+    - Boardroom
+    - Classroom
+    - Classroom - 2 per 6 ft. tables
+    - Classroom - 3 per 6 ft. tables
+    - Classroom - 3 per 8 ft. tables
+    - Classroom - 4 per 8 ft. tables
+  - name: MonthOfYear_Enum
+    definition: MonthOfYear_Enum
+    kind: EnumerationClosed
+    term_count: 12
+    description: Month of year types
+    terms_sample:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+  - name: NonScheduled_Enum
+    definition: NonScheduled_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: To specify which types of non-scheduled air service should be included.
+    terms_sample:
+    - ChartersOnly
+    - ExcludeCharters
+    - All
+  - name: OfficeLocation_Enum
+    definition: OfficeLocation_Enum
+    kind: EnumerationClosed
+    term_count: 5
+    description: Specifes the location type of an office (e.g. main, field, division).
+    terms_sample:
+    - Main
+    - Field
+    - Division
+    - Regional
+    - Remote
+  - name: OffsetDropTime_Enum
+    definition: OffsetDropTime_Enum
+    kind: EnumerationClosed
+    term_count: 5
+    description: An enumerated type indicating when the deadline drop time goes into effect.
+    terms_sample:
+    - Before arrival
+    - After booking
+    - After confirmation
+    - After arrival
+    - After departure
+  - name: OptionType_Enum
+    definition: OptionType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 8
+    description: null
+    terms_sample:
+    - 'Yes'
+    - 'No'
+    - Not applicable
+    - Not available
+    - Substitute
+    - Exceeds limit
+    - Unknown
+    - Other_
+  - name: PaymentCardCode_Enum
+    definition: PaymentCardCode_Enum_Base
+    kind: EnumerationOpen
+    term_count: 14
+    description: The 2 digit code that identifies the credit card.
+    terms_sample:
+    - VI
+    - UP
+    - TP
+    - MC
+    - MA
+    - JC
+    - EC
+    - DS
+  - name: PaymentCardIssuer_Enum
+    definition: PaymentCardIssuer_Enum_Base
+    kind: EnumerationOpen
+    term_count: 22
+    description: 'Source: OpenTravel'
+    terms_sample:
+    - VISA
+    - USAirways
+    - UnitedAirlines
+    - StarwoodHotels
+    - SouthwestAirlines
+    - RitzCarlton
+    - Mastercard
+    - Mariott
+  - name: PaymentType_Enum
+    definition: PaymentType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 40
+    description: Specifies a type of payment.
+    terms_sample:
+    - Air travel card
+    - Airline payment card
+    - Barter
+    - Business account
+    - Business check
+    - Cash
+    - Certified check
+    - Check
+  - name: PhoneLocation_Enum
+    definition: PhoneLocation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: Where the phone is located.
+    terms_sample:
+    - Brand reservations office
+    - Central reservations office
+    - Home
+    - Managing company
+    - Mobile
+    - Office
+    - Property direct
+    - Property reservation Office
+  - name: PhoneTechType_Enum
+    definition: PhoneTechType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: Defines the technology associated with this phone number.
+    terms_sample:
+    - Voice
+    - Fax
+    - Pager
+    - TTY
+    - Other_
+  - name: PhoneUseType_Enum
+    definition: PhoneUseType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 10
+    description: null
+    terms_sample:
+    - Contact
+    - Daytime contact
+    - Emergency contact
+    - Evening contact
+    - Guest use
+    - Mobile
+    - Pickup contact
+    - Toll free number
+  - name: PictureCategory_Enum
+    definition: PictureCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: Specifies the category of the mulitmedia item.
+    terms_sample:
+    - Ballroom
+    - Bar/Lounge
+    - Basics
+    - Beach
+    - Business center
+    - Exterior view
+    - Golf course
+    - Guest room
+  - name: PositionAccuracy_Enum
+    definition: PositionAccuracy_Enum
+    kind: EnumerationClosed
+    term_count: 12
+    description: Specifies the level of accuracy for the positon.
+    terms_sample:
+    - Zip9Code
+    - Zip7Code
+    - Zip5Code
+    - Street
+    - State
+    - Property
+    - Intersection
+    - Exact
+  - name: PreferLevel_Enum
+    definition: PreferLevel_Enum
+    kind: EnumerationClosed
+    term_count: 5
+    description: Used to specify a preference level for something that is or will be requested (e.g. a
+      supplier of a service, a type of service, a form of payment, etc.).
+    terms_sample:
+    - Only
+    - Unacceptable
+    - Preferred
+    - Required
+    - NoPreference
+  - name: ProfileStatus_Enum
+    definition: ProfileStatus_Enum_Base
+    kind: EnumerationOpen
+    term_count: 6
+    description: Status of the profile.
+    terms_sample:
+    - Active
+    - Inactive
+    - Lapsed
+    - Marked for Deletion
+    - Terminated
+    - Other_
+  - name: ProfileType_Enum
+    definition: ProfileType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 24
+    description: Specifies the type of profile.
+    terms_sample:
+    - Airline
+    - Arranger
+    - Association
+    - Authorized signer
+    - Billing contact
+    - Car rental
+    - Corporation
+    - CRO
+  - name: RatePeriod_Enum
+    definition: RatePeriod_Enum
+    kind: EnumerationClosed
+    term_count: 9
+    description: The RatePeriodSimpleType simple type defines a set of valid values for the type of rate
+      that may be applied.  Typically rates differ based upon the duration, and the actual rate is then
+      expressed in terms of the period of the rental.
+    terms_sample:
+    - Hourly
+    - Daily
+    - Weekly
+    - Monthly
+    - WeekendDay
+    - Other
+    - Package
+    - Bundle
+  - name: RatePlanType_Enum
+    definition: RatePlanType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 30
+    description: 'Note: Typically used for rate plans that may be published, e.g. have no qualifying criteria,
+      or may be restricted or negotiated, e.g. has qualifying criteria for eligibility and\/or has been
+      negotiated between parties.'
+    terms_sample:
+    - Other_
+    - Weekly
+    - Weekend
+    - TravelIndustry
+    - TourWholesale
+    - SeniorCitizen
+    - RegularRack
+    - Published
+  - name: RecreationService_Enum
+    definition: RecreationService_Enum_Base
+    kind: EnumerationOpen
+    term_count: 123
+    description: Describes the recreational activities available to a guest which may or may not be operated
+      by or located at the hotel.
+    terms_sample:
+    - Animal watching
+    - Antique shopping
+    - Archery
+    - Badminton court
+    - Baseball diamond
+    - Basketball court
+    - Beach
+    - Bike rental
+  - name: ReferencePoint_Enum
+    definition: ReferencePoint_Enum_Base
+    kind: EnumerationOpen
+    term_count: 33
+    description: Specifies a point of reference.
+    terms_sample:
+    - Airport
+    - Amusement park
+    - Arena
+    - Bar
+    - Bay
+    - Beach
+    - Bus station
+    - City center
+  - name: RequiredPayments_Enum
+    definition: RequiredPayments_Enum
+    kind: EnumerationClosed
+    term_count: 6
+    description: null
+    terms_sample:
+    - GuaranteeRequired
+    - None
+    - CC/DC/Voucher
+    - Profile
+    - Deposit
+    - PrePay
+  - name: ReservationBookDesignator_Enum
+    definition: ReservationBookDesignator_Enum
+    kind: EnumerationClosed
+    term_count: 3
+    description: null
+    terms_sample:
+    - Displayable
+    - NonDisplayable
+    - All
+  - name: ReservationMethod_Enum
+    definition: ReservationMethod_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: null
+    terms_sample:
+    - Electronic rooming list
+    - Housing bureau card
+    - Housing bureau web site
+    - GDS
+    - Individual
+    - Manual rooming list
+    - Rooming list
+    - Supplier direct
+  - name: RoomGender_Enum
+    definition: RoomGender_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: null
+    terms_sample:
+    - Male
+    - Female
+    - MaleAndFemale
+    - Unknown
+  - name: RoomLocation_Enum
+    definition: RoomLocation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 27
+    description: Specifies a hotel room location.
+    terms_sample:
+    - Annex room
+    - Away from the elevator
+    - Back of building
+    - Concierge floor
+    - Corner
+    - East
+    - Executive floor
+    - Frequent guest floor
+  - name: RoomViewType_Enum
+    definition: RoomViewType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 11
+    description: Describes room view types
+    terms_sample:
+    - Annex room
+    - Ground floor outside access
+    - Ground floor inside access
+    - Executive floor
+    - Near stairs
+    - Main building
+    - Wing room
+    - Tower room
+  - name: Routing_Enum
+    definition: Routing_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: Specifies the travel routing preference.
+    terms_sample:
+    - Normal
+    - Mirror
+  - name: SeatPosition_Enum
+    definition: SeatPosition_Enum
+    kind: EnumerationClosed
+    term_count: 11
+    description: Identifies the position of a seat, such as Window and Aisle.
+    terms_sample:
+    - None
+    - Together
+    - Aisle
+    - Center
+    - Window
+    - Specific
+    - Exit
+    - Table
+  - name: SecurityFeature_Enum
+    definition: SecurityFeature_Enum_Base
+    kind: EnumerationOpen
+    term_count: 71
+    description: Identifies security features of the services, meeting rooms, guest rooms, and restaurants
+      of a property.
+    terms_sample:
+    - 2nd lock on guest doors
+    - Audible alarm smoke detectors in guest rooms
+    - Audible alarms in hallways
+    - Audible alarms in public areas
+    - Auto link to fire station
+    - Automated External Defibrillator (AED) on-site
+    - Building meets all current local, state and country building codes
+    - Carbon monoxide detector
+  - name: SegmentCategory_Enum
+    definition: SegmentCategory_Enum_Base
+    kind: EnumerationOpen
+    term_count: 14
+    description: Describes the segment type.
+    terms_sample:
+    - Budget
+    - Deluxe
+    - Economy
+    - First Class
+    - Luxury
+    - Moderate
+    - Tourist
+    - Upscale
+  - name: Status_Enum
+    definition: Status_Enum_Base
+    kind: EnumerationOpen
+    term_count: 5
+    description: The status condition.
+    terms_sample:
+    - Complete
+    - Incomplete
+    - Not processed
+    - Unknown
+    - Other_
+  - name: TaxType_Enum
+    definition: TaxType_Enum_Base
+    kind: EnumerationOpen
+    term_count: 22
+    description: Describes the type of fee or tax.
+    terms_sample:
+    - Assessment/license tax
+    - Bed tax
+    - City tax
+    - Convention tax
+    - Country tax
+    - County tax
+    - Energy tax
+    - Federal tax
+  - name: TimeUnit_Enum
+    definition: TimeUnit_Enum
+    kind: EnumerationClosed
+    term_count: 8
+    description: null
+    terms_sample:
+    - Day
+    - Full duration
+    - Hour
+    - Minute
+    - Month
+    - Second
+    - Week
+    - Year
+  - name: ToFrom_Enum
+    definition: ToFrom_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: Used to indicate whether the context is to a facility or from a facility.
+    terms_sample:
+    - ToFacility
+    - FromFacility
+  - name: Transportation_Enum
+    definition: Transportation_Enum_Base
+    kind: EnumerationOpen
+    term_count: 29
+    description: 'Type of tranportation: Air, Rail, Bus, Boat, Private Auto, Other.'
+    terms_sample:
+    - Bicycle
+    - Boat
+    - Bus
+    - Cable car
+    - Car
+    - Carriage
+    - Courtesy car
+    - Helicopter
+  - name: TravelPurpose_Enum
+    definition: TravelPurpose_Enum_Base
+    kind: EnumerationOpen
+    term_count: 6
+    description: Specifies the reason the person is traveling.
+    terms_sample:
+    - Business
+    - Personal/leisure
+    - Group or meeting
+    - Conference
+    - Charter
+    - Other_
+  - name: TravelSector_Enum
+    definition: TravelSector_Enum_Base
+    kind: EnumerationOpen
+    term_count: 12
+    description: Specifies the travel sector.
+    terms_sample:
+    - Air
+    - Car
+    - Cruise
+    - Excursion
+    - Ferry
+    - Golf
+    - Hotel
+    - Insurance
+  - name: TripPurpose_Enum
+    definition: TripPurpose_Enum
+    kind: EnumerationClosed
+    term_count: 4
+    description: Typical trip purposes.
+    terms_sample:
+    - Business
+    - BusinessAndPleasure
+    - Pleasure
+    - Unknown
+  - name: UnitOfMeasure_Enum
+    definition: UnitOfMeasure_Enum
+    kind: EnumerationClosed
+    term_count: 28
+    description: The unit of measure in a code format. Refer to OpenTravel Code List Unit of Measure Code
+      (UOM).
+    terms_sample:
+    - Miles
+    - Kilometers
+    - Meters
+    - Millimeters
+    - Centimeters
+    - Yards
+    - Feet
+    - Inches
+  - name: VoluntaryIndicator_Enum
+    definition: VoluntaryIndicator_Enum
+    kind: EnumerationClosed
+    term_count: 2
+    description: TODO - why is this payment form instead of Voluntary indicator or boolean?
+    terms_sample:
+    - voluntary
+    - involuntary

@@ -1,0 +1,65 @@
+generated: '2026-07-28'
+method: searched
+status: published
+source: https://opentravel.org/.well-known/oauth-protected-resource
+discovery:
+  protected_resource_metadata: https://opentravel.org/.well-known/oauth-protected-resource
+  authorization_server_metadata: https://opentravel.org/.well-known/oauth-authorization-server
+  route_index: https://opentravel.org/wp-json/mcp
+servers:
+- name: mcp-oauth-server
+  transport: http
+  url: https://opentravel.org/wp-json/mcp/mcp-oauth-server
+  methods: [POST, GET, DELETE]
+  auth: oauth2
+  status: authenticated
+  probe:
+    date: '2026-07-28'
+    request: 'POST {"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+    http_status: 401
+    body: '{"code":"mcp_unauthorized","message":"MCP authentication required.","data":{"status":401}}'
+    www_authenticate: >-
+      Bearer realm="https://opentravel.org",
+      resource_metadata="https://opentravel.org/.well-known/oauth-protected-resource"
+- name: mcp-adapter-default-server
+  transport: http
+  url: https://opentravel.org/wp-json/mcp/mcp-adapter-default-server
+  methods: [POST, GET, DELETE]
+  auth: oauth2
+  status: authenticated
+  probe:
+    date: '2026-07-28'
+    request: 'POST {"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+    http_status: 401
+    body: '{"code":"rest_forbidden","message":"Sorry, you are not allowed to do that.","data":{"status":401}}'
+tools: []
+tools_note: >-
+  The live tool set could not be enumerated. Both servers return 401 to an anonymous
+  tools/list and the backing WordPress Abilities API (GET /wp-json/wp-abilities/v1/abilities)
+  also returns 401 rest_forbidden. No tool list is published anywhere on opentravel.org —
+  there is no /mcp/ page in the site's page sitemap and no llms.txt. Enumerating the real
+  tools with their inputSchema requires an authenticated OAuth 2.1 introspection with the
+  `mcp` scope. NOTHING IS GUESSED HERE: no tool names are recorded because none are public.
+authorization:
+  model: OAuth 2.1 authorization code + PKCE
+  issuer: https://opentravel.org
+  authorization_endpoint: https://opentravel.org/oauth/authorize
+  token_endpoint: https://opentravel.org/oauth/token
+  revocation_endpoint: https://opentravel.org/oauth/revoke
+  code_challenge_methods_supported: [S256]
+  grant_types_supported: [authorization_code, refresh_token]
+  token_endpoint_auth_methods_supported: [none]
+  client_id_metadata_document_supported: true
+  scopes_supported: [mcp]
+  bearer_methods_supported: [header]
+implementation:
+  platform: WordPress
+  evidence: >-
+    https://opentravel.org/wp-json/ advertises the `mcp` and `wp-abilities/v1` namespaces
+    alongside wp/v2 — the signature of the WordPress MCP Adapter / Abilities API stack. The
+    servers are mounted on the opentravel.org content site, not on the specification corpus.
+  caveat: >-
+    This MCP surface belongs to the OpenTravel WordPress site. There is no evidence it exposes
+    the OpenTravel Specification, the OTM Object Model, the Code Lists, or the Swagger 2.0
+    resource contracts. Treat it as a site/content MCP surface until an authenticated
+    tools/list proves otherwise. See mcp/opentravel-alliance-tool-crosswalk.yml.

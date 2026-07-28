@@ -1,0 +1,102 @@
+generated: '2026-07-28'
+method: derived
+source: openapi/*.json + json-schema/*.json + https://opentravel.org/about-2-0-object-model/
+scope: >-
+  These are the conventions of the OpenTravel 2.0 Object Model resource contracts as
+  published. OpenTravel operates no runtime, so nothing here is a service-level guarantee —
+  it is the message contract an implementer inherits when it hosts an OTM resource.
+authentication:
+  style: none declared
+  detail: >-
+    No securityDefinitions in any of the eight Swagger 2.0 documents; 401 and 403 are declared
+    on every operation but no scheme is named. Implementers choose their own.
+  see: authentication/opentravel-alliance-authentication.yml
+content_negotiation:
+  media_types: [application/json, application/xml]
+  detail: >-
+    Every operation declares both JSON and XML on consumes and produces. This is the defining
+    OTM property: one model compiles to XML Schema and JSON Schema, so the same object graph
+    is on the wire in either encoding. The Swagger `x-xml-schema` extension carries the XSD
+    pointer beside each JSON `$ref`.
+  ordering_inconsistency: >-
+    The declared order of the two media types differs between operations and between
+    releases (2018A FacilityResource lists application/xml first on consumes, 2020A
+    HotelDescriptiveContentResource lists application/json first). No default is stated.
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency key header, parameter or extension appears anywhere in the corpus. Search
+    style operations are modelled as POST with a body (POST /HospitalityOffers, POST
+    /Facilities, POST /HotelDescriptiveContents/Query), so retries are not safe by method
+    either. There is no published retry or deduplication contract.
+pagination:
+  supported: false
+  detail: >-
+    No cursor, offset, page, limit, link-header or next-token convention exists. The single
+    collection GET (HotelDescriptiveContentResource#Get) offers `maxResponses` (int32) and
+    `summaryResultsInd` (boolean) — a result cap and a projection flag, not pagination. There
+    is no total count and no way to reach beyond the cap.
+  params:
+  - {name: maxResponses, in: query, type: integer, meaning: maximum quantity of search results in the response}
+  - {name: summaryResultsInd, in: query, type: boolean, meaning: request summary information in the search results}
+filtering:
+  style: flat query parameters on the collection GET, all optional
+  params:
+  - {name: code, meaning: uniquely identifies a single property, maxLength: 32}
+  - {name: chainCode, meaning: identifies the chain, maxLength: 32}
+  - {name: brandCode, meaning: identifies a brand within a chain, maxLength: 32}
+  - {name: cityCode, meaning: three character IATA city code, maxLength: 32}
+  - {name: areaID, meaning: reservation-system-defined area, maxLength: 512}
+  - {name: hotelCode_TTI, meaning: TTI hotel reference code, type: integer}
+  - {name: displayCurrency, meaning: ISO 4217 three-letter currency code, pattern: '[a-zA-Z]{3}'}
+  note: >-
+    Query semantics that do not fit flat parameters are modelled as a POST /…/Query operation
+    carrying a QueryInfo object in the body.
+field_expansion:
+  supported: false
+  detail: >-
+    No expand/fields/include convention. The OTM equivalent is the compiler's `_Trim` variant
+    of each schema module and the `summaryResultsInd` flag — projection is chosen by the model
+    author, not by the caller.
+metadata:
+  supported: false
+  detail: >-
+    No free-form metadata bag. Extensibility is a model-level concern instead: the OTM
+    repository exists so implementers "add, reuse, and extend objects", and every generated
+    type carries an `extension` point rather than a metadata map.
+request_tracing:
+  supported: false
+  detail: no request-id, correlation-id or trace header is declared in any operation.
+versioning:
+  scheme: release-suite plus library semver, surfaced in the URI base path
+  detail: >-
+    Two versioning axes. (1) Release suites — OTA 1.0 message suites 2001A through 2024A and
+    OTM Object Suites 2016A, 2017A, 2017B, 2018A, 2020A. (2) Library version per OTM library,
+    e.g. HospitalityOffers 1.0.0, Common 5.0.0, Organization 4.1.0, OrganizationHospitality
+    4.0.0 — carried in the schema filename and in info.x-otm-library.
+  uri_form: basePath /v1_0 (2020A HotelDescriptiveContent), /resource/v1_0 (2020A Facility), / (2018A)
+  library_status: >-
+    Each document declares info.x-otm-library.LibraryStatus — FINAL for the 2018A hospitality
+    libraries, DRAFT for both 2020A libraries. DRAFT contracts are published in the mirror
+    alongside FINAL ones with no visible warning.
+  see: lifecycle/opentravel-alliance-lifecycle.yml
+error_envelope:
+  shape: OTM BaseResponse (2020A) / the operation's own success payload (2018A)
+  problem_json: false
+  see: errors/opentravel-alliance-problem-types.yml
+rate_limiting:
+  signalled: false
+  detail: no rate-limit headers, quotas or throttling contract are published. OpenTravel hosts nothing to throttle.
+identifiers:
+  style: implementer-assigned, carried as `Identifier` path/field values (maxLength 128)
+  external_authorities: [IATA airline and location codes, hotel chain and brand codes, ISO 3166 country, ISO 4217 currency]
+  detail: >-
+    OpenTravel mints no identifiers of its own for commercial entities; it curates
+    enumerations in the OpenTravel Code Lists and the OTM CodeList schema modules and defers
+    entity identity to IATA/ISO and to the trading partners.
+transport:
+  schemes_declared: [http]
+  detail: >-
+    Every document declares `schemes: [http]` with a placeholder host (127.0.0.1 or
+    example.com). Implementers must serve these contracts over HTTPS themselves; the
+    published artifact does not say so.

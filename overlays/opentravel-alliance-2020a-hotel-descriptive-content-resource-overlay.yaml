@@ -1,0 +1,64 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for OpenTravel 2020A Hotel Descriptive Content Resource
+  version: 1.0.0
+extends: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+x-generated: '2026-07-28'
+x-method: generated
+x-also-applies-to: openapi/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json
+x-note: >-
+  Captures API Evangelist annotations for a specification artifact that OpenTravel does not
+  operate. The original Swagger 2.0 document is never mutated. The `host` and `basePath` it
+  declares (127.0.0.1/v1_0) are placeholders emitted by the OTM compiler; an implementer
+  substitutes its own. Overlay 1.0.0 targets are expressed against the document as-is.
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: opentravel-alliance
+    x-apievangelist-artifact-kind: specification-contract
+    x-apievangelist-runtime-operated-by-provider: false
+    x-opentravel-release: '2020A'
+    x-opentravel-library: HospitalityContent 1.0.0
+    x-opentravel-library-status: DRAFT
+    x-opentravel-compiled: '2019-10-30'
+    x-apievangelist-json-schema-modules:
+    - json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+    - json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+    - json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+- target: $
+  update:
+    x-apievangelist-host-note: >-
+      Declared host `127.0.0.1` and schemes [http] are OTM compiler placeholders.
+      Serve over HTTPS on your own host.
+    x-apievangelist-security-note: >-
+      No securityDefinitions are declared although 401 and 403 are returned by every
+      operation. See authentication/opentravel-alliance-authentication.yml.
+    x-apievangelist-conventions: conventions/opentravel-alliance-conventions.yml
+    x-apievangelist-errors: errors/opentravel-alliance-problem-types.yml
+- target: $.paths['/HotelDescriptiveContents'].get
+  update:
+    tags:
+    - Hotel Descriptive Content
+    description: Search hotel descriptive content by property, chain, brand, city or area code.
+    x-apievangelist-operation-id: Get
+    x-apievangelist-operation-id-note: >-
+      operationId `Get` is unique only within this document; the OTM compiler emits
+      bare verbs, so ids collide across OpenTravel resource contracts.
+- target: $.paths['/HotelDescriptiveContents/Query'].post
+  update:
+    tags:
+    - Hotel Descriptive Content
+    description: Query hotel descriptive content with a structured HotelDescriptiveContentQueryInfo body.
+    x-apievangelist-operation-id: Query
+    x-apievangelist-operation-id-note: >-
+      operationId `Query` is unique only within this document; the OTM compiler emits
+      bare verbs, so ids collide across OpenTravel resource contracts.
+- target: $.paths['/HotelDescriptiveContents/Notifications'].post
+  update:
+    tags:
+    - Hotel Descriptive Content
+    description: Receive a pushed hotel descriptive content object.
+    x-apievangelist-operation-id: Notification
+    x-apievangelist-operation-id-note: >-
+      operationId `Notification` is unique only within this document; the OTM compiler emits
+      bare verbs, so ids collide across OpenTravel resource contracts.

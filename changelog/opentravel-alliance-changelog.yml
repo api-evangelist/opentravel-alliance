@@ -1,0 +1,90 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://opentravel.org/announcements/,
+  https://opentravel.org/download-the-opentravel-specification/,
+  api.github.com/repos/OpenTravel/*/releases
+note: >-
+  OpenTravel publishes no product changelog and no release-notes feed. There is no
+  /changelog page, no RSS of releases, and the public GitHub mirror of the specifications is
+  a single squashed commit ("Initial commit", 2024-11-26) so its history carries no signal
+  either. The two dated streams that DO exist are (1) publication announcements on
+  /announcements/ and (2) GitHub Releases on the tooling repositories. Both are captured
+  below. Entries are recorded with the dates the provider published; nothing is inferred.
+scheme: dated release suites (YYYY + A/B) for specifications; tagged snapshots for tooling
+current:
+  ota_1_0: 2024A
+  ota_2_0_object_suite: 2020A (public mirror)
+  otm_compiler: 5.0-SNAPSHOT-20240131
+  otm_dex_launcher: 5.0-SNAPSHOT-20240131
+  exporter_utility: '1.1'
+specification_entries:
+- date: '2021-10-04'
+  title: Open Travel Alliance debuts a development portal
+  kind: platform
+  highlights: [OpenTravel Developers Network (ODN) launched at opentraveldevelopersnetwork.com]
+- date: '2020-03-17'
+  title: OpenTravel Publishes Updated Codelists
+  kind: additions
+  highlights: [OpenTravel Code List refresh]
+- date: '2018-05-22'
+  title: OpenTravel Alliance Releases 2018A 2.0 Object Model Publication for Hospitality
+  kind: additions
+  breaking: false
+  highlights:
+  - 2018A Object Suite for hospitality
+  - source of the HospitalityFacility 1.0.0 and HospitalityOffers 1.0.0 Swagger contracts in openapi/
+- date: '2018-02-22'
+  title: OpenTravel 2018A 2.0 Hotel Specification Object Suite Public Review by March 1
+  kind: review-period
+- date: '2017-12-04'
+  title: OpenTravel 2017B 1.0 Message Suite Publication
+  kind: additions
+  note: last OTA 1.0 release present in the public GitHub mirror
+- date: '2017-06-22'
+  title: >-
+    OpenTravel Alliance Publishes Ground Transportation 2.0 Standard to Enable Connectivity
+    for Seamless End to End Consumer Experiences
+  kind: additions
+- date: '2017-04-25'
+  title: OpenTravel Alliance Published New Golf 2.0 Distribution Standard
+  kind: additions
+undated_but_present:
+- release: 2020A Object Suite
+  evidence: >-
+    Present in the public mirror; the 2020A Swagger contracts in openapi/ carry compile dates
+    of 2019-10-30 (HospitalityContent) and 2020-05-15 (FacilityResource). No announcement post
+    for the 2020A publication was found on /announcements/.
+- release: OTA 1.0 releases 2018A through 2024A
+  evidence: >-
+    Offered by the download form; absent from the public mirror and from /announcements/.
+tooling_entries:
+- date: '2025-01-15'
+  repo: ota2-exporter-utility
+  version: '1.1'
+  assets: [ota2-exporter-utility-bin.zip]
+- date: '2024-11-25'
+  repo: ota2-exporter-utility
+  version: '1.0'
+- date: '2024-01-31'
+  repo: OTM-DE-Compiler
+  version: 5.0-SNAPSHOT-20240131
+  assets: [ota2-repository-service.war, ota2-indexing-service.zip, nagios-jmx-plugin.zip]
+  highlights: [HTTPS migration for DEx and the opentravelmodel.net library]
+- date: '2024-01-31'
+  repo: OTM-DE-Utilities
+  version: 5.0-SNAPSHOT-20240131
+  assets: [ota2-app-launcher-win.zip, ota2-app-launcher-mac.zip, ota2-app-launcher-linux.zip]
+- date: '2022-08-28'
+  repo: OTM-DE-Utilities
+  version: 5.0-SNAPSHOT-20220828
+- date: '2022-06-11'
+  repo: OTM-DE-Compiler
+  version: 5.0-SNAPSHOT-20220611
+- date: '2021-07-02'
+  repo: OTM-DE-Compiler
+  version: 4.0-SNAPSHOT-20210702
+- date: '2020-11-23'
+  repo: OTM-DE
+  version: 4.0-SNAPSHOT-20201123
+  note: final release of the Eclipse-based OTM-DE before it was superseded by the DEx utilities

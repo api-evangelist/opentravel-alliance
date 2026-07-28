@@ -1,0 +1,68 @@
+generated: '2026-07-28'
+method: derived
+source: openapi/*.json (all eight Swagger 2.0 documents parsed 2026-07-28)
+format: otm-base-response
+format_note: >-
+  NOT RFC 9457. No operation declares application/problem+json. Every error status in every
+  OpenTravel 2.0 resource contract carries the same media types as the success path
+  (application/json + application/xml) and a schema drawn from the OTM model. In the 2020A
+  suite that schema is the shared Common_5_0_0 BaseResponse; in the 2018A suite the compiler
+  reused the resource's own success payload as the error payload, which is a spec defect
+  worth flagging to the standards body rather than a design choice.
+envelope:
+  2020A:
+    schema: BaseResponse
+    module: Common_5_0_0_Trim.schema.json
+    local_copy: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+  2018A:
+    schema: the operation's own success payload (HospitalityFacilities / SinglePropertyHospitalityOffers / MultiPropertyHospitalityOffers)
+    note: no distinct error schema is declared
+problems:
+- status: 400
+  title: Bad Request
+  schema: BaseResponse
+  applies_to: every operation in all four resource contracts
+- status: 401
+  title: Unauthorized
+  schema: BaseResponse
+  note: >-
+    Declared on every operation even though no securityDefinitions exist in any document —
+    the contract expects the implementer to supply the authentication scheme.
+- status: 402
+  title: Payment Required
+  schema: BaseResponse
+  note: >-
+    Emitted by the OTM compiler on every operation. No OpenTravel documentation explains a
+    402 condition; treat as compiler boilerplate.
+- status: 403
+  title: Forbidden
+  schema: BaseResponse
+- status: 404
+  title: Not Found
+  schema: BaseResponse
+- status: 500
+  title: Internal Server Error
+  schema: BaseResponse
+by_operation:
+- source: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+  operations:
+  - {operationId: Get, success: 200, errors: [400, 401, 402, 403, 404, 500], error_schema: 'Common_5_0_0_Trim.schema.json#/definitions/BaseResponse'}
+  - {operationId: Query, success: 201, errors: [400, 401, 402, 403, 404, 500], error_schema: 'Common_5_0_0_Trim.schema.json#/definitions/BaseResponse'}
+  - {operationId: Notification, success: 201, errors: [400, 401, 402, 403, 404, 500], error_schema: 'Common_5_0_0_Trim.schema.json#/definitions/BaseResponse'}
+- source: openapi/opentravel-2020a-facility-resource-openapi.json
+  operations:
+  - {operationId: Post, success: 200, errors: [400, 401, 402, 403, 404, 500], error_schema: 'Common_5_0_0_Trim.schema.json#/definitions/BaseResponse'}
+  - {operationId: Get, success: 200, errors: [400, 401, 402, 403, 404, 500], error_schema: 'Common_5_0_0_Trim.schema.json#/definitions/BaseResponse'}
+- source: openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
+  operations:
+  - {operationId: FindSinglePropertyOffers, success: 201, errors: [400, 401, 402, 403, 404, 500], error_schema: 'HospitalityOffers_1_0_0_Trim.schema.json#/definitions/SinglePropertyHospitalityOffers'}
+  - {operationId: FindMultiPropertyOffers, success: 201, errors: [400, 401, 402, 403, 404, 500], error_schema: 'HospitalityOffers_1_0_0_Trim.schema.json#/definitions/MultiPropertyHospitalityOffers'}
+- source: openapi/opentravel-2018a-facility-resource-openapi.json
+  operations:
+  - {operationId: FindHospitalityAvailability, success: 201, errors: [400, 401, 402, 403, 404, 500], error_schema: 'HospitalityFacility_1_0_0_Trim.schema.json#/definitions/HospitalityFacilities'}
+  - {operationId: RetrieveHospitalityAvailability, success: 201, errors: [400, 401, 402, 403, 404, 500], error_schema: 'HospitalityFacility_1_0_0_Trim.schema.json#/definitions/HospitalityFacilities'}
+  - {operationId: HospitalityFacilitySearch, success: 201, errors: [400, 401, 402, 403, 404, 500], error_schema: 'HospitalityFacility_1_0_0_Trim.schema.json#/definitions/HospitalityFacilities'}
+gaps:
+- Every error response carries an empty `description` string.
+- No error code registry, no machine-readable error type URIs, no remediation guidance.
+- No error reference page exists on opentravel.org, the ODN, or the public GitHub mirror.

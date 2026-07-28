@@ -1,0 +1,53 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for OpenTravel 2018A Hospitality Offers Resource
+  version: 1.0.0
+extends: openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
+x-generated: '2026-07-28'
+x-method: generated
+x-also-applies-to: openapi/opentravel-2018a-hospitality-offers-resource-defs-openapi.json
+x-note: >-
+  Captures API Evangelist annotations for a specification artifact that OpenTravel does not
+  operate. The original Swagger 2.0 document is never mutated. The `host` and `basePath` it
+  declares (127.0.0.1/) are placeholders emitted by the OTM compiler; an implementer
+  substitutes its own. Overlay 1.0.0 targets are expressed against the document as-is.
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: opentravel-alliance
+    x-apievangelist-artifact-kind: specification-contract
+    x-apievangelist-runtime-operated-by-provider: false
+    x-opentravel-release: '2018A'
+    x-opentravel-library: HospitalityOffers 1.0.0
+    x-opentravel-library-status: FINAL
+    x-opentravel-compiled: '2018-04-05'
+    x-apievangelist-json-schema-modules:
+    - json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
+- target: $
+  update:
+    x-apievangelist-host-note: >-
+      Declared host `127.0.0.1` and schemes [http] are OTM compiler placeholders.
+      Serve over HTTPS on your own host.
+    x-apievangelist-security-note: >-
+      No securityDefinitions are declared although 401 and 403 are returned by every
+      operation. See authentication/opentravel-alliance-authentication.yml.
+    x-apievangelist-conventions: conventions/opentravel-alliance-conventions.yml
+    x-apievangelist-errors: errors/opentravel-alliance-problem-types.yml
+- target: $.paths['/HospitalityPropertyOffers'].post
+  update:
+    tags:
+    - Hospitality Offers
+    description: Find hospitality offers for a single property.
+    x-apievangelist-operation-id: FindSinglePropertyOffers
+    x-apievangelist-operation-id-note: >-
+      operationId `FindSinglePropertyOffers` is unique only within this document; the OTM compiler emits
+      bare verbs, so ids collide across OpenTravel resource contracts.
+- target: $.paths['/HospitalityOffers'].post
+  update:
+    tags:
+    - Hospitality Offers
+    description: Find hospitality offers across multiple properties.
+    x-apievangelist-operation-id: FindMultiPropertyOffers
+    x-apievangelist-operation-id-note: >-
+      operationId `FindMultiPropertyOffers` is unique only within this document; the OTM compiler emits
+      bare verbs, so ids collide across OpenTravel resource contracts.
