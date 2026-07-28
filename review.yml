@@ -1,0 +1,536 @@
+aid: opentravel-alliance
+name: OpenTravel Alliance
+review:
+  question: >-
+    What does OpenTravel Alliance actually publish, how much of it is reachable without
+    a form or a membership, and what would it cost a travel technology company to leave?
+  date: '2026-07-28'
+  reviewer: API Evangelist
+  tier: industry-body-standards
+  homeMarket: United States
+  primaryDomain: opentravel.org
+
+findings:
+  summary: |
+    OpenTravel Alliance is a volunteer non-profit standards body, not a service operator.
+    It publishes the OpenTravel Specification — OTA 1.0 XML messages (2001A..2024A) and
+    the model-driven OpenTravel 2.0 Object Model (OTM) which compiles to XML Schema,
+    JSON Schema and Swagger 2.0 resource contracts — plus the OpenTravel Code Lists.
+    It runs no booking service, holds no inventory and sits beside the distribution chain
+    rather than inside it. There is no self-serve developer portal, no OpenTravel-operated
+    runtime API, and no certification programme or certification registry of any kind.
+
+    The canonical download route is a lead-capture form (name, company name, email,
+    version selection, terms acceptance) at /download-the-opentravel-specification/.
+    The FAQ states plainly: "Organizations are free to use OpenTravel Messaging and there
+    is *no* cost to download or implement." Free, therefore, but not anonymous.
+
+    The ungated route is a public GitHub mirror — github.com/OpenTravel/OpenTravel-Specifications
+    — one commit, "Initial commit", 2024-11-26, no README, no LICENSE. 19,066 files:
+    10,848 XSD, 5,823 XML, 1,255 HTML, 543 JSON Schema, 181 PDF, 39 ZIP, 22 WSDL and
+    8 Swagger 2.0 documents. That mirror is where every machine-readable artifact in this
+    profile came from. It is stale relative to the form: the mirror's OTA 1.0 tree stops at
+    OTA2017B while the download form offers releases through 2024A, so seven years of
+    OTA 1.0 releases exist only behind the form.
+
+    Membership ($950 to $11,250 per year by revenue band) buys the OTM repository with
+    add/reuse/extend rights, project-team participation, work-group priority influence,
+    early access during member review periods, and members-only documentation. Membership
+    does not buy the specification — the specification is free either way.
+
+  organization:
+    legalName: OpenTravel Alliance
+    type: non-profit industry standards body (volunteer)
+    address: 6300 N Wickham Rd #130-417, Melbourne, FL 32940, United States
+    founded: '1999'
+    sectorsCovered:
+      - Air
+      - Hospitality
+      - Car Rental
+      - Cruise
+      - Passenger Rail
+      - GDS
+      - Channel
+      - Technology Providers
+    futureGovernance: >-
+      The site states OpenTravel is "working with the Linux Foundation to form an
+      open-source foundation to revolutionize travel retail" — the Open Travel Foundation.
+      No date, no governance structure and no scope of transfer are published as of
+      2026-07-28. Recorded as announced intent only.
+
+  specifications:
+    - name: OpenTravel 1.0 Specification (XML messages)
+      releases: 2001A through 2024A (per download form); public GitHub mirror stops at 2017B
+      artifacts: XSD, XML samples, WSDL, HTML documentation, PDF
+      access: free of charge, lead-capture form required for latest releases
+    - name: OpenTravel 2.0 Object Model (OTM)
+      releases: 2016A, 2017A, 2017B, 2018A, 2020A present in the public mirror; download form lists 2016A..2019A
+      artifacts: XSD, JSON Schema, Swagger 2.0 resource contracts, examples
+      access: free of charge; the OTM repository itself requires a request form and membership for write/extend
+    - name: OpenTravel Code Lists
+      releases: 2016-02-24, 2019-03-04, 2024-09-04 (xlsm workbooks in the public mirror)
+      access: free of charge via /download-code-list/ or the public mirror
+      changeProcess: https://opentravel.org/how-to-request-a-change-to-the-opentravel-alliance-codelist/
+
+  certification:
+    programme: none
+    registry: none
+    note: >-
+      There is no OpenTravel certification, conformance test suite, or certified-implementer
+      registry. The closest published thing is a self-nominated adopter list at
+      /opentravel-message-adopters-integrators/ ("Request to be Listed as a Message Adopter")
+      naming Amadeus, American Airlines, Amtrak, Avis Budget Group, Best Western, Cybage,
+      Exclusive, Expedia, Hertz, Hilton, Hyatt, IBS PLC, Ideas, e-Juniper, LinksRez, Marriott,
+      Omni Hotels, OpenJaw Technologies, Passkey, RUB Group, Sabre and Viator. No levels,
+      no dates, no verification. This is a directory, not a certification.
+
+  runtimeApis:
+    operatedByOpenTravel: none
+    note: >-
+      Every Swagger 2.0 document harvested declares host 127.0.0.1 or example.com. They are
+      contracts for implementers to host, not endpoints OpenTravel serves. opentravelmodel.net
+      is a login-gated OTM Library Repository console (Browse/Search HTML), not a documented API.
+
+switchingCost:
+  interfaceShape:
+    value: open-standard
+    standard: OpenTravel Specification — OTA 1.0 XML message suite (2001A..2024A) and OpenTravel 2.0 Object Model (OTM), with Swagger 2.0 resource contracts generated from OTM
+    evidence: >-
+      The artifact this organization sells is the open interface itself. The IP policy states
+      OpenTravel grants "a non-exclusive, royalty-free license"; the membership page states
+      "The OpenTravel standard is a non-proprietary solution that is open to everyone"; the FAQ
+      states there is "*no* cost to download or implement". The message vocabulary is
+      multi-implementer by construction — Amadeus, Sabre, Expedia, Marriott, Hilton, Hyatt,
+      Amtrak, Hertz and Avis Budget all appear on the adopter list. Adopting OpenTravel messaging
+      reduces a travel company's switching cost rather than raising it: it is the substitute for
+      a GDS-proprietary or channel-manager-proprietary wire format.
+    caveat: >-
+      The standard is extensible by design and OTM's repository model exists specifically so
+      implementers can "add, reuse, and extend objects". Extensions are where implementer-specific
+      lock-in reappears — but that lock-in accrues to the implementer, not to OpenTravel.
+  secondSource:
+    value: alternatives-with-migration
+    alternativesConsidered:
+      - IATA NDC (airline offer/order XML; the airline-side rival for the same distribution problem)
+      - IATA ONE Order / IATA Open API / IATA Standards Settlement
+      - HTNG specifications (hospitality, now under AHLA) for the hotel-systems overlap
+      - GDS-proprietary formats (Sabre, Amadeus, Travelport) as the incumbent default OpenTravel replaces
+      - Direct supplier REST/JSON APIs and channel-manager proprietary schemas
+      - OTA-neutral schema.org / Google Hotel Ads feed formats for content distribution
+    reasoning: >-
+      For a hospitality integrator, OpenTravel and HTNG overlap and both are freely licensed, so
+      a swap is a schema-mapping project rather than a commercial renegotiation. For airline
+      distribution, IATA NDC is the alternative and it is a genuinely different data model — moving
+      an airline programme from OpenTravel air messages to NDC is a rebuild, not a swap. Nothing
+      about OpenTravel itself is single-sourced: the specification is downloadable, redistributable
+      and sublicensable, and OpenTravel does not gate any runtime.
+  exitPath:
+    value: not-applicable
+    reasoning: >-
+      OpenTravel holds no customer data. It operates no runtime service, stores no bookings, no PNRs
+      and no inventory. There is nothing to export because there is nothing held. The one data store
+      it does run — the OTM Library Repository at opentravelmodel.net — is a model repository, and
+      the site explicitly offers "a copy of the repo to be used with GitHub" on request
+      (/using-github-with-dex/), which is an export-on-request path for the models a member contributed.
+      Recorded as not-applicable at the organization level, with that repo-copy route noted.
+      No documented bulk export, dump, or data-portability endpoint exists. Probed:
+      /openapi.json, /swagger.json, /api-docs, /.well-known/ on opentravel.org — all soft-404
+      (WordPress catch-all returns HTTP 200 with the homepage). opentravelmodel.net/api,
+      /service, /openapi.json, /swagger.json — all HTTP 404.
+  identifierPortability:
+    value: >-
+      Shared industry identifiers throughout — IATA airline and airport/location codes, hotel chain
+      and brand codes, ISO country and currency codes — carried in the OpenTravel Code Lists
+      (OpenTravel_CodeList_2024_9_4.xlsm and predecessors) and in the OTM CodeList schema modules
+      (CodeList_3_0_0, CodeList_4_0_0). Model-level keys are namespaced OTM object identifiers
+      (e.g. Facilities/{Identifier}) that are implementer-assigned rather than OpenTravel-assigned.
+    detail: >-
+      OpenTravel mints no identifiers of its own for commercial entities. It curates enumerations
+      (AccommodationClassEnum, BedTypeEnum, BookingChannelEnum, DistributionTypeEnum and hundreds more)
+      and defers entity identity to IATA/ISO codes and to the trading partners. That is the
+      portable end of the spectrum: an integration keyed on OpenTravel code lists carries its keys
+      to any other system that also reads IATA/ISO codes. There are no GDS record IDs, no PNR
+      record locators and no vendor-opaque IDs owned by OpenTravel.
+  contractualLockIn:
+    value: none published beyond a terminable, attribution-bearing specification licence
+    verbatim:
+      - source: https://opentravel.org/intellectual-property/
+        quote: >-
+          "OpenTravel is the owner of OpenTravel specifications, and each member company grants the
+          OpenTravel Alliance with the right to sublicense to other member companies, their affiliates,
+          and end users, a non-exclusive, royalty-free license as defined in the membership agreement."
+      - source: https://opentravel.org/terms-and-conditions/
+        quote: >-
+          "OTA grants to You this non-exclusive license to use the Documentation, subject to the
+          conditions stated below."
+      - source: https://opentravel.org/terms-and-conditions/
+        quote: >-
+          "You may copy and download the Documentation, modify the Documentation solely to allow for
+          implementation of Your individual or proprietary software products or services, bundle the
+          Documentation with Your individual or proprietary software, and/or distribute and sublicense."
+      - source: https://opentravel.org/terms-and-conditions/
+        quote: >-
+          "You must reference, in a commercially reasonable location, that the OTA Documentation is used
+          in connection with Your applicable products or services" and include the OTA copyright notice.
+      - source: https://opentravel.org/terms-and-conditions/
+        quote: >-
+          "OTA may terminate this Agreement immediately upon Your breach of this Agreement and, upon such
+          termination You will cease all use duplication, distribution, and/or exploitation of the
+          Documentation."
+      - source: https://opentravel.org/download-the-opentravel-specification/
+        quote: >-
+          "Please note that this is an all volunteer, non-profit, organization. Servers and this website
+          have to be funded. If you are deriving value from this download, please donate to help cover
+          the costs."
+    notes: >-
+      No minimum term, no exclusivity, no full-content agreement, no segment fees and no termination
+      notice period are published — none of those concepts apply to a specification licence. The one
+      real term with teeth is the immediate-termination-on-breach clause requiring cessation of all use
+      and distribution of the documentation. Membership dues are published as annual amounts by revenue
+      band with no stated minimum commitment; no membership agreement document is public, and the IP
+      policy defers the operative licence terms to it, so the member-side commitment could not be verified.
+      The membership agreement is the one document that would settle this and it is not published.
+  accessGate:
+    value: application-approval
+    whatADeveloperMustDo: >-
+      To get the canonical specification: complete a form at
+      https://opentravel.org/download-the-opentravel-specification/ with name, company name, email and
+      version selection, and accept the Terms of Service. No payment, no accreditation, no approval wait
+      documented — but not anonymous and not self-serve in the API sense, since there is no API key,
+      no console and no account.
+      To get the OTM repository or the LinksRez OpenTravel-implementing dev portal
+      (https://opentravel.org/linksrez-dev-portal/): submit a request form including membership status
+      and a justification ("provide some comments on why you would like access") and wait for approval.
+      To get add/reuse/extend rights in the OTM repository, work-group participation, priority influence,
+      early access during member review periods, and members-only documentation: pay membership dues of
+      $950 (<$1M revenue), $2,250 ($1M-$5M), $4,500 ($5M-$500M), $7,500 ($500M-$2B), $9,500 ($2B-$5B) or
+      $11,250 ($5B+) per year.
+      To get the artifacts with no form at all: clone
+      https://github.com/OpenTravel/OpenTravel-Specifications — which carries no LICENSE file, so the
+      website Terms of Service are the only licence on record.
+    gatedOverall: true
+    selfServePortal: false
+  distributionModel:
+    value: not-applicable
+    reasoning: >-
+      OpenTravel does not distribute travel inventory. It is the vocabulary that GDS-intermediated,
+      channel-manager and direct-connect distribution all speak. Its members and adopters span every
+      model — GDSs (Amadeus, Sabre), OTAs (Expedia), hotel groups (Marriott, Hilton, Hyatt, Best Western,
+      Omni), car rental (Hertz, Avis Budget), rail (Amtrak) and technology providers (LinksRez, OpenJaw,
+      IBS, e-Juniper, Passkey).
+  ndcPosture:
+    value: not applicable — OpenTravel publishes its own air messaging and the OTM offer/order work, not IATA NDC
+    detail: >-
+      OpenTravel is a peer of IATA rather than an NDC participant. It runs an Offer/Order workgroup
+      (/offer-order/, /offer-order-workgroup/) addressing the same offer-and-order retailing model NDC
+      targets, and an Air sector page (/air/). No NDC certification level is claimed anywhere on the site,
+      no NDC endpoint exists, and the FAQ makes no reference to NDC or to any other standards body's
+      relationship. The only external standards cooperation published is with the OpenAPI Initiative
+      (/openapi-initiative-cooperation/) and an Arazzo Specification advocacy page
+      (/openapi-arazzo-specification/) pointing at https://github.com/OAI/Arazzo-Specification.
+  summaryJudgement: >-
+    OpenTravel is on the correct side of the travel lock-in question and it is the rare travel
+    organization where leaving costs nothing: the licence is royalty-free, sublicensable and
+    redistributable, the artifacts are mirrored on public GitHub, and there is no runtime, no
+    account and no data held. The friction is entirely in discovery — a lead-capture form in
+    front of the canonical download, a request form in front of the model repository, a paywall
+    in front of the ability to influence and extend the model, an unlicensed and seven-years-stale
+    public mirror, and Swagger 2.0 documents that still declare host 127.0.0.1. The cost of using
+    OpenTravel is friction, not lock-in.
+
+harvest:
+  fetchDate: '2026-07-28'
+  sourceRepository: https://github.com/OpenTravel/OpenTravel-Specifications
+  sourceBranch: master
+  sourceCommit: single commit "Initial commit", 2024-11-26T21:15:40Z
+  repositoryLicense: none — no LICENSE file present in the repository
+  repositoryInventory:
+    totalBlobs: 19066
+    xsd: 10848
+    xml: 5823
+    html: 1255
+    json: 543
+    pdf: 181
+    zip: 39
+    wsdl: 22
+    swagger: 8
+    xlsm: 8
+    xls: 18
+  specs:
+    - file: openapi/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2020A_ObjectSuite/OpenTravel_2020A_ObjectSuite_Resources/swagger/HospitalityContent_HotelDescriptiveContentResource/HotelDescriptiveContentResource_1_0_0.defs.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: UTF-8
+      title: HotelDescriptiveContentResource
+      version: 1.0.0
+      host: 127.0.0.1
+      basePath: /v1_0
+      paths: 3
+      operations: 3
+      definitions: 337
+      parses: true
+    - file: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2020A_ObjectSuite/OpenTravel_2020A_ObjectSuite_Resources/swagger/HospitalityContent_HotelDescriptiveContentResource/v1_0_0/HotelDescriptiveContentResource_1_0_0.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: UTF-8
+      title: HotelDescriptiveContentResource
+      version: 1.0.0
+      host: 127.0.0.1
+      basePath: /v1_0
+      paths: 3
+      operations: 3
+      definitions: 0
+      note: interface-only variant; definitions are carried in the sibling .defs document
+      parses: true
+    - file: openapi/opentravel-2020a-facility-resource-defs-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2020A_ObjectSuite/OpenTravel_2020A_ObjectSuite_Resources/swagger/FacilityResource_FacilityResource/FacilityResource_1_0_0.defs.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: UTF-8
+      title: FacilityResource
+      version: 1.0.0
+      host: example.com
+      basePath: /resource/v1_0
+      paths: 2
+      operations: 2
+      definitions: 232
+      parses: true
+    - file: openapi/opentravel-2020a-facility-resource-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2020A_ObjectSuite/OpenTravel_2020A_ObjectSuite_Resources/swagger/FacilityResource_FacilityResource/v1_0_0/FacilityResource_1_0_0.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: UTF-8
+      title: FacilityResource
+      version: 1.0.0
+      host: example.com
+      basePath: /resource/v1_0
+      paths: 2
+      operations: 2
+      definitions: 0
+      note: interface-only variant
+      parses: true
+    - file: openapi/opentravel-2018a-hospitality-offers-resource-defs-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/swagger/HospitalityOffers_HospitalityOffersResource/HospitalityOffersResource_1_0_0.defs.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: Latin-1 (upstream file contains byte 0xA0; not valid UTF-8 — saved verbatim)
+      title: HospitalityOffersResource
+      version: 1.0.0
+      host: 127.0.0.1
+      basePath: /
+      paths: 2
+      operations: 2
+      definitions: 372
+      parses: true
+    - file: openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/swagger/HospitalityOffers_HospitalityOffersResource/v1_0_0/HospitalityOffersResource_1_0_0.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: UTF-8
+      title: HospitalityOffersResource
+      version: 1.0.0
+      host: 127.0.0.1
+      basePath: /
+      paths: 2
+      operations: 2
+      definitions: 0
+      note: interface-only variant
+      parses: true
+    - file: openapi/opentravel-2018a-facility-resource-defs-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/swagger/HospitalityFacility_FacilityResource/FacilityResource_1_0_0.defs.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: Latin-1 (upstream file contains byte 0xA0; not valid UTF-8 — saved verbatim)
+      title: FacilityResource
+      version: 1.0.0
+      host: 127.0.0.1
+      basePath: /
+      paths: 3
+      operations: 3
+      definitions: 187
+      parses: true
+    - file: openapi/opentravel-2018a-facility-resource-openapi.json
+      sourceURL: https://raw.githubusercontent.com/OpenTravel/OpenTravel-Specifications/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/swagger/HospitalityFacility_FacilityResource/v1_0_0/FacilityResource_1_0_0.swagger
+      httpStatus: 200
+      fetchDate: '2026-07-28'
+      format: Swagger 2.0
+      encoding: UTF-8
+      title: FacilityResource
+      version: 1.0.0
+      host: 127.0.0.1
+      basePath: /
+      paths: 3
+      operations: 3
+      definitions: 0
+      note: interface-only variant
+      parses: true
+
+probes:
+  date: '2026-07-28'
+  note: >-
+    opentravel.org runs WordPress with a catch-all that returns HTTP 200 and the homepage for
+    unknown paths, so a bare 200 is not evidence a path exists. Real pages were confirmed from
+    https://opentravel.org/page-sitemap1.xml (HTTP 200) rather than from status codes.
+  results:
+    - url: https://opentravel.org
+      status: 200
+      note: live homepage
+    - url: https://www.opentravel.org
+      status: 200
+      note: redirects to https://opentravel.org/
+    - url: https://developer.opentravel.org
+      status: 000
+      note: DNS does not resolve
+    - url: https://developers.opentravel.org
+      status: 000
+      note: DNS does not resolve
+    - url: https://docs.opentravel.org
+      status: 000
+      note: DNS does not resolve
+    - url: https://api.opentravel.org
+      status: 000
+      note: DNS does not resolve
+    - url: https://repo.opentravel.org
+      status: 000
+      note: DNS does not resolve
+    - url: https://otm.opentravel.org
+      status: 000
+      note: DNS does not resolve
+    - url: https://opentravel.org/developers
+      status: 200
+      note: soft 404 — WordPress catch-all serves the homepage; not in the sitemap
+    - url: https://opentravel.org/api
+      status: 200
+      note: soft 404 — serves the homepage; not in the sitemap
+    - url: https://opentravel.org/docs
+      status: 200
+      note: soft 404 — serves the homepage; not in the sitemap
+    - url: https://opentravel.org/openapi.json
+      status: 200
+      note: soft 404 — serves the homepage, not JSON
+    - url: https://opentravel.org/swagger.json
+      status: 200
+      note: soft 404 — serves the homepage, not JSON
+    - url: https://opentravel.org/api-docs
+      status: 200
+      note: soft 404 — serves the homepage
+    - url: https://opentravel.org/.well-known/
+      status: 200
+      note: soft 404 — serves the homepage; no well-known documents published
+    - url: https://opentravel.org/sitemap.xml
+      status: 200
+      note: SmartCrawl sitemap index; page-sitemap1.xml enumerates 58 real pages
+    - url: https://opentravel.org/openapi/
+      status: 200
+      note: real page — about the OpenAPI Initiative relationship, no OpenTravel OpenAPI documents
+    - url: https://opentravel.org/openapi-arazzo-specification/
+      status: 200
+      note: real page — advocacy for the Arazzo Specification, links to github.com/OAI/Arazzo-Specification
+    - url: https://opentravel.org/download-specs/
+      status: 200
+      note: real page — lead-capture download form
+    - url: https://opentravel.org/download-the-opentravel-specification/
+      status: 200
+      note: real page — the canonical download form
+    - url: https://opentravel.org/download-code-list/
+      status: 200
+      note: real page
+    - url: https://opentravel.org/otm-repository/
+      status: 200
+      note: real page — access-request form, no endpoint published
+    - url: https://opentravel.org/membership/
+      status: 200
+      note: real page — dues table by revenue band
+    - url: https://opentravel.org/intellectual-property/
+      status: 200
+      note: real page — royalty-free licence statement
+    - url: https://opentravel.org/terms-and-conditions/
+      status: 200
+      note: real page — specification terms of use
+    - url: https://opentravel.org/linksrez-dev-portal/
+      status: 200
+      note: real page — gated request form for a member's OpenTravel-implementing portal; no URL published
+    - url: https://opentravel.org/opentravel-message-adopters-integrators/
+      status: 200
+      note: real page — self-nominated adopter directory
+    - url: https://opentravel.org/wp-json/
+      status: 200
+      note: WordPress REST API root is reachable; site CMS plumbing, not an OpenTravel product API
+    - url: https://opentravelmodel.net/
+      status: 200
+      note: OTM Library Repository console; User ID / Password login
+    - url: https://opentravelmodel.net/console/browse.html
+      status: 200
+      note: HTML browse console
+    - url: https://opentravelmodel.net/api
+      status: 404
+    - url: https://opentravelmodel.net/service
+      status: 404
+    - url: https://opentravelmodel.net/openapi.json
+      status: 404
+    - url: https://opentravelmodel.net/swagger.json
+      status: 404
+    - url: https://api.github.com/orgs/OpenTravel
+      status: 200
+      note: 12 public repositories
+    - url: https://github.com/OpenTravel/OpenTravel-Specifications
+      status: 200
+      note: the public specification mirror all artifacts were harvested from
+
+sources:
+  - url: https://opentravel.org/
+    type: Website
+    note: Homepage; sectors Air, Hospitality, Car Rental, GDS, Channel, Tech Providers; Melbourne FL address.
+  - url: https://opentravel.org/download-the-opentravel-specification/
+    type: Download
+    note: Lead-capture form (name, company, email, version, terms acceptance). OTA 2.0 2016A-2019A; OTA 1.0 2001A-2024A.
+  - url: https://opentravel.org/frequently-asked-questions/
+    type: FAQ
+    note: '"Organizations are free to use OpenTravel Messaging and there is *no* cost to download or implement."'
+  - url: https://opentravel.org/membership/
+    type: Pricing
+    note: Dues $950-$11,250/yr by revenue band; member-only OTM repository add/reuse/extend and early review access.
+  - url: https://opentravel.org/intellectual-property/
+    type: License
+    note: Non-exclusive, royalty-free licence sublicensable to member companies, affiliates and end users.
+  - url: https://opentravel.org/terms-and-conditions/
+    type: TermsOfService
+    note: Copy, modify, bundle, distribute and sublicense permitted; attribution required; as-is; immediate termination on breach.
+  - url: https://opentravel.org/opentravel-message-adopters-integrators/
+    type: Directory
+    note: Self-nominated adopter list. No certification levels.
+  - url: https://opentravel.org/otm-repository/
+    type: Documentation
+    note: Access-request form; repo copy for GitHub available on request.
+  - url: https://opentravel.org/openapi-arazzo-specification/
+    type: Documentation
+    note: Arazzo advocacy; links to the OpenAPI Initiative Arazzo repository.
+  - url: https://opentravel.org/open-travel-foundation-preview/
+    type: Announcement
+    note: '"working with the Linux Foundation to form an open-source foundation" — no date or governance detail.'
+  - url: https://github.com/OpenTravel/OpenTravel-Specifications
+    type: Repository
+    note: Public, unlicensed mirror; single commit 2024-11-26; 19,066 files; source of all harvested specs.
+  - url: https://opentravelmodel.net/
+    type: Registry
+    note: OTM Library Repository console, login required, no documented API.
+
+actions:
+  apisYmlCreated: true
+  apisListed: 4
+  specsHarvested: 8
+  openapiDirectory: openapi/
+  fabricationCheck: >-
+    No host, endpoint, scope, plan or specification was invented. Every artifact in openapi/ is a
+    verbatim byte-for-byte copy of a file fetched from raw.githubusercontent.com with HTTP 200 on
+    2026-07-28. Every quoted contractual term is reproduced from the page cited beside it. No NDC
+    claim, no certification claim and no runtime endpoint is asserted, because none is published.

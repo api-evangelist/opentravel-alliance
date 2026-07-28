@@ -1,0 +1,187 @@
+aid: opentravel-alliance
+url: https://raw.githubusercontent.com/api-evangelist/opentravel-alliance/refs/heads/main/apis.yml
+name: OpenTravel Alliance
+kind: company
+description: >-
+  The OpenTravel Alliance is a volunteer, non-profit travel technology standards body headquartered in
+  Melbourne, Florida, United States. Since 1999 it has published the OpenTravel Specification — the OTA 1.0
+  XML message suite (releases 2001A through 2024A) and the model-driven OpenTravel 2.0 Object Model (OTM),
+  which generates XML Schema, JSON Schema and Swagger 2.0 resource contracts — plus the OpenTravel Code Lists
+  used across air, hospitality, car rental, cruise, rail, GDS, channel and technology-provider systems.
+  OpenTravel does not operate a booking service or sit in the distribution chain itself; it supplies the
+  message vocabulary that suppliers, GDSs, channel managers and OTAs implement between each other, which
+  makes it a switching-cost reducer rather than a switching-cost holder. Its API posture is honest but thin:
+  there is no self-serve developer portal, no OpenTravel-operated runtime API and no public certification
+  registry. Specifications are royalty-free and free of charge, but the canonical download is behind a
+  name/company/email lead-capture form with terms acceptance, and the OTM repository and member review
+  periods are membership-gated ($950–$11,250/yr by revenue band). A public, unlicensed GitHub mirror at
+  github.com/OpenTravel/OpenTravel-Specifications carries the bulk of the corpus — including eight Swagger 2.0
+  resource contracts — and is the only ungated route to machine-readable artifacts. The organization has
+  announced work with the Linux Foundation to form an Open Travel Foundation.
+image: https://opentravel.org/wp-content/uploads/2025/08/opentravel-favicon2.png
+tags:
+- Travel
+- United States
+- Standards
+- Aviation
+- Hospitality
+- Hotels
+- Car Rental
+- Rail
+- Cruise
+- Distribution
+- GDS
+- Booking
+- Channel
+- XML
+- JSON Schema
+created: '2026-07-28'
+modified: '2026-07-28'
+specificationVersion: '0.19'
+apis:
+- aid: opentravel-alliance:opentravel-2020a-hotel-descriptive-content-resource
+  name: OpenTravel 2020A Hotel Descriptive Content Resource
+  description: >-
+    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2020A Object Suite. Defines
+    three operations for hotel descriptive content — GET /HotelDescriptiveContents, POST
+    /HotelDescriptiveContents/Query and POST /HotelDescriptiveContents/Notifications — with 337 model
+    definitions. This is a specification artifact published by the standards body for implementers to host
+    themselves; the document declares host 127.0.0.1 and basePath /v1_0 and OpenTravel operates no runtime
+    endpoint for it.
+  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
+  tags:
+  - Hospitality
+  - Hotels
+  - Content
+  - OpenTravel 2.0
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json
+  - type: OpenAPI
+    url: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+- aid: opentravel-alliance:opentravel-2020a-facility-resource
+  name: OpenTravel 2020A Facility Resource
+  description: >-
+    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2020A Object Suite. Defines
+    POST /Facilities and GET /Facilities/{Identifier} with 232 model definitions covering hospitality and golf
+    facility description. Published as a specification artifact with host example.com and basePath
+    /resource/v1_0; OpenTravel operates no runtime endpoint for it.
+  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
+  tags:
+  - Hospitality
+  - Facilities
+  - OpenTravel 2.0
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-2020a-facility-resource-defs-openapi.json
+  - type: OpenAPI
+    url: openapi/opentravel-2020a-facility-resource-openapi.json
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+- aid: opentravel-alliance:opentravel-2018a-hospitality-offers-resource
+  name: OpenTravel 2018A Hospitality Offers Resource
+  description: >-
+    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2018A Object Suite. Defines
+    POST /HospitalityOffers and POST /HospitalityPropertyOffers with 372 model definitions covering hotel offer
+    search and property-level offers. Specification artifact only — host 127.0.0.1, basePath /; the definitions
+    variant of this file is Latin-1 encoded rather than UTF-8 as published upstream.
+  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite
+  tags:
+  - Hospitality
+  - Hotels
+  - Offers
+  - OpenTravel 2.0
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-2018a-hospitality-offers-resource-defs-openapi.json
+  - type: OpenAPI
+    url: openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+- aid: opentravel-alliance:opentravel-2018a-facility-resource
+  name: OpenTravel 2018A Facility Resource
+  description: >-
+    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2018A Object Suite. Defines
+    POST /Facilities, POST /HospitalityFindHospitalityAvailability and POST
+    /HospitalityRetrieveFacilityAvailability with 187 model definitions. Specification artifact only — host
+    127.0.0.1, basePath /; the definitions variant of this file is Latin-1 encoded rather than UTF-8 as
+    published upstream.
+  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite
+  tags:
+  - Hospitality
+  - Facilities
+  - Availability
+  - OpenTravel 2.0
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-2018a-facility-resource-defs-openapi.json
+  - type: OpenAPI
+    url: openapi/opentravel-2018a-facility-resource-openapi.json
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+common:
+- type: Website
+  url: https://opentravel.org/
+- type: About
+  url: https://opentravel.org/about-us/
+- type: Specifications
+  url: https://opentravel.org/specifications/
+  name: OpenTravel Specifications
+- type: Documentation
+  url: https://opentravel.org/about-2-0-object-model/
+  name: About the OpenTravel 2.0 Object Model
+- type: Download
+  url: https://opentravel.org/download-the-opentravel-specification/
+  name: Download the OpenTravel Specification (lead-capture form, terms acceptance required)
+- type: Download
+  url: https://opentravel.org/download-code-list/
+  name: Download the OpenTravel Code List
+- type: Download
+  url: https://opentravel.org/download-otm-tool/
+  name: Download the OTM Development Environment (DEx)
+- type: Repository
+  url: https://github.com/OpenTravel/OpenTravel-Specifications
+  name: OpenTravel-Specifications public GitHub mirror
+- type: GitHubOrganization
+  url: https://github.com/OpenTravel
+- type: Registry
+  url: https://opentravelmodel.net/
+  name: OTM Library Repository console (login required)
+- type: Directory
+  url: https://opentravel.org/opentravel-message-adopters-integrators/
+  name: OpenTravel Message Adopters and Integrators
+- type: Pricing
+  url: https://opentravel.org/membership/
+  name: Membership dues by revenue band
+- type: SignUp
+  url: https://opentravel.org/join-opentravel/
+- type: TermsOfService
+  url: https://opentravel.org/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://opentravel.org/privacy-policy/
+- type: License
+  url: https://opentravel.org/intellectual-property/
+  name: OpenTravel Intellectual Property Policy
+- type: Governance
+  url: https://opentravel.org/governance/
+- type: Partners
+  url: https://opentravel.org/partners/
+- type: Blog
+  url: https://opentravel.org/announcements/
+- type: Contact
+  url: https://opentravel.org/contact-us/
+- type: FAQ
+  url: https://opentravel.org/frequently-asked-questions/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
