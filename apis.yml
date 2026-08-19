@@ -39,7 +39,7 @@ tags:
 - JSON Schema
 created: '2026-07-28'
 modified: '2026-07-28'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: opentravel-alliance:opentravel-2020a-hotel-descriptive-content-resource
   name: OpenTravel 2020A Hotel Descriptive Content Resource
