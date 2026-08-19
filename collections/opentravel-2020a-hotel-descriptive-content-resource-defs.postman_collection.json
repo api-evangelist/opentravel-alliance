@@ -1,0 +1,1293 @@
+{
+  "item": [
+    {
+      "id": "4196b9a1-4880-44ff-96e2-22a4d2c29e85",
+      "name": "HotelDescriptiveContentResource - Get",
+      "request": {
+        "name": "HotelDescriptiveContentResource - Get",
+        "description": {},
+        "url": {
+          "path": [
+            "HotelDescriptiveContents"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "displayCurrency",
+              "value": "<string>",
+              "description": "Preferred currencty code is a 3 char currency code as defined in ISO 4127"
+            },
+            {
+              "disabled": false,
+              "key": "maxResponses",
+              "value": "<integer>",
+              "description": "The maximum quantity of search results in the response."
+            },
+            {
+              "disabled": false,
+              "key": "summaryResultsInd",
+              "value": "<boolean>",
+              "description": "If true, summary information is requested in the search results."
+            },
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>",
+              "description": "Uniquely identifies a single property for a reservation."
+            },
+            {
+              "disabled": false,
+              "key": "chainCode",
+              "value": "<string>",
+              "description": "Identifies the chain."
+            },
+            {
+              "disabled": false,
+              "key": "brandCode",
+              "value": "<string>",
+              "description": "Identifies a brand with in a chain (e.g. Courtyard, Hampton Inn).  This code is optional if the hotel is an independent property that can be identified by a propert code alone."
+            },
+            {
+              "disabled": false,
+              "key": "cityCode",
+              "value": "<string>",
+              "description": "Specifies the three character IATA city code."
+            },
+            {
+              "disabled": false,
+              "key": "areaID",
+              "value": "<string>",
+              "description": "An identifier of an area as defined by a hotel reservation system to allow for seaches in areas such as suburbs or regions."
+            },
+            {
+              "disabled": false,
+              "key": "hotelCode_TTI",
+              "value": "<integer>",
+              "description": "TTI hotel reference code."
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f3bbfce2-2a97-42c2-aa0a-3e4b8b8a6f6e",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"HotelDescriptiveContent\": [\n    {\n      \"@type\": \"string\",\n      \"objID\": \"string\",\n      \"DescriptiveContentRef\": \"string\",\n      \"Identifier\": {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"url\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"system\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"organization\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"@type\": \"string\",\n      \"objID\": \"string\",\n      \"DescriptiveContentRef\": \"string\",\n      \"Identifier\": {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"url\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"system\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"organization\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ],\n  \"PayloadStdAttributes\": {\n    \"version\": 3450.4889908206505,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1965-10-31T09:55:41.081Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"InSeries\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "cf7bf8d6-49e2-4131-8754-cd5dcc401782",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "5ae2e728-a0d7-4ea9-abaa-f191e2d55ed1",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "1d41dd04-0300-4668-a9ba-9078a4aaba95",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "84bd0421-05c5-432b-81e9-91e29ce0f908",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "1d75781e-a339-4fce-9f8b-1db5453b7b6d",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "acab7776-a6ee-4e7d-86c2-2c0911e20616",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "0b37c8ee-17d8-478e-95ad-b96236087734",
+      "name": "HotelDescriptiveContentResource - Notification",
+      "request": {
+        "name": "HotelDescriptiveContentResource - Notification",
+        "description": {},
+        "url": {
+          "path": [
+            "HotelDescriptiveContents",
+            "Notifications"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "789318d8-5ed4-4ae4-8c6b-c6fd98aeb32f",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "2f043216-36c4-47a2-a1ea-33403a55ec85",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "4749359e-8fde-460f-8539-7a56e6183acb",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "655dddeb-cace-4140-886e-c65163572d7a",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "2ef92dca-8aad-4aed-9d5a-307992c58842",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "de7e9dd7-4f17-4e76-9c8e-1c2d7b977511",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "9fb745e5-3711-43af-af3a-3ca4ca3c7446",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"DescriptiveContentRef\": \"<string>\",\n  \"Identifier\": {\n    \"value\": \"<string>\",\n    \"url\": \"<string>\",\n    \"system\": \"<string>\",\n    \"organization\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c4e14b63-f513-4102-b52e-40932f5ab040",
+      "name": "HotelDescriptiveContentResource - Query",
+      "request": {
+        "name": "HotelDescriptiveContentResource - Query",
+        "description": {},
+        "url": {
+          "path": [
+            "HotelDescriptiveContents",
+            "Query"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "9a00aafc-646a-4272-a8ff-8b1514d5d8dd",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"HotelDescriptiveContent\": [\n    {\n      \"@type\": \"<string>\",\n      \"objID\": \"<string>\",\n      \"DescriptiveContentRef\": \"<string>\",\n      \"Identifier\": {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"url\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"system\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"organization\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    },\n    {\n      \"@type\": \"<string>\",\n      \"objID\": \"<string>\",\n      \"DescriptiveContentRef\": \"<string>\",\n      \"Identifier\": {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"url\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"system\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"organization\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ],\n  \"PayloadStdAttributes\": {\n    \"version\": 3042.9421113751755,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1985-03-09T09:16:55.766Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Subsequent\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "178babab-15ea-4da7-97e4-29b543eef9be",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "f5cef4b3-0a04-483b-80bb-19d7d8dfb597",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "4775b6b0-7ed2-4c56-90e4-1bb28c883d1b",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "961e51ac-60e1-4d27-b6b3-f8bf5ee5a83e",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "b4775e4b-6985-421f-95db-a11eccdc18e3",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "f9a48ec3-6e26-4330-adcc-79ef59040609",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"ProcessingInfo\": {\n    \"displayCurrency\": \"<string>\",\n    \"maxResponses\": \"<integer>\",\n    \"summaryResultsInd\": \"<boolean>\"\n  },\n  \"HotelDescriptiveRequestInfo\": {\n    \"@type\": \"<string>\",\n    \"languageRequested\": \"<string>\",\n    \"BasicPropertyInfo\": [\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"@type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"name\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"chainCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"brandCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"cityCode\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"ExtensionPoint_Summary\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"HotelRequestInfo\": {\n      \"@type\": \"<string>\",\n      \"hotelStatus\": \"<string>\",\n      \"HotelStatusCode\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"sendDataInd\": \"<boolean>\",\n      \"ExtensionPoint\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n    },\n    \"FacilityRequestInfo\": {\n      \"sendMeetingRoomsInd\": \"<boolean>\",\n      \"sendGuestRoomsInd\": \"<boolean>\",\n      \"sendRestaurantsInd\": \"<boolean>\"\n    },\n    \"PolicyRequestInfo\": {\n      \"sendPoliciesInd\": \"<boolean>\"\n    },\n    \"AreaRequestInfo\": {\n      \"sendRefPointsInd\": \"<boolean>\",\n      \"sendAttractionsInd\": \"<boolean>\",\n      \"sendRecreationsInd\": \"<boolean>\"\n    },\n    \"AffiliationRequestInfo\": {\n      \"sendDistribSystemsInd\": \"<boolean>\",\n      \"sendBrandInd\": \"<boolean>\",\n      \"sendLoyalProgramsInd\": \"<boolean>\",\n      \"sendAwardsInd\": \"<boolean>\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 2514.927593675901,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1974-10-15T01:10:57.705Z\",\n    \"target\": \"Test\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Start\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": true\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      {\n        \"value\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"language\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"type\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"typeExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"shortText\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"code\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"docURL\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tag\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"recordID\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"nodeList\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"status\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"statusExtension\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    ],\n    \"Status\": {\n      \"value\": {\n        \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      \"extension\": \"st\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://127.0.0.1/v1_0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5820a512-22e6-42ed-b0d1-9edcd3d2bea4",
+    "name": "HotelDescriptiveContentResource",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,1293 @@
+{
+  "item": [
+    {
+      "id": "115f70d4-dacb-4dbc-bf18-1565ee310396",
+      "name": "HotelDescriptiveContentResource - Get",
+      "request": {
+        "name": "HotelDescriptiveContentResource - Get",
+        "description": {},
+        "url": {
+          "path": [
+            "HotelDescriptiveContents"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "displayCurrency",
+              "value": "<string>",
+              "description": "Preferred currencty code is a 3 char currency code as defined in ISO 4127"
+            },
+            {
+              "disabled": false,
+              "key": "maxResponses",
+              "value": "<integer>",
+              "description": "The maximum quantity of search results in the response."
+            },
+            {
+              "disabled": false,
+              "key": "summaryResultsInd",
+              "value": "<boolean>",
+              "description": "If true, summary information is requested in the search results."
+            },
+            {
+              "disabled": false,
+              "key": "code",
+              "value": "<string>",
+              "description": "Uniquely identifies a single property for a reservation."
+            },
+            {
+              "disabled": false,
+              "key": "chainCode",
+              "value": "<string>",
+              "description": "Identifies the chain."
+            },
+            {
+              "disabled": false,
+              "key": "brandCode",
+              "value": "<string>",
+              "description": "Identifies a brand with in a chain (e.g. Courtyard, Hampton Inn).  This code is optional if the hotel is an independent property that can be identified by a propert code alone."
+            },
+            {
+              "disabled": false,
+              "key": "cityCode",
+              "value": "<string>",
+              "description": "Specifies the three character IATA city code."
+            },
+            {
+              "disabled": false,
+              "key": "areaID",
+              "value": "<string>",
+              "description": "An identifier of an area as defined by a hotel reservation system to allow for seaches in areas such as suburbs or regions."
+            },
+            {
+              "disabled": false,
+              "key": "hotelCode_TTI",
+              "value": "<integer>",
+              "description": "TTI hotel reference code."
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a4daf7de-ee31-4e52-a4bd-06f8fe39f810",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "63dcbd6a-a729-4bdd-a3e0-2ecdd8c0bb8e",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "4d3d46c7-4640-4805-af6a-b21e38e4f202",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "46ff50b2-1b35-422b-8206-7839c5e9cbcd",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "06a0d4e3-1d1a-45de-98ae-8d9a1653b4e9",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "d16fce4e-125c-4ed1-ab13-f34b2e2ee6ed",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "59d38fae-7019-42e7-8cd8-68ff6997b264",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "displayCurrency",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResponses",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "summaryResultsInd",
+                  "value": "<boolean>"
+                },
+                {
+                  "key": "code",
+                  "value": "<string>"
+                },
+                {
+                  "key": "chainCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "brandCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "cityCode",
+                  "value": "<string>"
+                },
+                {
+                  "key": "areaID",
+                  "value": "<string>"
+                },
+                {
+                  "key": "hotelCode_TTI",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ab53c8ed-a676-4f8c-a84b-7c8cdbd12f48",
+      "name": "HotelDescriptiveContentResource - Notification",
+      "request": {
+        "name": "HotelDescriptiveContentResource - Notification",
+        "description": {},
+        "url": {
+          "path": [
+            "HotelDescriptiveContents",
+            "Notifications"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "d6887c5b-9e5d-4d0e-b2e3-651ee1d9c1ae",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        },
+        {
+          "id": "cc7bc450-55db-42c6-b98f-021273819c1a",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "9e10c4f7-1363-4e53-b60c-f1212bc7ce42",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "c54ec9e2-d9aa-48dc-a83f-bdee2e9f06ad",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "9bf28911-5882-4de5-87c3-0468f5e2b3d4",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "1ff74041-6aa0-44ed-b3a8-ac6f481acbdf",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "6fbeedf6-508a-4b43-b894-55af997150d8",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Notifications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "698e1248-24dd-4a4d-aa4e-6b43ef3add58",
+      "name": "HotelDescriptiveContentResource - Query",
+      "request": {
+        "name": "HotelDescriptiveContentResource - Query",
+        "description": {},
+        "url": {
+          "path": [
+            "HotelDescriptiveContents",
+            "Query"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "511d3d14-9196-4161-a43c-66ccb1d8a64f",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "ee9c4623-792d-481b-808b-886ce251aa40",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "8dfeb601-36ad-47ab-afee-26210f8d6999",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "79f8ba6c-060a-414f-9ee8-95bdd6523abd",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "91468589-f0f2-4152-97d6-dc4e3055ef40",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "4c9ea907-f182-44d5-9537-6c1618b755a9",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "b01f4d77-2f67-4324-9c3c-eda10b9d7037",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "HotelDescriptiveContents",
+                "Query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://127.0.0.1/v1_0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "19fddb06-4739-48ca-8487-2a53904f5ab0",
+    "name": "HotelDescriptiveContentResource",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

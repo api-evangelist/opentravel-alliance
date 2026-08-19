@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FacilityResource",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "FacilityResource - FindHospitalityAvailability",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/HospitalityFindHospitalityAvailability"
+      },
+      "docs": "FacilityResource - FindHospitalityAvailability"
+    },
+    {
+      "info": {
+        "name": "FacilityResource - RetrieveHospitalityAvailability",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/HospitalityRetrieveFacilityAvailability"
+      },
+      "docs": "FacilityResource - RetrieveHospitalityAvailability"
+    },
+    {
+      "info": {
+        "name": "FacilityResource - HospitalityFacilitySearch",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/Facilities"
+      },
+      "docs": "FacilityResource - HospitalityFacilitySearch"
+    }
+  ],
+  "bundled": true
+}

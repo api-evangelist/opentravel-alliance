@@ -1,0 +1,32 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HospitalityOffersResource",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "HospitalityOffersResource - FindSinglePropertyOffers",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/HospitalityPropertyOffers"
+      },
+      "docs": "HospitalityOffersResource - FindSinglePropertyOffers"
+    },
+    {
+      "info": {
+        "name": "HospitalityOffersResource - FindMultiPropertyOffers",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/HospitalityOffers"
+      },
+      "docs": "HospitalityOffersResource - FindMultiPropertyOffers"
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,706 @@
+{
+  "item": [
+    {
+      "id": "dd14fd52-65d2-4aa7-b154-cf00a2f25333",
+      "name": "FacilityResource - Post",
+      "request": {
+        "name": "FacilityResource - Post",
+        "description": {
+          "content": "Add a facility to the facilities collection.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "Facilities"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "0a54a85e-f1de-4662-8ecc-eb655bb70ef1",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"Facility\": [\n    {\n      \"@type\": \"<string>\",\n      \"objID\": \"<string>\",\n      \"FacilityRef\": \"<string>\",\n      \"FacilityKey\": {\n        \"@type\": \"<string>\",\n        \"ExtensionPoint\": {}\n      }\n    },\n    {\n      \"@type\": \"<string>\",\n      \"objID\": \"<string>\",\n      \"FacilityRef\": \"<string>\",\n      \"FacilityKey\": {\n        \"@type\": \"<string>\",\n        \"ExtensionPoint\": {}\n      }\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "ead5a5b1-6f75-421c-b7be-92afd84d1945",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "bb2a8752-07df-49c5-b433-f0342392bcad",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "a2c87579-24fd-410d-bf2e-4e7a7bc97022",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "f032a3de-d61a-458f-ac12-82423e6d523a",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "6ed6e1df-d4e7-4e68-9c6a-e5d595b15faa",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "0cc8bd01-d430-441f-9432-e2a52f233b50",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "cfed9ce5-9a55-45ec-ae09-00f826ce1995",
+      "name": "FacilityResource - Get",
+      "request": {
+        "name": "FacilityResource - Get",
+        "description": {},
+        "url": {
+          "path": [
+            "Facilities",
+            ":Identifier"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "Identifier",
+              "description": "(Required) A unique identifier defined by an external authority for this object."
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/xml"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "bc21766d-4c06-4da0-a60e-427185a1fe0c",
+          "name": "Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities",
+                ":Identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Identifier",
+                  "description": "(Required) A unique identifier defined by an external authority for this object."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"<string>\",\n  \"objID\": \"<string>\",\n  \"FacilityRef\": \"<string>\",\n  \"FacilityKey\": {\n    \"@type\": \"<string>\",\n    \"ExtensionPoint\": {}\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "a6e46719-3227-499a-86e4-fec65ded3c5f",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities",
+                ":Identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Identifier",
+                  "description": "(Required) A unique identifier defined by an external authority for this object."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "5a95efce-d4ef-4958-9909-0d8ee909fe13",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities",
+                ":Identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Identifier",
+                  "description": "(Required) A unique identifier defined by an external authority for this object."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "749437b6-c8bd-4474-9a34-eb8a92df06fa",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities",
+                ":Identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Identifier",
+                  "description": "(Required) A unique identifier defined by an external authority for this object."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "70ebdaff-9c7b-478e-8052-58a5e781efd6",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities",
+                ":Identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Identifier",
+                  "description": "(Required) A unique identifier defined by an external authority for this object."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "109cfe4a-7615-453d-8809-128fa0b795e2",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities",
+                ":Identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Identifier",
+                  "description": "(Required) A unique identifier defined by an external authority for this object."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "id": "ab0ba7f1-a4f7-41d4-9927-21e9af5bac0d",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "Facilities",
+                ":Identifier"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "Identifier",
+                  "description": "(Required) A unique identifier defined by an external authority for this object."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"@type\": \"string\",\n  \"PayloadStdAttributes\": {\n    \"version\": 8869.397029675645,\n    \"echoToken\": \"string\",\n    \"timeStamp\": \"1971-04-27T17:09:26.319Z\",\n    \"target\": \"Production\",\n    \"targetName\": \"string\",\n    \"transactionIdentifier\": \"string\",\n    \"sequenceNmbr\": \"string\",\n    \"transactionStatusCode\": \"Rollback\",\n    \"correlationID\": \"string\",\n    \"primaryLangID\": \"string\",\n    \"altLangID\": \"string\",\n    \"retransmissionIndicatorInd\": false\n  },\n  \"Result\": {\n    \"@type\": \"string\",\n    \"Errors\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Required field missing\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"TCIH\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Processing exception\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"EO\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Incomplete\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Warnings\": [\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"No implementation\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"O\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Complete\",\n        \"statusExtension\": \"string\"\n      },\n      {\n        \"value\": \"string\",\n        \"language\": \"string\",\n        \"type\": \"Application error\",\n        \"typeExtension\": \"string\",\n        \"shortText\": \"string\",\n        \"code\": \"XDJ\",\n        \"docURL\": \"string\",\n        \"tag\": \"string\",\n        \"recordID\": \"string\",\n        \"nodeList\": \"string\",\n        \"status\": \"Unknown\",\n        \"statusExtension\": \"string\"\n      }\n    ],\n    \"Status\": {\n      \"value\": \"Incomplete\",\n      \"extension\": \"string\"\n    },\n    \"ExtensionPoint\": {}\n  },\n  \"ExtensionPoint\": {}\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://example.com/resource/v1_0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "cf9ba269-8caa-4643-8c1d-d1ce4efa6126",
+    "name": "FacilityResource",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RESTful service to access all types of facilities.",
+      "type": "text/plain"
+    }
+  }
+}

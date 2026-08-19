@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FacilityResource",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "FacilityResource - Post",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/Facilities"
+      },
+      "docs": "Add a facility to the facilities collection."
+    },
+    {
+      "info": {
+        "name": "FacilityResource - Get",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "{{baseUrl}}/Facilities/:Identifier",
+        "params": [
+          {
+            "name": "Identifier",
+            "value": "",
+            "type": "path",
+            "description": "A unique identifier defined by an external authority for this object."
+          }
+        ]
+      },
+      "docs": "FacilityResource - Get"
+    }
+  ],
+  "bundled": true
+}

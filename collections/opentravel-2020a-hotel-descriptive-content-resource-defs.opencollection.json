@@ -1,0 +1,99 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HotelDescriptiveContentResource",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "HotelDescriptiveContentResource - Get",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "{{baseUrl}}/HotelDescriptiveContents",
+        "params": [
+          {
+            "name": "displayCurrency",
+            "value": "",
+            "type": "query",
+            "description": "Preferred currencty code is a 3 char currency code as defined in ISO 4127"
+          },
+          {
+            "name": "maxResponses",
+            "value": "",
+            "type": "query",
+            "description": "The maximum quantity of search results in the response."
+          },
+          {
+            "name": "summaryResultsInd",
+            "value": "",
+            "type": "query",
+            "description": "If true, summary information is requested in the search results."
+          },
+          {
+            "name": "code",
+            "value": "",
+            "type": "query",
+            "description": "Uniquely identifies a single property for a reservation."
+          },
+          {
+            "name": "chainCode",
+            "value": "",
+            "type": "query",
+            "description": "Identifies the chain."
+          },
+          {
+            "name": "brandCode",
+            "value": "",
+            "type": "query",
+            "description": "Identifies a brand with in a chain (e.g. Courtyard, Hampton Inn).  This code is optional if the hotel is an independent property that can be identified by a propert code alone."
+          },
+          {
+            "name": "cityCode",
+            "value": "",
+            "type": "query",
+            "description": "Specifies the three character IATA city code."
+          },
+          {
+            "name": "areaID",
+            "value": "",
+            "type": "query",
+            "description": "An identifier of an area as defined by a hotel reservation system to allow for seaches in areas such as suburbs or regions."
+          },
+          {
+            "name": "hotelCode_TTI",
+            "value": "",
+            "type": "query",
+            "description": "TTI hotel reference code."
+          }
+        ]
+      },
+      "docs": "HotelDescriptiveContentResource - Get"
+    },
+    {
+      "info": {
+        "name": "HotelDescriptiveContentResource - Notification",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/HotelDescriptiveContents/Notifications"
+      },
+      "docs": "HotelDescriptiveContentResource - Notification"
+    },
+    {
+      "info": {
+        "name": "HotelDescriptiveContentResource - Query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "{{baseUrl}}/HotelDescriptiveContents/Query"
+      },
+      "docs": "HotelDescriptiveContentResource - Query"
+    }
+  ],
+  "bundled": true
+}
