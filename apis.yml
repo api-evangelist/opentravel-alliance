@@ -57,156 +57,238 @@ created: '2026-07-28'
 modified: '2026-07-28'
 specificationVersion: '0.23'
 apis:
-- aid: opentravel-alliance:opentravel-2020a-hotel-descriptive-content-resource
-  name: OpenTravel 2020A Hotel Descriptive Content Resource
-  description: >-
-    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2020A Object Suite. Defines
-    three operations for hotel descriptive content — GET /HotelDescriptiveContents, POST
-    /HotelDescriptiveContents/Query and POST /HotelDescriptiveContents/Notifications — with 337 model
-    definitions. This is a specification artifact published by the standards body for implementers to host
-    themselves; the document declares host 127.0.0.1 and basePath /v1_0 and OpenTravel operates no runtime
-    endpoint for it.
-  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
+- aid: opentravel-alliance:opentravel-alliance-facilities-api
+  name: OpenTravel Alliance Facilities API
+  description: The Facilities API from OpenTravel Alliance — 2 operation(s) for facilities.
+  humanURL: >-
+    https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
   tags:
-  - Hospitality
-  - Hotels
-  - Content
-  - OpenTravel 2.0
+  - Facilities
   properties:
   - type: OpenAPI
-    url: openapi/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json
-  - type: OpenAPI
-    url: openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+    url: openapi/opentravel-alliance-facilities-api-openapi.yml
   - type: Documentation
     url: https://opentravel.org/about-2-0-object-model/
   - type: Repository
     url: https://github.com/OpenTravel/OpenTravel-Specifications
   - type: JSONSchema
     url: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
-    name: HospitalityContent 1.0.0 resource views (JSON Schema draft-04)
   - type: JSONSchema
     url: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
-    name: OrganizationHospitality 4.0.0 model (JSON Schema draft-04)
   - type: JSONSchema
     url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
-    name: Common 5.0.0 shared model (JSON Schema draft-04)
-  - type: Overlay
-    url: overlays/opentravel-alliance-2020a-hotel-descriptive-content-resource-overlay.yaml
-  - type: AgentSkill
-    url: skills/opentravel-alliance-hotel-descriptive-content.md
   - type: Webhooks
     url: asyncapi/opentravel-alliance-notifications-webhooks.yml
-    name: Notification operation catalog derived from the resource contract
-- aid: opentravel-alliance:opentravel-2020a-facility-resource
-  name: OpenTravel 2020A Facility Resource
-  description: >-
-    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2020A Object Suite. Defines
-    POST /Facilities and GET /Facilities/{Identifier} with 232 model definitions covering hospitality and golf
-    facility description. Published as a specification artifact with host example.com and basePath
-    /resource/v1_0; OpenTravel operates no runtime endpoint for it.
-  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
-  tags:
-  - Hospitality
-  - Facilities
-  - OpenTravel 2.0
-  properties:
-  - type: OpenAPI
-    url: openapi/opentravel-2020a-facility-resource-defs-openapi.json
-  - type: OpenAPI
-    url: openapi/opentravel-2020a-facility-resource-openapi.json
-  - type: Documentation
-    url: https://opentravel.org/about-2-0-object-model/
-  - type: Repository
-    url: https://github.com/OpenTravel/OpenTravel-Specifications
   - type: JSONSchema
     url: json-schema/opentravel-2020a-facility-resource-trim.schema.json
-    name: FacilityResource 1.0.0 collection wrapper (JSON Schema draft-04)
   - type: JSONSchema
     url: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
-    name: Organization 4.1.0 facility model (JSON Schema draft-04)
-  - type: JSONSchema
-    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
-    name: Common 5.0.0 shared model (JSON Schema draft-04)
-  - type: Overlay
-    url: overlays/opentravel-alliance-2020a-facility-resource-overlay.yaml
-  - type: AgentSkill
-    url: skills/opentravel-alliance-facility-resource.md
-- aid: opentravel-alliance:opentravel-2018a-hospitality-offers-resource
-  name: OpenTravel 2018A Hospitality Offers Resource
-  description: >-
-    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2018A Object Suite. Defines
-    POST /HospitalityOffers and POST /HospitalityPropertyOffers with 372 model definitions covering hotel offer
-    search and property-level offers. Specification artifact only — host 127.0.0.1, basePath /; the definitions
-    variant of this file is Latin-1 encoded rather than UTF-8 as published upstream.
-  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite
-  tags:
-  - Hospitality
-  - Hotels
-  - Offers
-  - OpenTravel 2.0
-  properties:
-  - type: OpenAPI
-    url: openapi/opentravel-2018a-hospitality-offers-resource-defs-openapi.json
-  - type: OpenAPI
-    url: openapi/opentravel-2018a-hospitality-offers-resource-openapi.json
-  - type: Documentation
-    url: https://opentravel.org/about-2-0-object-model/
-  - type: Repository
-    url: https://github.com/OpenTravel/OpenTravel-Specifications
   - type: JSONSchema
     url: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
-    name: HospitalityOffers 1.0.0 model (JSON Schema draft-04)
-  - type: Overlay
-    url: overlays/opentravel-alliance-2018a-hospitality-offers-resource-overlay.yaml
-  - type: AgentSkill
-    url: skills/opentravel-alliance-hospitality-offers.md
   - type: Examples
     url: examples/_index.yml
-    name: >-
-      OpenTravel-published request/response payloads for FindSinglePropertyOffers and
-      FindMultiPropertyOffers
   - type: APIReference
-    url: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
-    name: OTM-generated model reference for the 2018A Object Suite
-- aid: opentravel-alliance:opentravel-2018a-facility-resource
-  name: OpenTravel 2018A Facility Resource
+    url: >-
+      https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
+- aid: opentravel-alliance:opentravel-alliance-hospitalityfindhospitalityavailability-api
+  name: OpenTravel Alliance Hospitality Find Hospitality Availability API
   description: >-
-    Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2018A Object Suite. Defines
-    POST /Facilities, POST /HospitalityFindHospitalityAvailability and POST
-    /HospitalityRetrieveFacilityAvailability with 187 model definitions. Specification artifact only — host
-    127.0.0.1, basePath /; the definitions variant of this file is Latin-1 encoded rather than UTF-8 as
-    published upstream.
-  humanURL: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite
+    The HospitalityFindHospitalityAvailability API from OpenTravel Alliance — 1 operation(s) for hospitalityfindhospitalityavailability.
+  humanURL: >-
+    https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
   tags:
-  - Hospitality
-  - Facilities
-  - Availability
-  - OpenTravel 2.0
+  - HospitalityFindHospitalityAvailability
   properties:
   - type: OpenAPI
-    url: openapi/opentravel-2018a-facility-resource-defs-openapi.json
-  - type: OpenAPI
-    url: openapi/opentravel-2018a-facility-resource-openapi.json
+    url: openapi/opentravel-alliance-hospitalityfindhospitalityavailability-api-openapi.yml
   - type: Documentation
     url: https://opentravel.org/about-2-0-object-model/
   - type: Repository
     url: https://github.com/OpenTravel/OpenTravel-Specifications
   - type: JSONSchema
-    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
-    name: HospitalityFacility 1.0.0 model (JSON Schema draft-04)
-  - type: Overlay
-    url: overlays/opentravel-alliance-2018a-facility-resource-overlay.yaml
-  - type: AgentSkill
-    url: skills/opentravel-alliance-hospitality-facility-availability.md
+    url: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+  - type: Webhooks
+    url: asyncapi/opentravel-alliance-notifications-webhooks.yml
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-facility-resource-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
   - type: Examples
     url: examples/_index.yml
-    name: >-
-      OpenTravel-published request/response payloads for HospitalityFacilitySearch,
-      FindHospitalityAvailability and RetrieveHospitalityAvailability
   - type: APIReference
-    url: https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
-    name: OTM-generated model reference for the 2018A Object Suite
+    url: >-
+      https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
+- aid: opentravel-alliance:opentravel-alliance-hospitalityoffers-api
+  name: OpenTravel Alliance Hospitality Offers API
+  description: >-
+    The HospitalityOffers API from OpenTravel Alliance — 1 operation(s) for hospitalityoffers.
+  humanURL: >-
+    https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
+  tags:
+  - HospitalityOffers
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-alliance-hospitalityoffers-api-openapi.yml
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+  - type: Webhooks
+    url: asyncapi/opentravel-alliance-notifications-webhooks.yml
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-facility-resource-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
+  - type: Examples
+    url: examples/_index.yml
+  - type: APIReference
+    url: >-
+      https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
+- aid: opentravel-alliance:opentravel-alliance-hospitalitypropertyoffers-api
+  name: OpenTravel Alliance Hospitality Property Offers API
+  description: >-
+    The HospitalityPropertyOffers API from OpenTravel Alliance — 1 operation(s) for hospitalitypropertyoffers.
+  humanURL: >-
+    https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
+  tags:
+  - HospitalityPropertyOffers
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-alliance-hospitalitypropertyoffers-api-openapi.yml
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+  - type: Webhooks
+    url: asyncapi/opentravel-alliance-notifications-webhooks.yml
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-facility-resource-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
+  - type: Examples
+    url: examples/_index.yml
+  - type: APIReference
+    url: >-
+      https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
+- aid: opentravel-alliance:opentravel-alliance-hospitalityretrievefacilityavailability-api
+  name: OpenTravel Alliance Hospitality Retrieve Facility Availability API
+  description: >-
+    The HospitalityRetrieveFacilityAvailability API from OpenTravel Alliance — 1 operation(s) for hospitalityretrievefacilityavailability.
+  humanURL: >-
+    https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
+  tags:
+  - HospitalityRetrieveFacilityAvailability
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-alliance-hospitalityretrievefacilityavailability-api-openapi.yml
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+  - type: Webhooks
+    url: asyncapi/opentravel-alliance-notifications-webhooks.yml
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-facility-resource-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
+  - type: Examples
+    url: examples/_index.yml
+  - type: APIReference
+    url: >-
+      https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
+- aid: opentravel-alliance:opentravel-alliance-hoteldescriptivecontents-api
+  name: OpenTravel Alliance Hotel Descriptive Contents API
+  description: >-
+    The HotelDescriptiveContents API from OpenTravel Alliance — 3 operation(s) for hoteldescriptivecontents.
+  humanURL: >-
+    https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite
+  tags:
+  - HotelDescriptiveContents
+  properties:
+  - type: OpenAPI
+    url: openapi/opentravel-alliance-hoteldescriptivecontents-api-openapi.yml
+  - type: Documentation
+    url: https://opentravel.org/about-2-0-object-model/
+  - type: Repository
+    url: https://github.com/OpenTravel/OpenTravel-Specifications
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-hospitality-4-0-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-common-5-0-0-trim.schema.json
+  - type: Webhooks
+    url: asyncapi/opentravel-alliance-notifications-webhooks.yml
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-facility-resource-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2020a-organization-4-1-0-trim.schema.json
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-offers-trim.schema.json
+  - type: Examples
+    url: examples/_index.yml
+  - type: APIReference
+    url: >-
+      https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation
+  - type: JSONSchema
+    url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
 common:
+- type: Overlay
+  url: overlays/opentravel-alliance-2020a-hotel-descriptive-content-resource-overlay.yaml
+- type: AgentSkill
+  url: skills/opentravel-alliance-hotel-descriptive-content.md
+- type: Overlay
+  url: overlays/opentravel-alliance-2020a-facility-resource-overlay.yaml
+- type: AgentSkill
+  url: skills/opentravel-alliance-facility-resource.md
+- type: Overlay
+  url: overlays/opentravel-alliance-2018a-hospitality-offers-resource-overlay.yaml
+- type: AgentSkill
+  url: skills/opentravel-alliance-hospitality-offers.md
+- type: Overlay
+  url: overlays/opentravel-alliance-2018a-facility-resource-overlay.yaml
+- type: AgentSkill
+  url: skills/opentravel-alliance-hospitality-facility-availability.md
 - type: AgenticAccess
   url: agentic-access/opentravel-alliance-agentic-access.yml
 - type: DeveloperPortal
