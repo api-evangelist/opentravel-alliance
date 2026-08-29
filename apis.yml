@@ -287,6 +287,9 @@ apis:
   - type: JSONSchema
     url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
 common:
+- type: CapabilityMap
+  url: capabilities/opentravel-alliance-capability-edges.yml
+  name: OpenTravel Alliance Business Capability Map
 - type: IssueTracker
   url: https://github.com/OpenTravel/OpenTravel-Specifications/issues
 - type: Overlay

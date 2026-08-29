@@ -1,0 +1,38 @@
+slug: opentravel-alliance
+provider: OpenTravel Alliance
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Travel & Hospitality
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: HotelDescriptiveContents
+  spec_file: opentravel-alliance-hoteldescriptivecontents-api-openapi.yml
+  capability_id: BC-4000.70
+  capability_id_l1: BC-4000
+  capability_name: Travel Content & Imagery Management
+  confidence: 0.75
+  evidence: GET /HotelDescriptiveContents Get; POST /HotelDescriptiveContents/Notifications Notification;
+    schemas BasicPropertyInfo, AreaInfo, FacilityRequestInfo, AffiliationInfoRequest
+  reason: The OTA Hotel Descriptive Content messages retrieve, query and notify changes to descriptive
+    property content (basic property info, area info, facilities, affiliations) — authoring and management
+    of descriptive travel content. Some risk it is read as distribution content syndication, hence 0.75.
+- tag: Facilities
+  spec_file: opentravel-alliance-facilities-api-openapi.yml
+  capability_id: BC-4000
+  capability_id_l1: BC-4000
+  capability_name: Travel Product & Inventory Management
+  confidence: 0.72
+  evidence: POST /Facilities HospitalityFacilitySearch; schemas HospitalityFacilities, DisabilityFeature_Enum_Base,
+    PictureCategory_Enum_Base, Rating, AddressBldgRoom
+  reason: Operations search and retrieve hospitality facility records described by amenity, accessibility,
+    imagery-category and rating attributes — descriptive lodging product/content master data. L1 Travel
+    Product & Inventory Management is supported; the split between lodging product definition and content/imagery
+    management is not decisive enough to name an L2.
