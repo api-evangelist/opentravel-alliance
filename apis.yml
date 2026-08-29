@@ -20,6 +20,20 @@ description: >-
   github.com/OpenTravel/OpenTravel-Specifications carries the bulk of the corpus — including eight Swagger 2.0
   resource contracts — and is the only ungated route to machine-readable artifacts. The organization has
   announced work with the Linux Foundation to form an Open Travel Foundation.
+deliveryModel:
+  model: saas
+  license: OpenTravel Intellectual Property Policy
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - license
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://opentravel.org/wp-content/uploads/2025/08/opentravel-favicon2.png
 tags:
 - Travel
@@ -273,6 +287,8 @@ apis:
   - type: JSONSchema
     url: json-schema/opentravel-2018a-hospitality-facility-trim.schema.json
 common:
+- type: IssueTracker
+  url: https://github.com/OpenTravel/OpenTravel-Specifications/issues
 - type: Overlay
   url: overlays/opentravel-alliance-2020a-hotel-descriptive-content-resource-overlay.yaml
 - type: AgentSkill
