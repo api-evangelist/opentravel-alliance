@@ -1,0 +1,3984 @@
+openapi: 3.2.0
+info:
+  title: Opentravel Alliance Facilities API
+  version: 1.0.0
+  x-refined-note:
+  - x-otm-library differs across the merged source definitions and was not carried
+  description: 'Operations tagged Facilities across 4 of this provider''s published API definitions: opentravel-2018a-facility-resource-defs-openapi.json, opentravel-2018a-facility-resource-openapi.json, opentravel-2020a-facility-resource-defs-openapi.json, opentravel-2020a-facility-resource-openapi.json. Each path carries the servers of the definition it was published in.'
+servers:
+- url: http://127.0.0.1/
+- url: http://example.com/resource/v1_0
+tags:
+- name: Facilities
+paths:
+  /Facilities:
+    post:
+      summary: FacilityResource - HospitalityFacilitySearch
+      operationId: HospitalityFacilitySearch
+      responses:
+        '201':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityFacility_1_0_0_Trim.xsd#/HospitalityFacilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+        '400':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityFacility_1_0_0_Trim.xsd#/HospitalityFacilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+        '401':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityFacility_1_0_0_Trim.xsd#/HospitalityFacilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+        '402':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityFacility_1_0_0_Trim.xsd#/HospitalityFacilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+        '403':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityFacility_1_0_0_Trim.xsd#/HospitalityFacilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+        '404':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityFacility_1_0_0_Trim.xsd#/HospitalityFacilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+        '500':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityFacility_1_0_0_Trim.xsd#/HospitalityFacilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HospitalityFacilities'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FacilityQueryFacilitySearch'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/FacilityQueryFacilitySearch'
+        description: Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.
+        required: true
+      tags:
+      - Facilities
+    servers:
+    - url: http://127.0.0.1/
+  /Facilities/{Identifier}:
+    get:
+      summary: FacilityResource - Get
+      operationId: Get
+      parameters:
+      - name: Identifier
+        in: path
+        description: A unique identifier defined by an external authority for this object.
+        required: true
+        schema:
+          type: string
+          maxLength: 128
+      responses:
+        '400':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '401':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '402':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '403':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '404':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '500':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '200':
+          description: Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.
+          x-xml-schema:
+            $ref: Organization_4_1_0_Trim.xsd#/Facility
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FacilityID_2'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FacilityID_2'
+      tags:
+      - Facilities
+    servers:
+    - url: http://example.com/resource/v1_0
+components:
+  schemas:
+    ExtensionPoint_Summary: {}
+    Country:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Country
+      description: ISO 3166 code for a country.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}ISO3166'
+      properties:
+        value:
+          type: string
+          pattern: '[a-zA-Z]{2}'
+        name:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength0to64'
+            examples:
+            - context: Common
+              value: Ireland
+          type: string
+          maxLength: 128
+    DisabilityFeature_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: DisabilityFeature_Enum
+      description: Specifies information about a facility, amenity or service that is relevant to people with a disability.
+      type: string
+      enum:
+      - Accessibility to goods and services
+      - Accessible baths
+      - Accessible entrance
+      - Accessible parking
+      - Accessible platform lifts available
+      - Accessible rooms
+      - Accessible self parking available
+      - Accessible van parking
+      - Accommodations have bath in bedroom
+      - Adapted room doors
+      - Adjustable height hand-held shower wand
+      - Americans with Disabilities Act (ADA) compliance
+      - Assistive listening devices for meetings upon request
+      - Audible emergency alarm for sight impaired guest
+      - Bathroom doors in inches
+      - Bathroom doors open outwards
+      - Bathroom vanity in guest rooms for wheelchair user's height
+      - Bathtub grab bars
+      - Bathtub seat
+      - Bed types of wheelchair accessible rooms
+      - Bedroom wheelchair access
+      - Benches in locker rooms.
+      - Braille signage provided
+      - Braille/large print literature
+      - Business center� is wheelchair accessible
+      - Closed caption TV
+      - Closet rods in guest rooms for disabled person height
+      - Complementary accessible transportation with advanced notice
+      - Complies with Local/State/Federal laws for disabled
+      - Concierge desk is wheelchair accessible
+      - Describe in detail how your kitchen is accessible.
+      - Does hotel have accessible parking?
+      - Door width in inches
+      - Drinking fountains accessible
+      - Elevator access to all levels
+      - Elevator near accessible rooms
+      - Elevators equipped for accessibility
+      - Elevators have Braille Instructions
+      - Emergency cord/button system in bathroom
+      - Emergency cord/button system in bedroom
+      - Emergency exit signs in Braille
+      - Emergency info in Braille
+      - Emergency instructions in pictorial form
+      - Emergeny procedures for people with disabilites
+      - Exercise facility is wheelchair accessible
+      - Facilities for people with hearing impairment only
+      - Facilities for people with vision impairment only
+      - Feather free bedding/pillows available
+      - Flashing door knocker available
+      - Flat terrain between parking and entrance
+      - Food service lines accessible
+      - Grab bars in bathroom
+      - Guest rooms and access routes are accessible
+      - Hearing impaired services
+      - Hearing induction loop system installed
+      - Height from ground of deadbolt in guest room
+      - Height from ground of elevator external buttons
+      - Height from ground of elevator internal buttons
+      - Height from ground of elevator internal handrails
+      - Height from ground of guest bed including mattress
+      - Height from ground of thermostat in guest room
+      - Height from ground to light switches in bathroom
+      - Height from ground to light switches in guest room
+      - Height from ground to peephole in guest room door
+      - Height of bathroom basin
+      - Height of bathroom toilet seat
+      - Height of controls at highest operable part for bath
+      - Height of controls at highest operable part for roll-in shower
+      - Height of deadbolt in guest room (in feet)
+      - Height of deadbolt in guest room (in Inches)
+      - Height of light switches in guest rooms (feet)
+      - Height of light switches in guest rooms (inches)
+      - Height of non-slip handrails adjacent to bath
+      - Height of non-slip handrails adjacent to bathroom toilet
+      - Height of non-slip handrails in shower area
+      - Height of peephole in guest room (in feet)
+      - Height of peephole in guest room (in inches)
+      - Height of thermostat in guest room (in feet)
+      - Height of thermostat in guest room (in inches)
+      - Hotel entrance is accessible
+      - Hotel restaurant is wheelchair accessible
+      - Impairment aids available
+      - Length/depth of clear floor space in front of bath
+      - Length/depth of clear floor space in front of guest bathroom toilet
+      - Lever handles on guest room doors
+      - Light switches in guest rooms for wheelchair user's height
+      - List available room types for disabled persons- 8 fields
+      - Locker rooms accessible
+      - Lower level seating required
+      - Lowered electrical outlets
+      - Lowered night guards on guest room doors
+      - Number of accessible meeting rooms
+      - Number of accessible rooms with standard tub
+      - Number of each room type equipped for disabled persons- 8 fields
+      - Number of roll-in showers available
+      - Number of rooms with Braille
+      - Number of rooms with wheelchair accessible showers
+      - Number of wheelchair accessible rooms
+      - Other services for persons with disabilities
+      - Passenger has meet and assist requirement
+      - Passenger has oxygen equipment
+      - Pool is wheelchair accessible
+      - Portable bathtub seats
+      - Public areas wheelchair accessible
+      - Public telephones accessible
+      - Raised toilet seat with grab bars
+      - Ramp access
+      - Registration desk is wheelchair accessible
+      - Restaurant/bar menus available in 14pt print
+      - Restaurant/bar menus available in Braille
+      - Restroom facilities accessible
+      - Roll-in shower area with bathroom seat
+      - Roll-in shower available
+      - Route from accessible public entrance to business center is accessible
+      - Route from accessible public entrance to exercise facility is accessible
+      - Route from accessible public entrance to meeting rooms is accessible
+      - Route from accessible public entrance to pool is accessible
+      - Route from accessible public entrance to registration area is accessible
+      - Route from accessible public entrance to restaurant is accessible
+      - Route from accessible public entrance to spa is accessible
+      - Safety bars in shower
+      - Sales and service counters accessible
+      - Service animals allowed on property for people with disabilities
+      - Service dogs allowed
+      - Special needs menus
+      - Staff proficient in sign language
+      - Staff trained in service to disabled guests
+      - Steps/staircases have color markings
+      - Steps/staircases have handrails
+      - Subtitles/closed captions available on TV
+      - Tactile/14pt print signage throughout hotel
+      - Telephone for hearing impaired
+      - Television amplifier
+      - Toilet seat in guest rooms for disabled person
+      - TTY/TTD compatible
+      - Van accessible parking in self parking
+      - Viabrating alarm available
+      - Vibrating pillows available
+      - Visual emergency alarm for hearing impaired guest
+      - Walk-in shower
+      - What room types have wheel-in showers? (free form stringbox)
+      - Wheelchair accessible elevators
+      - Wheelchair lift required
+      - Wheelchair, passenger has own chair, buses
+      - Wheelchair, passenger has own chair, trains
+      - Wheelchair, passenger requires station wheelchair
+      - Wheelchairs available
+      - Which floors have accessible rooms
+      - Wide corridors
+      - Wide entrance
+      - Wide restaurant entrance
+      - Width/diameter of clear floor space at main hotel entrance
+      - Width/diameter of clear floor space at main restaurant entrance
+      - Width/diameter of clear floor space in front of bath
+      - Width/diameter of clear floor space in front of guest bathroom toilet
+      - Width/diameter of clear opening space at bathroom door
+      - Width/diameter of clear opening space at bedroom door
+      - Width/diameter of elevator clear door opening space
+      - Width/diameter of main corridors
+      - Width/diameter of wheelchair turning space in bathroom
+      - Width/diameter of wheelchair turning space in bedroom
+      - Width/diameter of wheelchair turning space in lobby/reception area
+      - Other_
+    PictureCategory_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: PictureCategory_Enum
+      description: Specifies the category of the mulitmedia item.
+      type: string
+      enum:
+      - Ballroom
+      - Bar/Lounge
+      - Basics
+      - Beach
+      - Business center
+      - Exterior view
+      - Golf course
+      - Guest room
+      - Guest room amenity
+      - Health club
+      - Hot news
+      - Lobby view
+      - Logo
+      - Map
+      - Meeting room
+      - Miscellaneous
+      - Pool view
+      - Promotional
+      - Property amenity
+      - Recreational facility
+      - Restaurant
+      - Spa
+      - Suite
+      - Other_
+    HospitalityFacilities:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BaseResponse
+      properties:
+        '@type':
+          type: string
+        FacilityHotel:
+          type: array
+          items:
+            $ref: '#/components/schemas/FacilityHotel'
+          maxItems: 1000
+        PayloadStdAttributes:
+          description: 'Assigned Type: ota2-0400:PayloadStdAttributes'
+          $ref: '#/components/schemas/PayloadStdAttributes'
+        Result:
+          description: 'Assigned Type: ota2-0400:Result'
+          $ref: '#/components/schemas/Result'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    YesNoInherit_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: YesNoInherit_Enum
+      type: string
+      enum:
+      - 'Yes'
+      - 'No'
+      - Inherit
+    ReferencePoint_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: ReferencePoint_Enum
+      description: Specifies a point of reference.
+      properties:
+        value:
+          $ref: '#/components/schemas/ReferencePoint_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    UnitOfMeasure_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: UnitOfMeasure_Enum
+      description: The unit of measure in a code format. Refer to OpenTravel Code List Unit of Measure Code (UOM).
+      type: string
+      enum:
+      - Miles
+      - Kilometers
+      - Meters
+      - Millimeters
+      - Centimeters
+      - Yards
+      - Feet
+      - Inches
+      - Pixels
+      - Block
+      - Megabytes
+      - Gigabytes
+      - Square feet
+      - Square meters
+      - Pounds
+      - Kilograms
+      - Square inch
+      - Square yard
+      - Acre
+      - Square millimeter
+      - Square centimeter
+      - Hectare
+      - Ounce
+      - Gram
+      - Gallons
+      - Liters
+      - Kilowatts
+      - Cubic meters
+    FacilityID:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Facility
+      description: Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.
+      properties:
+        '@type':
+          type: string
+        objID:
+          description: A unique identifier within this document for this object.
+          type: string
+        FacilityRef:
+          description: Refers to the obj ID on an object defined elsewhere in the current document.
+          type: string
+        FacilityKey:
+          description: 'Assigned Type: org-0300:FacilityKey'
+          $ref: '#/components/schemas/FacilityKey'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    StateProv:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: StateProv
+      description: The standard code or abbreviation for the state, province, or region.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StateProvCodeType'
+      properties:
+        value:
+          type: string
+          maxLength: 8
+          minLength: 2
+        name:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength0to64'
+            examples:
+            - context: Common
+              value: Texas
+          type: string
+          maxLength: 128
+    BusinessService:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: BusinessService
+      description: Name of the business service.
+      properties:
+        businessServiceCode:
+          description: 'Assigned Type: ota2-0400:OTA_Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          type: string
+          pattern: '[0-9A-Z]{1,4}(\.[A-Z]{3}(\.X){0,1}){0,1}'
+    Code:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Code
+      description: Any code used to specify an item, for example, type of traveler, service code, room amenity, etc.  May be used to reference the OpenTravel RMA Codelist.
+      properties:
+        value:
+          type: string
+          maxLength: 32
+        codeContext:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          type: string
+          maxLength: 32
+        description:
+          description: 'Assigned Type: ota2-0400:String'
+          type: string
+          maxLength: 512
+    BasePayload:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BasePayload
+      properties:
+        '@type':
+          type: string
+        PayloadStdAttributes:
+          description: 'Assigned Type: ota2-0400:PayloadStdAttributes'
+          $ref: '#/components/schemas/PayloadStdAttributes'
+        POS:
+          description: 'Assigned Type: ota2-0400:POS'
+          $ref: '#/components/schemas/POS'
+        ProcessingInfo:
+          description: 'Assigned Type: ota2-0400:ProcessingInfo'
+          $ref: '#/components/schemas/ProcessingInfo'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Rating:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Rating
+      description: The actual award or rating received by the facility.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+      properties:
+        value:
+          type: string
+        provider:
+          description: The name of the award or ratings provider.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: Provider
+          type: string
+        description:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          type: string
+          maxLength: 128
+    AdditionalDetailType_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: AdditionalDetailType_Enum
+      description: Identifies the type of detail being sent.
+      type: string
+      enum:
+      - Advanced booking information
+      - Amenity information
+      - Areas served
+      - Booking guidelines
+      - Cancellation information
+      - Catering description
+      - Check in check out information
+      - Check-in policy
+      - Check-out policy
+      - Children information
+      - Commission information
+      - Contract/negotiated booking information
+      - Corporate booking information
+      - Cuisine description
+      - Customs information for material
+      - Deposit information
+      - Deposit policy for master account
+      - Deposit policy for reservations
+      - Driving directions
+      - Driving directions from the east
+      - Driving directions from the north
+      - Driving directions from the south
+      - Driving directions from the west
+      - Early checkout description
+      - Express check-in policy
+      - Express check-out policy
+      - Extended stay information
+      - Extra charge information
+      - Extra person information
+      - Facility restrictions
+      - Family plan description
+      - Food and beverage minimums for groups
+      - General meeting planning information
+      - Government booking policy
+      - Group booking information
+      - Group meeting planning information
+      - Guarantee information
+      - Inclusion information
+      - Last room availability description
+      - Late arrival information
+      - Late departure information
+      - Maximum stay information
+      - Meal plan description
+      - Meeting room description
+      - Minimum stay information
+      - Miscellaneous information
+      - Offsite facilities information
+      - Offsite recreational activities information
+      - Offsite services information
+      - Onsite facilities information
+      - Onsite recreational activities information
+      - Onsite services information
+      - Oversold policy description
+      - Package information
+      - Pet policy description
+      - Promotional information
+      - Property description
+      - Property location
+      - Rate description
+      - Rate disclaimer information
+      - Restaurant services
+      - Room decor description
+      - Room information
+      - Room type upgrade description
+      - Seasons
+      - Security information
+      - Service charge information
+      - Special events
+      - Special offers description
+      - Surcharge information
+      - Tax information
+      - Travel industry booking information
+      - Visa/travel requirement information
+      - Other_
+    AddressBldgRoom:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: AddressBldgRoom
+      description: A string with a minimum length of 0 and a maximum length of 512.
+      properties:
+        value:
+          type: string
+          maxLength: 512
+        buldingInd:
+          description: When true, the information is a building name.
+          type: boolean
+    Location:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Location
+      properties:
+        '@type':
+          type: string
+        Address:
+          description: 'Assigned Type: ota2-0400:Address'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}AddressInfoType'
+          $ref: '#/components/schemas/Address'
+        Position:
+          description: 'Assigned Type: ota2-0400:Geolocation'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}Position'
+          $ref: '#/components/schemas/Geolocation'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      - Address
+      discriminator:
+        propertyName: '@type'
+    ChargeUnit_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: ChargeUnit_Enum
+      description: 'Source: Charge Type (CHG) OpenTravel codelist.'
+      properties:
+        value:
+          $ref: '#/components/schemas/ChargeUnit_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    Identifier:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Identifier
+      description: Identifier provides the ability to create a globally unique identifier.   This could be GUID a UUID or any other string that an organization that distinctly identifies the specific object.\n\nIdeally, for the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.\n\nThe URL, system and company attributes can be omitted only when the system context can be implied by a parent or ancestor element.
+      properties:
+        value:
+          type: string
+          maxLength: 128
+        url:
+          description: Uri of the creating system. The URI should be an URL and be globally unique. Should only be omitted when the context is clearly implied for the containing document.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Identifier provides the ability to create a globally unique identifier. For the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.
+          type: string
+        system:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: sysABC3344
+          type: string
+          maxLength: 128
+        organization:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: Acme
+          type: string
+          maxLength: 128
+    TargetEnvironment_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: TargetEnvironment_Enum
+      type: string
+      enum:
+      - Test
+      - Production
+    DisabilityFeature_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: DisabilityFeature_Enum
+      description: Specifies information about a facility, amenity or service that is relevant to people with a disability.
+      properties:
+        value:
+          $ref: '#/components/schemas/DisabilityFeature_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    TimeSpan:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: TimeSpan
+      description: Specifies the arrival date and departure date which covers the whole Reservation.
+      properties:
+        start:
+          description: 'Assigned Type: ota2-0400:DateTime'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: '2016-08-22T19:32:52Z'
+          type: string
+          format: date-time
+        end:
+          description: 'Assigned Type: ota2-0400:DateTime'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: '2016-08-28T04:32:52Z'
+          type: string
+          format: date-time
+      required:
+      - start
+      - end
+    BedType_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: BedType_Enum
+      description: The type(s) of sleeping option(s) in a guest accommodation.
+      type: string
+      enum:
+      - Dorm bed
+      - Double/full
+      - Futon
+      - King
+      - Murphy bed
+      - Queen
+      - Run of the house
+      - Sofa bed
+      - Tatami mats
+      - Twin/single
+      - Water bed
+      - Other_
+    IndexPointCode_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: IndexPointCode_Enum
+      description: Indicates the type of location being referenced (e.g., Airport, Hotel).
+      type: string
+      enum:
+      - Cross street
+      - Intersection
+      - Highway
+      - Highway exit
+      - City
+      - Airport
+      - Rail station
+      - Subway station
+      - Geo location
+      - Bus/coach station
+      - Hotel
+      - Nearest major city
+      - Surrounding city
+      - Heliport
+      - Regional express train station
+      - Attraction
+      - Business location
+      - Car rental location
+      - Convention center
+      - Educational
+      - Event
+      - Ground transport
+      - Military bases
+      - Park/recreational area
+      - Port
+      - Resort/ski area
+      - Shopping center
+      - Sports
+      - Transportation points
+      - Neighbouring state
+      - Metro area
+      - District
+      - Local landmark
+    ExtensionPoint_Custom: {}
+    SegmentCategory_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: SegmentCategory_Enum
+      description: Describes the segment type.
+      type: string
+      enum:
+      - Budget
+      - Deluxe
+      - Economy
+      - First Class
+      - Luxury
+      - Moderate
+      - Tourist
+      - Upscale
+      - Standard
+      - Midscale
+      - Quality
+      - Midscale without F&B
+      - Upper upscale
+      - Other_
+    Features:
+      x-otm-entity:
+        EntityType: ChoiceObject
+        EntityName: Features
+      properties:
+        '@type':
+          type: string
+        quantity:
+          description: 'Assigned Type: ota2-0400:NonNegativeInteger'
+          type: integer
+          format: int32
+          minimum: 0
+        Description:
+          description: 'Assigned Type: ota2-0400:Description'
+          $ref: '#/components/schemas/Description'
+        ExtensionPoint_Shared:
+          $ref: '#/components/schemas/ExtensionPoint_Shared'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    PictureCategory_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: PictureCategory_Enum
+      description: Specifies the category of the mulitmedia item.
+      properties:
+        value:
+          $ref: '#/components/schemas/PictureCategory_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    RequestorID:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: RequestorID
+      description: An identifier of the entity making the request (e.g. ATA\/IATA\/ID number, Electronic Reservation Service Provider (ERSP), Association of British Travel Agents.(ABTA)).
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Extension: UniqueID_Type'
+      properties:
+        '@type':
+          type: string
+        Identifier:
+          description: 'Assigned Type: ota2-0400:Identifier'
+          $ref: '#/components/schemas/Identifier'
+        ExtensionPoint_Summary:
+          $ref: '#/components/schemas/ExtensionPoint_Summary'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    PayloadStdAttributes:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: PayloadStdAttributes
+      description: The standard attributes that appear on the root element for all OpenTravel messages.
+      properties:
+        echoToken:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to128'
+            equivalents:
+            - context: Common
+              value: EchoToken
+          type: string
+          maxLength: 128
+        timeStamp:
+          description: YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock:\n20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+            equivalents:
+            - context: Common
+              value: TimeStamp
+          type: string
+          format: date-time
+        target:
+          description: Test or Production target system indicator.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: OTA_PayloadStdAttributes_Target'
+            equivalents:
+            - context: Common
+              value: Target
+          $ref: '#/components/schemas/TargetEnvironment_Enum'
+        targetName:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: TargetName
+          type: string
+          maxLength: 128
+        version:
+          description: The OpenTravel message version indicated by a decimal value.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}decimal'
+            equivalents:
+            - context: Common
+              value: Version
+          type: number
+          format: float
+        transactionIdentifier:
+          description: Unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: TransactionIdentifier
+          type: string
+        sequenceNmbr:
+          description: 'Implementer: Message resynchronization typically is required if a system has been off-line and needs to retrieve messages that were missed.'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: SequenceNmbr
+          type: string
+        transactionStatusCode:
+          description: This indicates where this message falls within a sequence of messages.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: OTA_PayloadStdAttributes_TransactionStatusCode'
+            equivalents:
+            - context: Common
+              value: TransactionStatusCode
+          $ref: '#/components/schemas/TransactionStatusCode_Enum'
+        correlationID:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: CorrelationID
+          type: string
+          maxLength: 128
+        primaryLangID:
+          description: 'ISO 639 (3) character language codes: http:\/\/en.wikipedia.org\/wiki\/Lists_of_ISO_639_codes'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}language'
+            equivalents:
+            - context: Common
+              value: PrimaryLangID
+            examples:
+            - context: Common
+              value: en
+          type: string
+        altLangID:
+          description: 'ISO 639 (3) character language codes: http:\/\/en.wikipedia.org\/wiki\/Lists_of_ISO_639_codes'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}language'
+            equivalents:
+            - context: Common
+              value: AltLangID
+            examples:
+            - context: Common
+              value: es
+          type: string
+        retransmissionIndicatorInd:
+          description: 'Implementer: It is recommended that this attribute is used (i.e., set to TRUE) only when a message is retransmitted.'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}boolean'
+            equivalents:
+            - context: Common
+              value: RetransmissionIndicator
+          type: boolean
+      required:
+      - version
+    RelativePosition:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: RelativePosition
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Extension: TransportationsType'
+          - 'Extension: TransportationsType'
+      properties:
+        '@type':
+          type: string
+        direction:
+          description: Defines the cardinal direction (e.g., north, south, southwest).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+          type: string
+        distance:
+          description: Defines the distance between two points.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+          type: string
+        unitOfMeasureCode:
+          description: The unit of measure in a code format. Refer to OpenTravel Code List Unit of Measure Code (UOM).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}OTA_CodeType'
+          $ref: '#/components/schemas/UnitOfMeasure_Enum'
+        indexPointCode:
+          description: This is the object referred to by the relative position (e.g. cross street, airport). Refer to OpenTravel Code List Index Point Code (IPC).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          $ref: '#/components/schemas/IndexPointCode_Enum'
+        name:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength0to64'
+          type: string
+          maxLength: 128
+        toFrom:
+          description: Used to indicate whether the context is to a facility or from a facility.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: RelativePositionType_ToFrom'
+          $ref: '#/components/schemas/ToFrom_Enum'
+        positionAccuracy:
+          description: Indicates the accuracy of the property's geo-coding, since the property's longitude and latitude may not always be exact. Refer to OpenTravel Code List Position Accuracy Code (PAC).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          $ref: '#/components/schemas/PositionAccuracy_Enum'
+        Transportations:
+          description: 'Assigned Type: ota2-0400:Transportations'
+          $ref: '#/components/schemas/Transportations'
+        Description:
+          description: 'Assigned Type: ota2-0400:Description'
+          $ref: '#/components/schemas/Description'
+        nearestInd:
+          description: The indicator for whether this location is nearest.
+          type: boolean
+        primaryInd:
+          description: Indicates whether the reference point is considered the main reference point for the specific type of IndexPointCode (e.g., in Dallas, where IndexPointCode=airport Dallas\/Fort Worth airport would be the primary airport even if another airport such as Love Field is closer).
+          type: boolean
+        approximateDistanceInd:
+          description: When true, the distance information is approximate.
+          type: boolean
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    URL:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: URL
+      description: Web site address, in IETF specified format.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}anyURI'
+      properties:
+        value:
+          type: string
+        type:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: Type
+          type: string
+          maxLength: 128
+        defaultInd:
+          description: Indicates whether or not this is the default URL.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'AttributeGroup: DefaultIndGroup'
+          type: boolean
+    DetailedHotelSearchCriteria:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: DetailedHotelSearchCriteria
+      properties:
+        '@type':
+          type: string
+        hotelCodeContext:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to32'
+            examples:
+            - context: orghs
+              value: Sabre
+          type: string
+          maxLength: 32
+        tTIcode:
+          description: 'Note:   This code is maintained by the Travel Technology Initiative (TTI) and provides a unique way to identify a property across a multiplicity of channels, service providers, tour companies, representation companies and third parties involved in the booking, administration and fulfillment of travel within the hospitality industry. For more information: http:\/\/www.tti.org\/tticodes.html'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}positiveInteger'
+          type: integer
+          format: int32
+        Features:
+          description: 'Assigned Type: ota2-0400:Features'
+          $ref: '#/components/schemas/Features'
+        BedType:
+          description: 'Assigned Type: ota2-0300:BedType_Enum'
+          $ref: '#/components/schemas/BedType_Enum'
+        HotelAmenity:
+          type: array
+          items:
+            $ref: '#/components/schemas/Code'
+          maxItems: 100
+        RoomAmenities:
+          type: array
+          items:
+            $ref: '#/components/schemas/Code'
+          maxItems: 100
+        Rating:
+          description: The minimum hotel rating value of the hotels to be returned (e.g. only return hotels with a 3.5 rating or higher).
+          type: number
+          format: float
+          maximum: 5
+          minimum: 0
+        petsAllowedInd:
+          description: When true, pets are allowed at the facility.
+          type: boolean
+        smokingRoomsInd:
+          description: When true, this hotel facility offers smoking rooms.
+          type: boolean
+        aDACompliantInd:
+          description: When true, this hotel facility is ADA compliant.
+          type: boolean
+        exactMatchInd:
+          description: When true, only properties\/rate plans that exactly match the search criteria should be returned.
+          type: boolean
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    MultimediaCollection:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: MultimediaCollection
+      properties:
+        '@type':
+          type: string
+        lastUpdated:
+          description: The date and time when the collection of multimedia information was last updated.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+            equivalents:
+            - context: Common
+              value: LastUpdated
+          type: string
+          format: date-time
+        Multimedia:
+          type: array
+          items:
+            $ref: '#/components/schemas/Multimedia'
+          minItems: 1
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      - Multimedia
+      discriminator:
+        propertyName: '@type'
+    ChargeUnit_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: ChargeUnit_Enum
+      description: 'Source: Charge Type (CHG) OpenTravel codelist.'
+      type: string
+      enum:
+      - Per unit
+      - Per order
+      - Per tray
+      - Per dozen
+      - Per gallon
+      - Round trip
+      - Per room
+      - Per item
+      - Per rental
+      - Per person per night
+      - Per person per stay
+      - Per room per night
+      - Per room per stay
+      - Weekly
+      - Per occurance
+      - Half day
+      - Hourly
+      - Daily
+      - Per function
+      - Per minute
+      - First use
+      - Per person
+      - Unit
+      - Tray
+      - Stay
+      - Room
+      - Reservation/Booking
+      - Rental
+      - OverMinuteCharge
+      - Order
+      - OneWay
+      - OneTimeUse
+      - MinimumCharge
+      - MaximumCharge
+      - Item
+      - Gallon
+      - Complimentary
+      - AdditionsPerStay
+      - Other_
+    PropertyID:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Property
+      description: 'A property may contain one or more facilities of the same or differing types.  Example:  The property Disney Orlando has many hotels and golf courses on it.'
+      properties:
+        '@type':
+          type: string
+        objID:
+          description: A unique identifier within this document for this object.
+          type: string
+        Identifier:
+          description: 'Assigned Type: ota2-0400:Identifier'
+          $ref: '#/components/schemas/Identifier'
+        PropertyRef:
+          description: Refers to the obj ID on an object defined elsewhere in the current document.
+          type: string
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    FacilityKey:
+      x-otm-entity:
+        EntityType: ChoiceObject
+        EntityName: FacilityKey
+      description: Allows for a facility to be identified by and Identifier element or other elements\/attributes that are appropriate for the specific type of facility.
+      properties:
+        '@type':
+          type: string
+        ExtensionPoint_Shared:
+          $ref: '#/components/schemas/ExtensionPoint_Shared'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    TimeUnit_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: TimeUnit_Enum
+      type: string
+      enum:
+      - Day
+      - Full duration
+      - Hour
+      - Minute
+      - Month
+      - Second
+      - Week
+      - Year
+    TransportationID:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Transportation
+      description: Detailed transportation information.
+      properties:
+        '@type':
+          type: string
+        objID:
+          description: A unique identifier within this document for this object.
+          type: string
+        Identifier:
+          description: 'Assigned Type: ota2-0400:Identifier'
+          $ref: '#/components/schemas/Identifier'
+        TransportationRef:
+          description: Refers to the obj ID on an object defined elsewhere in the current document.
+          type: string
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    InformationType_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: InformationType_Enum
+      description: Identifies the type of information being sent.
+      properties:
+        value:
+          $ref: '#/components/schemas/InformationType_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    BookingChannel_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: BookingChannel_Enum
+      description: Specifies a type of booking channel.
+      properties:
+        value:
+          $ref: '#/components/schemas/BookingChannel_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    EmailAddressType_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: EmailAddressType_Enum
+      description: Specifies a type of email address.
+      properties:
+        value:
+          $ref: '#/components/schemas/EmailAddressType_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    RateRange:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: RateRange
+      description: A range of monetary values within which the cost of the available products are requested.
+      properties:
+        minRate:
+          description: 'Assigned Type: ota2-0400:Money'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}Money'
+          type: number
+          format: float
+        maxRate:
+          description: 'Assigned Type: ota2-0400:Money'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}Money'
+          type: number
+          format: float
+        fixedRate:
+          description: 'Assigned Type: ota2-0400:Money'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}Money'
+          type: number
+          format: float
+        rateTimeUnit:
+          description: Used to specify the period of time to which the rates apply.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}TimeUnitType'
+          $ref: '#/components/schemas/TimeUnit_Enum'
+        currencyCode:
+          description: 'Assigned Type: ota2-0400:CurrencyCode_ISO4217'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}AlphaLength3'
+          type: string
+          pattern: '[a-zA-Z]{3}'
+    EmailAddressType_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: EmailAddressType_Enum
+      description: Specifies a type of email address.
+      type: string
+      enum:
+      - Business
+      - Listserve
+      - Managing company
+      - Personal
+      - Property
+      - Reservation office
+      - Sales office
+      - Other_
+    Enum_AddressRole_Open:
+      type: string
+      enum:
+      - Home
+      - Business
+      - Destination
+      - Other
+      - Other_
+    OperationSchedule:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: OperationSchedule
+      properties:
+        '@type':
+          type: string
+        daysOfWeek:
+          description: The day(s) of week to which the operation time applies.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'AttributeGroup: DOW_PatternGroup'
+          $ref: '#/components/schemas/DayOfOperation'
+        additionalOperationInfoCode:
+          description: 'Assigned Type: ota2-0400:OTA_Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          type: string
+          pattern: '[0-9A-Z]{1,4}(\.[A-Z]{3}(\.X){0,1}){0,1}'
+        frequency:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to64'
+          type: string
+          maxLength: 128
+        text:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength0to64'
+          type: string
+          maxLength: 128
+        DateTimeSpanWindows:
+          description: 'Assigned Type: ota2-0400:DateTimeSpanWindows'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'AttributeGroup: DateTimeSpanGroup'
+          $ref: '#/components/schemas/DateTimeSpanWindows'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Text:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Text
+      description: Provides text and indicates whether it is formatted or not.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+      properties:
+        value:
+          type: string
+          maxLength: 4096
+        language:
+          description: The language in which the text is provided.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'AttributeGroup: LanguageGroup'
+            examples:
+            - context: Common
+              value: en
+          type: string
+        textFormat:
+          description: Indicates the format of text used in the description e.g. unformatted  or html.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: FormattedTextTextType_TextFormat'
+            equivalents:
+            - context: Common
+              value: TextFormat
+            examples:
+            - context: Common
+              value: Sample Formatted text
+          $ref: '#/components/schemas/TextFormatType'
+    ImageID:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Image
+      description: 'Warning:  This will be redesigned in the next release.'
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Extension: VideoItemType'
+      properties:
+        '@type':
+          type: string
+        objID:
+          description: A unique identifier within this document for this object.
+          type: string
+        Identifier:
+          description: 'Assigned Type: ota2-0400:Identifier'
+          $ref: '#/components/schemas/Identifier'
+        ImageRef:
+          description: Refers to the obj ID on an object defined elsewhere in the current document.
+          type: string
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    ExtensionPoint: {}
+    ParagraphListItem:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: ParagraphListItem
+      properties:
+        listItem:
+          description: The item or sequence number.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}integer'
+            equivalents:
+            - context: Common
+              value: ListItem
+          type: integer
+          format: int32
+        text2:
+          description: 'Assigned Type: ota2-0400:Text'
+          type: string
+          maxLength: 4096
+        language:
+          description: The language in which the text is provided.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'AttributeGroup: LanguageGroup'
+            examples:
+            - context: Common
+              value: en
+          type: string
+        textFormat:
+          description: Indicates the format of text used in the description e.g. unformatted  or html.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: FormattedTextTextType_TextFormat'
+            equivalents:
+            - context: Common
+              value: TextFormat
+            examples:
+            - context: Common
+              value: Sample Formatted text
+          $ref: '#/components/schemas/TextFormatType'
+    TextFormatType:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: TextFormatType
+      type: string
+      enum:
+      - PlainText
+      - HTML
+    Result:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Result
+      properties:
+        '@type':
+          type: string
+        Errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorWarning'
+          maxItems: 50
+        Warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorWarning'
+          maxItems: 50
+        Status:
+          description: 'Assigned Type: ota2-0300:Status_Enum'
+          $ref: '#/components/schemas/Status_Enum'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    ProcessingInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: ProcessingInfo
+      description: Transaction processing directives, including display currency overrides. If no display currency information is provided, the display and pricing currency will default to the value in POS\/Source\/@ISOCurrency.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - (Developer Notes) An agreement should be in place with your trading partners that specifies what information is summary versus detail.
+      properties:
+        displayCurrency:
+          description: 'Assigned Type: ota2-0400:CurrencyCode_ISO4217'
+          x-otm-annotations:
+            documentation:
+              references:
+              - '(Reference): http:\/\/www.opentraveldevelopersnetwork.com\/Supported_ISO_Standards.php'
+              more-info:
+              - '(More Info): http:\/\/www.opentraveldevelopersnetwork.com\/2012A_SchemaDoc\/DisplayCurrency'
+          type: string
+          pattern: '[a-zA-Z]{3}'
+        positiveInteger:
+          description: The maximum quantity of search results in the response.
+          type: integer
+          format: int32
+        summaryResultsInd:
+          description: If true, summary information is requested in the search results.
+          type: boolean
+    TransactionStatusCode_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: TransactionStatusCode_Enum
+      type: string
+      enum:
+      - Start
+      - End
+      - Rollback
+      - InSeries
+      - Continuation
+      - Subsequent
+    Enum_AddressRole:
+      properties:
+        value:
+          $ref: '#/components/schemas/Enum_AddressRole_Open'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    HotelDetails:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: HotelDetails
+      properties:
+        '@type':
+          type: string
+        supplierIntegrationLevel:
+          description: 'Assigned Type: ota2-0400:NonNegativeInteger'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            examples:
+            - context: orghs
+              value: '1'
+          type: integer
+          format: int32
+          minimum: 0
+        maxGroupRoomQuantity:
+          description: 'Assigned Type: ota2-0400:NonNegativeInteger'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+          type: integer
+          format: int32
+          minimum: 0
+        currencyCode:
+          description: 'Assigned Type: ota2-0400:CurrencyCode_ISO4217'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}AlphaLength3'
+            examples:
+            - context: orghs
+              value: usd
+          type: string
+          pattern: '[a-zA-Z]{3}'
+        hotelCodeContext:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: orghs
+              value: Sabre
+          type: string
+          maxLength: 128
+        tTICode:
+          description: 'Note:   This code is maintained by the Travel Technology Initiative (TTI) and provides a unique way to identify a property across a multiplicity of channels, service providers, tour companies, representation companies and third parties involved in the booking, administration and fulfillment of travel within the hospitality industry. For more information: http:\/\/www.tti.org\/tticodes.html.'
+          type: integer
+          format: int32
+        Recreation:
+          type: array
+          items:
+            $ref: '#/components/schemas/Recreation'
+        BusinessService:
+          type: array
+          items:
+            $ref: '#/components/schemas/BusinessService'
+        Policy:
+          description: 'Assigned Type: orghs-0300:HotelPolicy'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}Policy'
+          $ref: '#/components/schemas/HotelPolicy'
+        MeetingCenter:
+          type: array
+          items:
+            $ref: '#/components/schemas/MeetingCenter'
+        Amenity:
+          type: array
+          items:
+            $ref: '#/components/schemas/Amenity'
+        Ancillary:
+          description: 'Assigned Type: ota2-0400:Ancillary_Summary'
+          $ref: '#/components/schemas/Ancillary'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    PositionAccuracy_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: PositionAccuracy_Enum
+      description: Specifies the level of accuracy for the positon.
+      type: string
+      enum:
+      - Zip9Code
+      - Zip7Code
+      - Zip5Code
+      - Street
+      - State
+      - Property
+      - Intersection
+      - Exact
+      - County
+      - Country
+      - City
+      - Block
+    Ancillary:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Ancillary
+      properties:
+        '@type':
+          type: string
+        name:
+          description: 'Assigned Type: ota2-0400:String'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+          type: string
+          maxLength: 512
+        description:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          type: string
+          maxLength: 128
+        PricingType:
+          description: 'Assigned Type: ota2-0300:ChargeUnit_Enum'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: GolfAmenityType_PricingType'
+          $ref: '#/components/schemas/ChargeUnit_Enum'
+        Code:
+          description: 'Assigned Type: ota2-0400:Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+          $ref: '#/components/schemas/Code'
+        includedInd:
+          description: If TRUE, this is included with the purchase.
+          type: boolean
+        orderableInd:
+          description: If TRUE, this ancillary may be ordered.
+          type: boolean
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    FacilityQueryFacilitySearch:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Facility
+      description: Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.
+      properties:
+        '@type':
+          type: string
+        BasePayload:
+          description: 'Assigned Type: ota2-0400:BasePayload'
+          $ref: '#/components/schemas/BasePayload'
+        FacilityQueryHotel:
+          description: 'Assigned Type: orghs-0300:Facility_Query_Hotel'
+          $ref: '#/components/schemas/FacilityQueryHotel'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    ExtensionPoint_Shared: {}
+    Address:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Address
+      description: Provides address information. Unformatted addresses are captured using the simple facet.
+      properties:
+        '@type':
+          type: string
+        AddressLine:
+          type: array
+          items:
+            type: string
+            maxLength: 128
+          maxItems: 4
+        BldgRoom:
+          type: array
+          items:
+            $ref: '#/components/schemas/AddressBldgRoom'
+          maxItems: 2
+        Number:
+          description: 'Assigned Type: ota2-0400:AddressStreetNumber'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StreetNmbr'
+            equivalents:
+            - context: Common
+              value: StreetNmbr
+            examples:
+            - context: Common
+              value: '111'
+          $ref: '#/components/schemas/AddressStreetNumber'
+        Street:
+          description: May contain the street number when the Street number element is missing.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to255'
+            equivalents:
+            - context: Common
+              value: AddressLine
+            examples:
+            - context: Common
+              value: Travers Street
+          type: string
+          maxLength: 128
+        City:
+          description: City (e.g., Dublin), town, or postal station (i.e., a postal service territory, often used in a military address).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: CityName
+            examples:
+            - context: Common
+              value: Dublin
+          type: string
+          maxLength: 128
+        County:
+          description: County or Region Name (e.g., Fairfax).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: County
+            examples:
+            - context: Common
+              value: Fairfax
+          type: string
+          maxLength: 128
+        StateProv:
+          description: 'Assigned Type: ota2-0400:StateProv'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StateProvType'
+            equivalents:
+            - context: Common
+              value: StateProv
+            examples:
+            - context: Common
+              value: Texas
+          $ref: '#/components/schemas/StateProv'
+        Country:
+          description: 'Assigned Type: ota2-0400:Country'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}CountryNameType'
+            equivalents:
+            - context: Common
+              value: CountryName
+            examples:
+            - context: Common
+              value: IE
+          $ref: '#/components/schemas/Country'
+        PostalCode:
+          description: Post Office Code number.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: PostalCode
+            examples:
+            - context: Common
+              value: 32165-9999
+          type: string
+          maxLength: 128
+        role:
+          $ref: '#/components/schemas/Enum_AddressRole'
+        ExtensionPoint_Summary:
+          $ref: '#/components/schemas/ExtensionPoint_Summary'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    DateTimeStamp:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: DateTimeStamp
+      description: Time stamp of the creation.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+      properties:
+        value:
+          type: string
+          format: date-time
+        create:
+          description: Time stamp of the creation.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+            equivalents:
+            - context: Common
+              value: CreateDateTime
+          type: string
+          format: date-time
+        creatorID:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: CreatorID
+            examples:
+            - context: Common
+              value: c123456789
+          type: string
+          maxLength: 128
+        lastModify:
+          description: Time stamp of last modification.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+            equivalents:
+            - context: Common
+              value: LastModifyDateTime
+          type: string
+          format: date-time
+        lastModifierID:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: LastModifierID
+            examples:
+            - context: Common
+              value: m987654321
+          type: string
+          maxLength: 128
+        purge:
+          description: Date an item will be purged from a database (e.g., from a live database to an archive).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}date'
+            equivalents:
+            - context: Common
+              value: PurgeDate
+          type: string
+          format: date
+    HotelPolicy:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: HotelPolicy
+      properties:
+        checkInTime:
+          description: The checkin time required by this hotel for a room stay.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}time'
+            equivalents:
+            - context: orghs
+              value: ''
+            examples:
+            - context: orghs
+              value: '16:00:00'
+          type: string
+        checkOutTime:
+          description: The checkout time required by this hotel for a room stay.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}time'
+            examples:
+            - context: orghs
+              value: '12:00:00'
+          type: string
+    ReferencePoint_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: ReferencePoint_Enum
+      description: Specifies a point of reference.
+      type: string
+      enum:
+      - Airport
+      - Amusement park
+      - Arena
+      - Bar
+      - Bay
+      - Beach
+      - Bus station
+      - City center
+      - Church
+      - Corporation
+      - Educational Institution
+      - Ferry station
+      - Financial district
+      - Financial institution
+      - Lake
+      - Landmark
+      - Library
+      - Marina
+      - Market
+      - Medical facility
+      - Metro/subway station
+      - Monument
+      - Museum
+      - Park
+      - Racetrack
+      - Restaurant
+      - River
+      - Shopping center
+      - Sports facility
+      - Synagogue
+      - Train station
+      - Zoo
+      - Other_
+    RecreationService_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: RecreationService_Enum
+      description: Describes the recreational activities available to a guest which may or may not be operated by or located at the hotel.
+      type: string
+      enum:
+      - Animal watching
+      - Antique shopping
+      - Archery
+      - Badminton court
+      - Baseball diamond
+      - Basketball court
+      - Beach
+      - Bike rental
+      - Bike trail
+      - Billiards
+      - Bird watching
+      - Boat tours
+      - Boating
+      - Bocce court
+      - Bowling alley
+      - Boxing
+      - Camping
+      - Canoeing
+      - Children's pool
+      - Children's program
+      - Children's program, onsite
+      - Cricket pitch
+      - Cross country skiing
+      - Dancing
+      - Dart board
+      - Direct access to a beach
+      - Diving
+      - Dog racing
+      - Downhill skiing
+      - Driving range
+      - Extensive health club
+      - Fishing
+      - Fitness center
+      - Fly fishing
+      - Football field
+      - Gambling
+      - Garden
+      - Golf
+      - Golf location (onsite/nearby)
+      - Health club
+      - Helicopter/airplane sightseeing
+      - Hiking trail
+      - Horse racing
+      - Horseback riding
+      - Hot tub
+      - Hunting
+      - Ice skating
+      - Indoor pool
+      - Indoor tennis courts
+      - Indoor/outdoor connecting pool
+      - Jet-ski
+      - Jogging trail
+      - Karaoke
+      - Kayaking
+      - Kids beach club
+      - Kids equestrian club
+      - Kids golf academy
+      - Lake
+      - Limited health club
+      - Massage services
+      - Miniature golf
+      - Mountain biking trail
+      - Mountain climbing
+      - Museum/gallery
+      - Nature preserve trail
+      - Nightclub
+      - Ocean
+      - Outdoor pool
+      - Outdoor tennis courts
+      - Outlet shopping
+      - Paddle court
+      - Parasailing
+      - Playground
+      - Polo
+      - Pool
+      - Putt putt golf
+      - Racquetball court
+      - River
+      - River rafting
+      - Rock climbing
+      - Safari
+      - Sailing
+      - Sauna
+      - Scuba diving
+      - Shopping
+      - Sightseeing tours
+      - Skating rink
+      - Skeet shooting
+      - Ski in/out facilities
+      - Skydiving
+      - Snorkeling
+      - Snow boarding
+      - Snow mobiling
+      - Snow skiing
+      - Soccer field
+      - Solarium
+      - Spa facility
+      - Sports court
+      - Sports events
+      - Squash court
+      - Steam bath
+      - Sun tanning bed
+      - Sunbathing
+      - Surfing
+      - Table tennis
+      - Teen programs
+      - Tennis court
+      - Tennis professional
+      - Theatre
+      - Tubing
+      - Upscale shopping
+      - Velodrome
+      - Volleyball
+      - Walking track
+      - Water activities
+      - Water-skiing
+      - Weightlifting
+      - Whirlpool
+      - Windsurfing
+      - Wine tasting
+      - Winter sports
+      - Wrestling
+      - Other_
+    POS:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: POS
+      properties:
+        '@type':
+          type: string
+        Source:
+          type: array
+          items:
+            $ref: '#/components/schemas/Source'
+          maxItems: 10
+          minItems: 1
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      - Source
+      discriminator:
+        propertyName: '@type'
+    Transportations:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Transportations
+      properties:
+        '@type':
+          type: string
+        Transportation:
+          type: array
+          items:
+            $ref: '#/components/schemas/TransportationID'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Enum_TelephoneRole:
+      properties:
+        value:
+          $ref: '#/components/schemas/Enum_TelephoneRole_Open'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    AddressStreetNumber:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: AddressStreetNumber
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Extension: StreetNmbrType'
+      properties:
+        value:
+          type: string
+          maxLength: 128
+        streetNmbrSuffix:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to8'
+            equivalents:
+            - context: Common
+              value: StreetNmbrSuffix
+            examples:
+            - context: Common
+              value: B
+          type: string
+          maxLength: 32
+        streetDirection:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to8'
+            equivalents:
+            - context: Common
+              value: StreetDirection
+            examples:
+            - context: Common
+              value: NNW
+          type: string
+          maxLength: 32
+        ruralRouteNmbr:
+          description: 'Assigned Type: ota2-0400:RuralRouteNumber'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}NumericStringLength1to5'
+            equivalents:
+            - context: Common
+              value: RuralRouteNmbr
+            examples:
+            - context: Common
+              value: '88'
+          type: string
+          pattern: '[0-9]{1,5}'
+        pO_Box:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: '98567499'
+          type: string
+          maxLength: 128
+    DateTimeSpanWindows:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: DateTimeSpanWindows
+      properties:
+        '@type':
+          type: string
+        TimeSpan:
+          description: 'Assigned Type: ota2-0400:TimeSpan'
+          $ref: '#/components/schemas/TimeSpan'
+        ExtensionPoint_Summary:
+          $ref: '#/components/schemas/ExtensionPoint_Summary'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Amenity:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Amenity
+      properties:
+        '@type':
+          type: string
+        name:
+          description: 'Assigned Type: ota2-0400:String'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+          type: string
+          maxLength: 512
+        description:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          type: string
+          maxLength: 128
+        Code:
+          description: 'Assigned Type: ota2-0400:Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+          $ref: '#/components/schemas/Code'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Source:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Source
+      properties:
+        '@type':
+          type: string
+        agentSine:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: AgentSine
+          type: string
+          maxLength: 32
+        pseudoCityCode:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: PseudoCityCode
+          type: string
+          maxLength: 32
+        iSOCountry:
+          description: 'Assigned Type: ota2-0400:CountryCode_ISO3166'
+          x-otm-annotations:
+            documentation:
+              references:
+              - http:\/\/simple.wikipedia.org\/wiki\/ISO_3166-1_alpha-3
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}ISO3166'
+            equivalents:
+            - context: Common
+              value: ISOCountry
+          type: string
+          pattern: '[a-zA-Z]{2}'
+        iSOCurrency:
+          description: 'Assigned Type: ota2-0400:CurrencyCode_ISO4217'
+          x-otm-annotations:
+            documentation:
+              references:
+              - http:\/\/www.iso.org\/iso\/support\/currency_codes_list-1.htm
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}AlphaLength3'
+            equivalents:
+            - context: Common
+              value: ISOCurrency
+          type: string
+          pattern: '[a-zA-Z]{3}'
+        agentDutyCode:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: AgentDutyCode
+          type: string
+          maxLength: 32
+        airlineVendorID:
+          description: 'Assigned Type: ota2-0400:AirlineCode_IATA'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}UpperCaseAlphaNumericLength2to3'
+            equivalents:
+            - context: Common
+              value: AirlineVendorID
+            examples:
+            - context: Common
+              value: B6
+          type: string
+          pattern: ([a-zA-Z0-9]{2})?
+        airportCode:
+          description: 'Assigned Type: ota2-0400:AirportCode_IATA'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}UpperCaseAlphaNumericLength3to5'
+            equivalents:
+            - context: Common
+              value: AirportCode
+            examples:
+            - context: Common
+              value: IAD
+          type: string
+          pattern: ([A-Z]{3})?
+        firstDepartPoint:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength3'
+            equivalents:
+            - context: Common
+              value: FirstDepartPoint
+          type: string
+          maxLength: 32
+        eRSP_UserID:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: ERSP_UserID
+          type: string
+          maxLength: 32
+        terminalID:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: TerminalID
+          type: string
+          maxLength: 32
+        RequestorID:
+          description: 'Assigned Type: ota2-0400:RequestorID'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}RequestorID'
+            equivalents:
+            - context: Common
+              value: RequestorID
+          $ref: '#/components/schemas/RequestorID'
+        Position:
+          description: 'Assigned Type: ota2-0400:Geolocation'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}Position'
+            equivalents:
+            - context: Common
+              value: Position
+          $ref: '#/components/schemas/Geolocation'
+        BookingChannel:
+          description: 'Assigned Type: ota2-0400:BookingChannel'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}BookingChannel'
+            equivalents:
+            - context: Common
+              value: BookingChannel
+          $ref: '#/components/schemas/BookingChannel'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    InformationType_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: InformationType_Enum
+      description: Identifies the type of information being sent.
+      type: string
+      enum:
+      - Address
+      - Advisory
+      - Alias name
+      - Amenities
+      - Attractions
+      - Awards
+      - Contact
+      - Corporate locations
+      - Description
+      - Descriptive content
+      - Dining
+      - Driving directions
+      - Facilities
+      - Geocodes
+      - Location
+      - Long name
+      - Marketing
+      - Pictures
+      - Policy
+      - Recreation
+      - Safety
+      - Services
+      - Short description
+      - Special instructions
+      - Transportation
+      - Other_
+    FacilityQueryHotel:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Facility
+      description: Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.
+      properties:
+        '@type':
+          type: string
+        HotelName:
+          description: A name or partial name of hotel used in searching for a hotel facility.
+          type: string
+          maxLength: 128
+        BrandCode:
+          description: A code that identifies the brand or flag of a hotel, often used for independently-owned or franchised properties who are known by a specific brand.
+          type: string
+          maxLength: 128
+        BrandName:
+          description: The name of a brand of hotels (e.g., Courtyard, Hampton Inn).
+          type: string
+          maxLength: 128
+        ChainCode:
+          description: The code that identifies a hotel chain or management group. The hotel chain code is decided between vendors. This attribute is optional if the hotel is an independent property that can be identified by the HotelCode attribute.
+          type: string
+          maxLength: 128
+        ChainName:
+          description: The name of the hotel chain (e.g., Hilton, Marriott, Hyatt, Starwood).
+          type: string
+          maxLength: 128
+        Radius:
+          description: 'Assigned Type: ota2-0400:Radius'
+          $ref: '#/components/schemas/Radius'
+        ReferencePoint:
+          description: 'Assigned Type: ota2-0400:ReferencePoint'
+          $ref: '#/components/schemas/ReferencePoint'
+        DetailedHotelSearchCriteria:
+          description: 'Assigned Type: orghs-0300:DetailedHotelSearchCriteria'
+          $ref: '#/components/schemas/DetailedHotelSearchCriteria'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    AdditionalDetailType_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: AdditionalDetailType_Enum
+      description: Identifies the type of detail being sent.
+      properties:
+        value:
+          $ref: '#/components/schemas/AdditionalDetailType_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    ToFrom_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: ToFrom_Enum
+      description: Used to indicate whether the context is to a facility or from a facility.
+      type: string
+      enum:
+      - ToFacility
+      - FromFacility
+    RecreationService_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: RecreationService_Enum
+      description: Describes the recreational activities available to a guest which may or may not be operated by or located at the hotel.
+      properties:
+        value:
+          $ref: '#/components/schemas/RecreationService_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    MeetingCenter:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: MeetingCenter
+      description: Meeting center details for a facility.
+      properties:
+        meetingRoomCount:
+          description: 'Assigned Type: ota2-0400:NonNegativeInteger'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            examples:
+            - context: org
+              value: '15'
+          type: integer
+          format: int32
+          minimum: 0
+        largestSeatingCapacity:
+          description: The largest seating capacity available in the largest meeting room - generally this is for theatre-style room setup.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            examples:
+            - context: org
+              value: '200'
+          type: integer
+          format: int32
+        largestRoomSpace:
+          description: The amount of room space for the largest unique meeting room at the facility.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            examples:
+            - context: org
+              value: 2000 sq ft
+          type: string
+        unitOfMeasureCode:
+          description: 'Assigned Type: ota2-0400:OTA_Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          type: string
+          pattern: '[0-9A-Z]{1,4}(\.[A-Z]{3}(\.X){0,1}){0,1}'
+        meetingRoomCode:
+          description: 'Assigned Type: ota2-0400:OTA_Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          type: string
+          pattern: '[0-9A-Z]{1,4}(\.[A-Z]{3}(\.X){0,1}){0,1}'
+    Telephone:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Telephone
+      description: Information about a telephone number, including the actual number and its usage.
+      properties:
+        '@type':
+          type: string
+        countryAccessCode:
+          description: 'Assigned Type: ota2-0400:TelephoneCountryAccessCode'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}NumericStringLength1to3'
+            equivalents:
+            - context: Common
+              value: CountryAccessCode
+            examples:
+            - context: Common
+              value: '01'
+          type: string
+          pattern: '[0-9]{1,3}'
+        areaCityCode:
+          description: 'Assigned Type: ota2-0400:TelephoneAreaCityCode'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}NumericStringLength1to8'
+            equivalents:
+            - context: Common
+              value: AreaCityCode
+            examples:
+            - context: Common
+              value: '202'
+          type: string
+          pattern: '[0-9]{1,8}'
+        phoneNumber:
+          description: 'Assigned Type: ota2-0400:TelephoneNumber'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: PhoneNumber
+            examples:
+            - context: Common
+              value: '5555555'
+          type: string
+          pattern: '[0-9]{7,20}'
+        extension:
+          description: 'Assigned Type: ota2-0400:TelephoneExtension'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}NumericStringLength1to5'
+            equivalents:
+            - context: Common
+              value: Extension
+            examples:
+            - context: Common
+              value: '237'
+          type: string
+          pattern: '[0-9]{1,5}'
+        id:
+          description: Used elsewhere in the message to reference a specific telephone number (including faxes).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}RPH_Type'
+            equivalents:
+            - context: Common
+              value: RPH
+          type: string
+        role:
+          $ref: '#/components/schemas/Enum_TelephoneRole'
+        ExtensionPoint_Summary:
+          $ref: '#/components/schemas/ExtensionPoint_Summary'
+      required:
+      - '@type'
+      - phoneNumber
+      discriminator:
+        propertyName: '@type'
+    CompanyName:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: CompanyName
+      description: Identifies a company by name.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength0to128'
+      properties:
+        value:
+          type: string
+          maxLength: 512
+        division:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: Division
+            examples:
+            - context: Common
+              value: Travel Division
+          type: string
+          maxLength: 128
+        department:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: Department
+            examples:
+            - context: Common
+              value: Adventure department
+          type: string
+          maxLength: 128
+        shortName:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to32'
+            equivalents:
+            - context: Common
+              value: CompanyShortName
+            examples:
+            - context: Common
+              value: Adventure Inc
+          type: string
+          maxLength: 128
+        code:
+          description: 'Assigned Type: ota2-0400:Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: Code
+            examples:
+            - context: Common
+              value: AI
+          type: string
+          maxLength: 32
+        codeContext:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          type: string
+          maxLength: 32
+        description:
+          description: 'Assigned Type: ota2-0400:String'
+          type: string
+          maxLength: 512
+    ReferencePoint:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: ReferencePoint
+      properties:
+        '@type':
+          type: string
+        name:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          type: string
+          maxLength: 128
+        Code:
+          description: 'Assigned Type: ota2-0400:Code'
+          $ref: '#/components/schemas/Code'
+        Type:
+          description: 'Assigned Type: ota2-0300:ReferencePoint_Enum'
+          $ref: '#/components/schemas/ReferencePoint_Enum'
+        Location:
+          description: 'Assigned Type: ota2-0400:Location'
+          $ref: '#/components/schemas/Location'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    BookingChannel_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: BookingChannel_Enum
+      description: Specifies a type of booking channel.
+      type: string
+      enum:
+      - Agent
+      - Alternative distribution system (ADS)
+      - Central reservation system (CRS)
+      - Global distribution system (GDS)
+      - Internet
+      - Kiosk
+      - Property management system (PMS)
+      - Sales and catering system (SCS)
+      - Tour operator system (TOS)
+      - Other_
+    Status_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: Status_Enum
+      description: The status condition.
+      type: string
+      enum:
+      - Complete
+      - Incomplete
+      - Not processed
+      - Unknown
+      - Other_
+    Email:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Email
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to128'
+          - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to128'
+      properties:
+        '@type':
+          type: string
+        remark:
+          description: 'Assigned Type: ota2-0400:StringText'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to128'
+            equivalents:
+            - context: Common
+              value: Remark
+          type: string
+          maxLength: 4096
+        textFormat:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: EmailType_TextFormat'
+            equivalents:
+            - context: Common
+              value: TextFormat
+          type: string
+          maxLength: 128
+        Address:
+          description: The email address.  IETF RFC 2821
+          type: string
+          maxLength: 512
+        Type:
+          description: 'Assigned Type: ota2-0300:EmailAddressType_Enum'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+            equivalents:
+            - context: Common
+              value: EmailType
+          $ref: '#/components/schemas/EmailAddressType_Enum'
+        Privacy:
+          description: 'Assigned Type: ota2-0400:Privacy'
+          $ref: '#/components/schemas/Privacy'
+        validInd:
+          description: If true, this is a valid email address that has been system verified via a successful email transmission.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}boolean'
+            equivalents:
+            - context: Common
+              value: ValidInd
+          type: boolean
+        defaultInd:
+          description: If true, this identifies this is the default email address.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'AttributeGroup: DefaultIndGroup'
+          type: boolean
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      - Address
+      discriminator:
+        propertyName: '@type'
+    Multimedia:
+      x-otm-entity:
+        EntityType: ChoiceObject
+        EntityName: Multimedia
+      description: Describes multimedia item(s).
+      properties:
+        '@type':
+          type: string
+        objID:
+          description: A unique identifier within this document for this object.
+          type: string
+        lastUpdated:
+          description: The date and time when the multimedia information was last updated.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+            equivalents:
+            - context: Common
+              value: LastUpdated
+          type: string
+          format: date-time
+        version:
+          description: The version of the content, typically in the form of \"1\" or \"2.3.\"
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: Version
+          type: string
+        language:
+          description: The language associated with the caption for the category.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}language'
+            examples:
+            - context: Common
+              value: en
+          type: string
+        caption:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to128'
+          type: string
+          maxLength: 128
+        Category:
+          description: 'Assigned Type: ota2-0300:PictureCategory_Enum'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          $ref: '#/components/schemas/PictureCategory_Enum'
+        AdditionalDetailType:
+          description: 'Assigned Type: ota2-0300:AdditionalDetailType_Enum'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+            equivalents:
+            - context: Common
+              value: AdditionalDetailCode
+          $ref: '#/components/schemas/AdditionalDetailType_Enum'
+        InfoType:
+          description: 'Assigned Type: ota2-0300:InformationType_Enum'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+            equivalents:
+            - context: Common
+              value: InfoCode
+          $ref: '#/components/schemas/InformationType_Enum'
+        ExtensionPoint_Shared:
+          $ref: '#/components/schemas/ExtensionPoint_Shared'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    BedType_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: BedType_Enum
+      description: The type(s) of sleeping option(s) in a guest accommodation.
+      properties:
+        value:
+          $ref: '#/components/schemas/BedType_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    ErrorWarningType_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: ErrorWarningType_Enum
+      description: Tthe category of error or warning.
+      type: string
+      enum:
+      - Advisory
+      - Application error
+      - Authentication
+      - Authentication timeout
+      - Authorization
+      - Business rule
+      - No implementation
+      - Processing exception
+      - Protocol violation
+      - Required field missing
+      - Unknown
+      - Other_
+    Status_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: Status_Enum
+      description: The status condition.
+      properties:
+        value:
+          $ref: '#/components/schemas/Status_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    Geolocation:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Geolocation
+      description: TODO-(use enums and other for lat,long??  Format for the lat and long, is there a XML format)Used to specify the geographic coordinates of a location.
+      properties:
+        latitude:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: Latitude
+          type: string
+          maxLength: 32
+        longitude:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: Longitude
+          type: string
+          maxLength: 32
+        altitude:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to16'
+            equivalents:
+            - context: Common
+              value: Altitude
+          type: string
+          maxLength: 32
+        altitudeUnitOfMeasure_Enum:
+          description: Provides the unit of measure for the altitude (e.g., feet, meters, miles, kilometers). Refer to OpenTravel Code List Unit of Measure Code (UOM).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}OTA_CodeType'
+            equivalents:
+            - context: Common
+              value: AltitudeUnitOfMeasureCode
+          $ref: '#/components/schemas/UnitOfMeasure_Enum'
+        mapURL:
+          description: The URL of a map image.
+          type: string
+        formatURL:
+          description: The URL to the format for the latitude and longitude for this location.
+          type: string
+    SegmentCategory_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: SegmentCategory_Enum
+      description: Describes the segment type.
+      properties:
+        value:
+          $ref: '#/components/schemas/SegmentCategory_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    ErrorWarning:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: ErrorWarning
+      description: The error in textual format.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+      properties:
+        value:
+          type: string
+          maxLength: 512
+        language:
+          description: 'Assigned Type: ota2-0400:LanguageCode'
+          type: string
+        type:
+          $ref: '#/components/schemas/ErrorWarningType_Enum_Base'
+        typeExtension:
+          type: string
+          maxLength: 128
+          minLength: 1
+        shortText:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          type: string
+          maxLength: 128
+        code:
+          description: 'Assigned Type: ota2-0400:OTA_Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}OTA_CodeType'
+            equivalents:
+            - context: Common
+              value: Code
+          type: string
+          pattern: '[0-9A-Z]{1,4}(\.[A-Z]{3}(\.X){0,1}){0,1}'
+        docURL:
+          description: If present, this URL refers to an online description of the error that occurred.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}anyURI'
+            equivalents:
+            - context: Common
+              value: DocURL
+          type: string
+        tag:
+          description: 'Assigned Type: ota2-0400:String'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: Tag
+          type: string
+          maxLength: 512
+        recordID:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: RecordID
+          type: string
+          maxLength: 128
+        nodeList:
+          description: 'Assigned Type: ota2-0400:String'
+          type: string
+          maxLength: 512
+        status:
+          $ref: '#/components/schemas/Status_Enum_Base'
+        statusExtension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    FacilityHotel:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Facility
+      description: Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.
+      allOf:
+      - $ref: '#/components/schemas/Facility'
+      - properties:
+          brandName:
+            description: 'Assigned Type: ota2-0400:StringShort'
+            type: string
+            maxLength: 128
+          chainName:
+            description: 'Assigned Type: ota2-0400:StringShort'
+            type: string
+            maxLength: 128
+          Features:
+            description: 'Assigned Type: ota2-0400:Features'
+            $ref: '#/components/schemas/Features'
+          SegmentCategory:
+            description: 'Assigned Type: ota2-0300:SegmentCategory_Enum'
+            $ref: '#/components/schemas/SegmentCategory_Enum'
+          HotelDetails:
+            description: 'Assigned Type: orghs-0300:HotelDetails'
+            $ref: '#/components/schemas/HotelDetails'
+          RateRange:
+            description: 'Assigned Type: ota2-0400:RateRange'
+            $ref: '#/components/schemas/RateRange'
+          ExtensionPoint_Custom:
+            $ref: '#/components/schemas/ExtensionPoint_Custom'
+    Enum_TelephoneRole_Open:
+      type: string
+      enum:
+      - Home
+      - Office
+      - Mobile
+      - Other
+      - Other_
+    Radius:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Radius
+      description: The radius distance.
+      properties:
+        value:
+          type: integer
+          format: int32
+        unitOfMeasure:
+          description: The unit of measure for the radius value.
+          $ref: '#/components/schemas/UnitOfMeasure_Enum'
+    BookingChannel:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BookingChannel
+      properties:
+        '@type':
+          type: string
+        CompanyName:
+          description: 'Assigned Type: ota2-0400:CompanyName'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}CompanyNameType'
+            equivalents:
+            - context: Common
+              value: CompanyName
+          $ref: '#/components/schemas/CompanyName'
+        Type:
+          description: 'Assigned Type: ota2-0300:BookingChannel_Enum'
+          $ref: '#/components/schemas/BookingChannel_Enum'
+        primaryInd:
+          description: Indicates whether the enumerated booking channel is the primary means of connectivity used by the source.
+          type: boolean
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    AccessibilityFeatures_OTA20400:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: AccessibilityFeatures
+      description: Describes accessibility featrues.
+      properties:
+        '@type':
+          type: string
+        AccessibilityFeatures:
+          description: 'Assigned Type: ota2-0300:DisabilityFeature_Enum'
+          $ref: '#/components/schemas/DisabilityFeature_Enum'
+        ExtensionPoint_Summary:
+          $ref: '#/components/schemas/ExtensionPoint_Summary'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Facility:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Facility
+      description: Describes a facility (e.g. Hotel Facility,Conference Facility, Golf Facility).  A facility must have a single address and a single geolocation.
+      allOf:
+      - $ref: '#/components/schemas/FacilityID'
+      - properties:
+          name:
+            description: 'Assigned Type: ota2-0400:StringShort'
+            type: string
+            maxLength: 128
+          Location:
+            description: 'Assigned Type: ota2-0400:Location'
+            $ref: '#/components/schemas/Location'
+          OperationSchedule:
+            type: array
+            items:
+              $ref: '#/components/schemas/OperationSchedule'
+            maxItems: 30
+          MultimediaCollection:
+            description: 'Assigned Type: ota2-0400:MultimediaCollection'
+            $ref: '#/components/schemas/MultimediaCollection'
+          Rating:
+            description: 'Assigned Type: ota2-0400:Rating'
+            $ref: '#/components/schemas/Rating'
+          Telephone:
+            type: array
+            items:
+              $ref: '#/components/schemas/Telephone'
+            maxItems: 5
+          Email:
+            description: 'Assigned Type: ota2-0400:Email'
+            $ref: '#/components/schemas/Email'
+          Description:
+            type: array
+            items:
+              $ref: '#/components/schemas/Text'
+            maxItems: 10
+          Property:
+            description: 'Assigned Type: org-0300:Property'
+            $ref: '#/components/schemas/PropertyID'
+          SiteURL:
+            description: 'Assigned Type: ota2-0400:URL'
+            $ref: '#/components/schemas/URL'
+          RelativePosition:
+            description: 'Assigned Type: ota2-0400:RelativePosition'
+            $ref: '#/components/schemas/RelativePosition'
+          AccessibilityFeatures:
+            description: 'Assigned Type: ota2-0400:AccessibilityFeatures'
+            $ref: '#/components/schemas/AccessibilityFeatures_OTA20400'
+          ExtensionPoint_Summary:
+            $ref: '#/components/schemas/ExtensionPoint_Summary'
+    Description:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: TextParagraph
+      properties:
+        '@type':
+          type: string
+        name:
+          description: 'Assigned Type: ota2-0400:StringTiny'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: Name
+            examples:
+            - context: Common
+              value: paragraph name
+          type: string
+          maxLength: 32
+        number:
+          description: The sequence number for the paragraph.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: ParagraphNumber
+          type: integer
+          format: int32
+        Text:
+          type: array
+          items:
+            $ref: '#/components/schemas/Text'
+          maxItems: 1000
+        Image:
+          type: array
+          items:
+            $ref: '#/components/schemas/ImageID'
+          maxItems: 1000
+        URL:
+          type: array
+          items:
+            type: string
+          maxItems: 1000
+        ParagraphListItem:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParagraphListItem'
+          maxItems: 1000
+        DateTimeStamp:
+          description: 'Assigned Type: ota2-0400:DateTimeStamp'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'AttributeGroup: DateTimeStampGroup'
+          $ref: '#/components/schemas/DateTimeStamp'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    OptInStatus_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: OptInStatus_Enum
+      type: string
+      enum:
+      - OptedIn
+      - OptedOut
+      - Unknown
+    Recreation:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Recreation
+      properties:
+        '@type':
+          type: string
+        recreationDescription:
+          description: 'Assigned Type: ota2-0400:StringShort'
+          type: string
+          maxLength: 128
+        Code:
+          description: 'Assigned Type: ota2-0300:RecreationService_Enum'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/chameleon.anonymous\/ns}OTA_CodeType'
+          $ref: '#/components/schemas/RecreationService_Enum'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Privacy:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Privacy
+      description: Allows for control of the sharing of data between parties.
+      properties:
+        shareMarketInd:
+          description: Permission for sharing data for marketing purposes.
+          $ref: '#/components/schemas/YesNoInherit_Enum'
+        shareSyncInd:
+          description: Permission for sharing data for synchronization of information held by other travel service providers.
+          $ref: '#/components/schemas/YesNoInherit_Enum'
+        optInStatus:
+          description: If present and set to opt out, a customer has explicitly opted out of marketing communication. When set to opt out it overrides the ShareMarketInd.
+          $ref: '#/components/schemas/OptInStatus_Enum'
+        optInDate:
+          description: The date and time of opt in.
+          type: string
+          format: date-time
+        optOutDate:
+          description: The date and time of opt out.
+          type: string
+          format: date-time
+    FacilityList:
+      x-otm-entity:
+        EntityType: ActionFacet
+        EntityName: FacilityResource_FacilityList
+      properties:
+        Facility:
+          type: array
+          items:
+            $ref: '#/components/schemas/FacilityID_2'
+          maxItems: 1000
+    FacilityID_2:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: Facility
+      properties:
+        '@type':
+          type: string
+        objID:
+          description: A unique identifier within this document for this object.
+          type: string
+        FacilityRef:
+          description: Refers to the obj ID on an object defined elsewhere in the current document.
+          type: string
+        FacilityKey:
+          description: 'Assigned Type: org-0400:FacilityKey'
+          $ref: '#/components/schemas/FacilityKey_2'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Result_2:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Result
+      properties:
+        '@type':
+          type: string
+        Errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorWarning_2'
+          maxItems: 50
+        Warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorWarning_2'
+          maxItems: 50
+        Status:
+          description: 'Assigned Type: ota2-0400:Status_Enum'
+          $ref: '#/components/schemas/Status_Enum'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    BaseResponse:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BaseResponse
+      properties:
+        '@type':
+          type: string
+        PayloadStdAttributes:
+          description: 'Assigned Type: ota2-0500:PayloadStdAttributes'
+          $ref: '#/components/schemas/PayloadStdAttributes_2'
+        Result:
+          description: 'Assigned Type: ota2-0500:Result'
+          $ref: '#/components/schemas/Result_2'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    FacilityKey_2:
+      x-otm-entity:
+        EntityType: ChoiceObject
+        EntityName: FacilityKey
+      properties:
+        '@type':
+          type: string
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    ErrorWarning_2:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: ErrorWarning
+      description: The error in textual format.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+      properties:
+        value:
+          type: string
+          maxLength: 512
+        language:
+          description: 'Assigned Type: ota2-0500:LanguageCode'
+          type: string
+        type:
+          $ref: '#/components/schemas/ErrorWarningType_Enum_Base'
+        typeExtension:
+          type: string
+          maxLength: 128
+          minLength: 1
+        shortText:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          type: string
+          maxLength: 128
+        code:
+          description: 'Assigned Type: ota2-0500:OTA_Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}OTA_CodeType'
+            equivalents:
+            - context: Common
+              value: Code
+          type: string
+          pattern: '[0-9A-Z]{1,4}(\.[A-Z]{3}(\.X){0,1}){0,1}'
+        docURL:
+          description: If present, this URL refers to an online description of the error that occurred.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}anyURI'
+            equivalents:
+            - context: Common
+              value: DocURL
+          type: string
+        tag:
+          description: 'Assigned Type: ota2-0500:String'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: Tag
+          type: string
+          maxLength: 512
+        recordID:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: RecordID
+          type: string
+          maxLength: 128
+        nodeList:
+          description: 'Assigned Type: ota2-0500:String'
+          type: string
+          maxLength: 512
+        status:
+          $ref: '#/components/schemas/Status_Enum_Base'
+        statusExtension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    PayloadStdAttributes_2:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: PayloadStdAttributes
+      description: The standard attributes that appear on the root element for all OpenTravel messages.
+      properties:
+        echoToken:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to128'
+            equivalents:
+            - context: Common
+              value: EchoToken
+          type: string
+          maxLength: 128
+        timeStamp:
+          description: YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock:\n20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+            equivalents:
+            - context: Common
+              value: TimeStamp
+          type: string
+          format: date-time
+        target:
+          description: Test or Production target system indicator.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: OTA_PayloadStdAttributes_Target'
+            equivalents:
+            - context: Common
+              value: Target
+          $ref: '#/components/schemas/TargetEnvironment_Enum'
+        targetName:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: TargetName
+          type: string
+          maxLength: 128
+        version:
+          description: The OpenTravel message version indicated by a decimal value.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}decimal'
+            equivalents:
+            - context: Common
+              value: Version
+          type: number
+          format: float
+        transactionIdentifier:
+          description: Unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: TransactionIdentifier
+          type: string
+        sequenceNmbr:
+          description: 'Implementer: Message resynchronization typically is required if a system has been off-line and needs to retrieve messages that were missed.'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: SequenceNmbr
+          type: string
+        transactionStatusCode:
+          description: This indicates where this message falls within a sequence of messages.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: OTA_PayloadStdAttributes_TransactionStatusCode'
+            equivalents:
+            - context: Common
+              value: TransactionStatusCode
+          $ref: '#/components/schemas/TransactionStatusCode_Enum'
+        correlationID:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: CorrelationID
+          type: string
+          maxLength: 128
+        primaryLangID:
+          description: 'ISO 639 (3) character language codes: http:\/\/en.wikipedia.org\/wiki\/Lists_of_ISO_639_codes'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}language'
+            equivalents:
+            - context: Common
+              value: PrimaryLangID
+            examples:
+            - context: Common
+              value: en
+          type: string
+        altLangID:
+          description: 'ISO 639 (3) character language codes: http:\/\/en.wikipedia.org\/wiki\/Lists_of_ISO_639_codes'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}language'
+            equivalents:
+            - context: Common
+              value: AltLangID
+            examples:
+            - context: Common
+              value: es
+          type: string
+        retransmissionIndicatorInd:
+          description: 'Implementer: It is recommended that this attribute is used (i.e., set to TRUE) only when a message is retransmitted.'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}boolean'
+            equivalents:
+            - context: Common
+              value: RetransmissionIndicator
+          type: boolean
+      required:
+      - version
+x-refined-from:
+- opentravel-2018a-facility-resource-defs-openapi.json
+- opentravel-2018a-facility-resource-openapi.json
+- opentravel-2020a-facility-resource-defs-openapi.json
+- opentravel-2020a-facility-resource-openapi.json
+x-otm-resource:
+  namespace: http://www.opentravel.org/OTM/resources/HospitalityResources/v1
+  localName: FacilityResource

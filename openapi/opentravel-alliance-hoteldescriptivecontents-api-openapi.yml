@@ -1,0 +1,1018 @@
+openapi: 3.2.0
+info:
+  title: Opentravel Alliance Hotel Descriptive Contents API
+  version: 1.0.0
+  x-refined-note:
+  - x-otm-library differs across the merged source definitions and was not carried
+  description: 'Operations tagged HotelDescriptiveContents across 2 of this provider''s published API definitions: opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json, opentravel-2020a-hotel-descriptive-content-resource-openapi.json. Each path carries the servers of the definition it was published in.'
+servers:
+- url: http://127.0.0.1/v1_0
+tags:
+- name: HotelDescriptiveContents
+paths:
+  /HotelDescriptiveContents:
+    get:
+      summary: HotelDescriptiveContentResource - Get
+      operationId: Get
+      parameters:
+      - name: displayCurrency
+        in: query
+        description: Preferred currencty code is a 3 char currency code as defined in ISO 4127
+        x-otm-annotations:
+          documentation:
+            references:
+            - http:\/\/www.opentraveldevelopersnetwork.com\/Supported_ISO_Standards.php
+            more-info:
+            - http:\/\/www.opentraveldevelopersnetwork.com\/2012A_SchemaDoc\/DisplayCurrency
+        required: false
+        schema:
+          type: string
+          pattern: '[a-zA-Z]{3}'
+      - name: maxResponses
+        in: query
+        description: The maximum quantity of search results in the response.
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: summaryResultsInd
+        in: query
+        description: If true, summary information is requested in the search results.
+        required: false
+        schema:
+          type: boolean
+      - name: code
+        in: query
+        description: Uniquely identifies a single property for a reservation.
+        x-otm-annotations:
+          examples:
+          - context: ph
+            value: WASJW
+        required: false
+        schema:
+          type: string
+          maxLength: 32
+      - name: chainCode
+        in: query
+        description: Identifies the chain.
+        x-otm-annotations:
+          examples:
+          - context: ph
+            value: MC
+        required: false
+        schema:
+          type: string
+          maxLength: 32
+      - name: brandCode
+        in: query
+        description: Identifies a brand with in a chain (e.g. Courtyard, Hampton Inn).  This code is optional if the hotel is an independent property that can be identified by a propert code alone.
+        x-otm-annotations:
+          examples:
+          - context: ph
+            value: FS
+        required: false
+        schema:
+          type: string
+          maxLength: 32
+      - name: cityCode
+        in: query
+        description: Specifies the three character IATA city code.
+        x-otm-annotations:
+          examples:
+          - context: ph
+            value: WAS
+        required: false
+        schema:
+          type: string
+          maxLength: 32
+      - name: areaID
+        in: query
+        description: An identifier of an area as defined by a hotel reservation system to allow for seaches in areas such as suburbs or regions.
+        required: false
+        schema:
+          type: string
+          maxLength: 512
+      - name: hotelCode_TTI
+        in: query
+        description: TTI hotel reference code.
+        required: false
+        schema:
+          type: integer
+          format: int32
+          minimum: 0
+      responses:
+        '400':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '401':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '402':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '403':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '404':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '500':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '200':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityContent_HospitalityResources_1_0_0_Trim.xsd#/HotelDescriptiveContentListResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HotelDescriptiveContentListResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HotelDescriptiveContentListResponse'
+      tags:
+      - HotelDescriptiveContents
+    servers:
+    - url: http://127.0.0.1/v1_0
+  /HotelDescriptiveContents/Notifications:
+    post:
+      summary: HotelDescriptiveContentResource - Notification
+      operationId: Notification
+      responses:
+        '400':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '401':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '402':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '403':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '404':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '500':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '201':
+          description: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HotelDescriptiveContentID'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/HotelDescriptiveContentID'
+        required: true
+      tags:
+      - HotelDescriptiveContents
+    servers:
+    - url: http://127.0.0.1/v1_0
+  /HotelDescriptiveContents/Query:
+    post:
+      summary: HotelDescriptiveContentResource - Query
+      operationId: Query
+      responses:
+        '400':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '401':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '402':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '403':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '404':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '500':
+          description: ''
+          x-xml-schema:
+            $ref: Common_5_0_0_Trim.xsd#/BaseResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BaseResponse'
+        '201':
+          description: ''
+          x-xml-schema:
+            $ref: HospitalityContent_HospitalityResources_1_0_0_Trim.xsd#/HotelDescriptiveContentListResponse
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/HotelDescriptiveContentListResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HotelDescriptiveContentListResponse'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HotelDescriptiveContentQueryInfo'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/HotelDescriptiveContentQueryInfo'
+        required: true
+      tags:
+      - HotelDescriptiveContents
+    servers:
+    - url: http://127.0.0.1/v1_0
+components:
+  schemas:
+    ExtensionPoint_Summary: {}
+    HotelDescriptiveContentListResponse:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BaseResponse
+      properties:
+        '@type':
+          type: string
+        HotelDescriptiveContent:
+          type: array
+          items:
+            $ref: '#/components/schemas/HotelDescriptiveContentID'
+        PayloadStdAttributes:
+          description: 'Assigned Type: ota2-0500:PayloadStdAttributes'
+          $ref: '#/components/schemas/PayloadStdAttributes'
+        Result:
+          description: 'Assigned Type: ota2-0500:Result'
+          $ref: '#/components/schemas/Result'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    HotelDescriptiveRequestInfo:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: HotelDescriptiveRequestInfo
+      properties:
+        '@type':
+          type: string
+        languageRequested:
+          description: The language in which the hotel property information should be returned.
+          type: string
+        BasicPropertyInfo:
+          type: array
+          items:
+            $ref: '#/components/schemas/BasicPropertyInfo'
+        HotelRequestInfo:
+          description: 'Assigned Type: orghs-0400:HotelRequestInfo'
+          $ref: '#/components/schemas/HotelRequestInfo'
+        FacilityRequestInfo:
+          description: 'Assigned Type: orghs-0400:FacilityRequestInfo'
+          $ref: '#/components/schemas/FacilityRequestInfo'
+        PolicyRequestInfo:
+          description: 'Assigned Type: orghs-0400:PolicyInfo'
+          $ref: '#/components/schemas/PolicyInfo'
+        AreaRequestInfo:
+          description: 'Assigned Type: orghs-0400:AreaInfo'
+          $ref: '#/components/schemas/AreaInfo'
+        AffiliationRequestInfo:
+          description: 'Assigned Type: orghs-0400:AffiliationInfoRequest'
+          $ref: '#/components/schemas/AffiliationInfoRequest'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Status_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: Status_Enum
+      description: The status condition.
+      type: string
+      enum:
+      - Complete
+      - Incomplete
+      - Not processed
+      - Unknown
+      - Other_
+    HotelRequestInfo:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: HotelRequestInfo
+      properties:
+        '@type':
+          type: string
+        hotelStatus:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          type: string
+          maxLength: 128
+        HotelStatusCode:
+          description: 'Assigned Type: ota2-0400:PropertyStatus_Enum'
+          $ref: '#/components/schemas/PropertyStatus_Enum'
+        sendDataInd:
+          description: When true, send hotel property info data.
+          type: boolean
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    ErrorWarningType_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: ErrorWarningType_Enum
+      description: Tthe category of error or warning.
+      type: string
+      enum:
+      - Advisory
+      - Application error
+      - Authentication
+      - Authentication timeout
+      - Authorization
+      - Business rule
+      - No implementation
+      - Processing exception
+      - Protocol violation
+      - Required field missing
+      - Unknown
+      - Other_
+    Status_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: Status_Enum
+      description: The status condition.
+      properties:
+        value:
+          $ref: '#/components/schemas/Status_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    PropertyStatus_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: PropertyStatus_Enum
+      type: string
+      enum:
+      - Closed
+      - Deflagged
+      - Deleted
+      - Inactive
+      - Locked
+      - Open
+      - Pre-opening
+      - Reactivated
+      - Test
+      - Unlocked
+      - Other_
+    ErrorWarning:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: ErrorWarning
+      description: The error in textual format.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+      properties:
+        value:
+          type: string
+          maxLength: 512
+        language:
+          description: 'Assigned Type: ota2-0500:LanguageCode'
+          type: string
+        type:
+          $ref: '#/components/schemas/ErrorWarningType_Enum_Base'
+        typeExtension:
+          type: string
+          maxLength: 128
+          minLength: 1
+        shortText:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          type: string
+          maxLength: 128
+        code:
+          description: 'Assigned Type: ota2-0500:OTA_Code'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}OTA_CodeType'
+            equivalents:
+            - context: Common
+              value: Code
+          type: string
+          pattern: '[0-9A-Z]{1,4}(\.[A-Z]{3}(\.X){0,1}){0,1}'
+        docURL:
+          description: If present, this URL refers to an online description of the error that occurred.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}anyURI'
+            equivalents:
+            - context: Common
+              value: DocURL
+          type: string
+        tag:
+          description: 'Assigned Type: ota2-0500:String'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: Tag
+          type: string
+          maxLength: 512
+        recordID:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: RecordID
+          type: string
+          maxLength: 128
+        nodeList:
+          description: 'Assigned Type: ota2-0500:String'
+          type: string
+          maxLength: 512
+        status:
+          $ref: '#/components/schemas/Status_Enum_Base'
+        statusExtension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    AffiliationInfoRequest:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: AffiliationInfoRequest
+      description: Used to indicated if affiliation information is being requested.
+      properties:
+        sendDistribSystemsInd:
+          description: When true, distribution system information is being requested.
+          type: boolean
+        sendBrandInd:
+          description: When true Brand information is being rquested.
+          type: boolean
+        sendLoyalProgramsInd:
+          description: When true, loyalty program information is being requested.
+          type: boolean
+        sendAwardsInd:
+          description: When true, award information is being requested.
+          type: boolean
+    ExtensionPoint: {}
+    BasicPropertyInfo:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BasicPropertyInfo
+      properties:
+        '@type':
+          type: string
+        code:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: WASJW
+          type: string
+          maxLength: 32
+        name:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: JW Marriott Washington DC
+          type: string
+          maxLength: 128
+        chainCode:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: MC
+          type: string
+          maxLength: 32
+        brandCode:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: FS
+          type: string
+          maxLength: 32
+        cityCode:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: WAS
+          type: string
+          maxLength: 32
+        ExtensionPoint_Summary:
+          $ref: '#/components/schemas/ExtensionPoint_Summary'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    HotelDescriptiveContentQueryInfo:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: HotelDescriptiveContent
+      properties:
+        '@type':
+          type: string
+        ProcessingInfo:
+          description: 'Assigned Type: ota2-0500:ProcessingInfo'
+          $ref: '#/components/schemas/ProcessingInfo'
+        HotelDescriptiveRequestInfo:
+          description: 'Assigned Type: orghs-0400:HotelDescriptiveRequestInfo'
+          $ref: '#/components/schemas/HotelDescriptiveRequestInfo'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Identifier:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: Identifier
+      description: Identifier provides the ability to create a globally unique identifier.   This could be GUID a UUID or any other string that an organization that distinctly identifies the specific object.\n\nIdeally, for the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.\n\nThe URL, system and company attributes can be omitted only when the system context can be implied by a parent or ancestor element.
+      properties:
+        value:
+          type: string
+          maxLength: 128
+        url:
+          description: Uri of the creating system. The URI should be an URL and be globally unique. Should only be omitted when the context is clearly implied for the containing document.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Identifier provides the ability to create a globally unique identifier. For the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.
+          type: string
+        system:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: sysABC3344
+          type: string
+          maxLength: 128
+        organization:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: Acme
+          type: string
+          maxLength: 128
+    PropertyStatus_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: PropertyStatus_Enum
+      properties:
+        value:
+          $ref: '#/components/schemas/PropertyStatus_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    TargetEnvironment_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: TargetEnvironment_Enum
+      type: string
+      enum:
+      - Test
+      - Production
+    Result:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: Result
+      properties:
+        '@type':
+          type: string
+        Errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorWarning'
+          maxItems: 50
+        Warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorWarning'
+          maxItems: 50
+        Status:
+          description: 'Assigned Type: ota2-0400:Status_Enum'
+          $ref: '#/components/schemas/Status_Enum'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    AreaInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: AreaInfo
+      description: Used to specifiy if area information is being requested.
+      properties:
+        sendRefPointsInd:
+          description: When true, reference point information is being requested.
+          type: boolean
+        sendAttractionsInd:
+          description: When true, attraction information is being requested.
+          type: boolean
+        sendRecreationsInd:
+          description: When true, recreation information is being requested.
+          type: boolean
+    FacilityRequestInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: FacilityRequestInfo
+      properties:
+        sendMeetingRoomsInd:
+          description: When true, send meeting room information.
+          type: boolean
+        sendGuestRoomsInd:
+          description: When true, send guest room information.
+          type: boolean
+        sendRestaurantsInd:
+          description: When true, send restaurant information.
+          type: boolean
+    ProcessingInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: ProcessingInfo
+      description: Transaction processing directives, including display currency overrides. If no display currency information is provided, the display and pricing currency will default to the value in POS\/Source\/@ISOCurrency.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - (Developer Notes) An agreement should be in place with your trading partners that specifies what information is summary versus detail.
+      properties:
+        displayCurrency:
+          description: 'Assigned Type: ota2-0500:CurrencyCode_ISO4217'
+          x-otm-annotations:
+            documentation:
+              references:
+              - http:\/\/www.opentraveldevelopersnetwork.com\/Supported_ISO_Standards.php
+              more-info:
+              - http:\/\/www.opentraveldevelopersnetwork.com\/2012A_SchemaDoc\/DisplayCurrency
+          type: string
+          pattern: '[a-zA-Z]{3}'
+        maxResponses:
+          description: The maximum quantity of search results in the response.
+          type: integer
+          format: int32
+        summaryResultsInd:
+          description: If true, summary information is requested in the search results.
+          type: boolean
+    HotelDescriptiveContentID:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: HotelDescriptiveContent
+      properties:
+        '@type':
+          type: string
+        objID:
+          description: A unique identifier within this document for this object.
+          type: string
+        DescriptiveContentRef:
+          description: Refers to the obj ID on an object defined elsewhere in the current document.
+          type: string
+        Identifier:
+          description: 'Assigned Type: ota2-0500:Identifier'
+          $ref: '#/components/schemas/Identifier'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    PolicyInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: PolicyInfo
+      description: Used to indicate if policy information is being requested.
+      properties:
+        sendPoliciesInd:
+          description: When true, policy information is being requested.
+          type: boolean
+    TransactionStatusCode_Enum:
+      x-otm-entity:
+        EntityType: EnumerationClosed
+        EntityName: TransactionStatusCode_Enum
+      type: string
+      enum:
+      - Start
+      - End
+      - Rollback
+      - InSeries
+      - Continuation
+      - Subsequent
+    BaseResponse:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BaseResponse
+      properties:
+        '@type':
+          type: string
+        PayloadStdAttributes:
+          description: 'Assigned Type: ota2-0500:PayloadStdAttributes'
+          $ref: '#/components/schemas/PayloadStdAttributes'
+        Result:
+          description: 'Assigned Type: ota2-0500:Result'
+          $ref: '#/components/schemas/Result'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    PayloadStdAttributes:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: PayloadStdAttributes
+      description: The standard attributes that appear on the root element for all OpenTravel messages.
+      properties:
+        echoToken:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to128'
+            equivalents:
+            - context: Common
+              value: EchoToken
+          type: string
+          maxLength: 128
+        timeStamp:
+          description: YYYY-MM-DDThh:mm:ssZ with time values using the 24 hour clock:\n20 November 2003, 1:59:38 pm UTC becomes 2003-11-20T13:59:38Z
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}dateTime'
+            equivalents:
+            - context: Common
+              value: TimeStamp
+          type: string
+          format: date-time
+        target:
+          description: Test or Production target system indicator.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: OTA_PayloadStdAttributes_Target'
+            equivalents:
+            - context: Common
+              value: Target
+          $ref: '#/components/schemas/TargetEnvironment_Enum'
+        targetName:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: TargetName
+          type: string
+          maxLength: 128
+        version:
+          description: The OpenTravel message version indicated by a decimal value.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}decimal'
+            equivalents:
+            - context: Common
+              value: Version
+          type: number
+          format: float
+        transactionIdentifier:
+          description: Unique identifier to relate all messages within a transaction (e.g. this would be sent in all request and response messages that are part of an on-going transaction).
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: TransactionIdentifier
+          type: string
+        sequenceNmbr:
+          description: 'Implementer: Message resynchronization typically is required if a system has been off-line and needs to retrieve messages that were missed.'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Changed type from {http:\/\/www.w3.org\/2001\/XMLSchema}nonNegativeInteger.
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}string'
+            equivalents:
+            - context: Common
+              value: SequenceNmbr
+          type: string
+        transactionStatusCode:
+          description: This indicates where this message falls within a sequence of messages.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'LocalAnonymousType: OTA_PayloadStdAttributes_TransactionStatusCode'
+            equivalents:
+            - context: Common
+              value: TransactionStatusCode
+          $ref: '#/components/schemas/TransactionStatusCode_Enum'
+        correlationID:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}StringLength1to64'
+            equivalents:
+            - context: Common
+              value: CorrelationID
+          type: string
+          maxLength: 128
+        primaryLangID:
+          description: 'ISO 639 (3) character language codes: http:\/\/en.wikipedia.org\/wiki\/Lists_of_ISO_639_codes'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}language'
+            equivalents:
+            - context: Common
+              value: PrimaryLangID
+            examples:
+            - context: Common
+              value: en
+          type: string
+        altLangID:
+          description: 'ISO 639 (3) character language codes: http:\/\/en.wikipedia.org\/wiki\/Lists_of_ISO_639_codes'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}language'
+            equivalents:
+            - context: Common
+              value: AltLangID
+            examples:
+            - context: Common
+              value: es
+          type: string
+        retransmissionIndicatorInd:
+          description: 'Implementer: It is recommended that this attribute is used (i.e., set to TRUE) only when a message is retransmitted.'
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - 'Assigned XSD Type: {http:\/\/www.w3.org\/2001\/XMLSchema}boolean'
+            equivalents:
+            - context: Common
+              value: RetransmissionIndicator
+          type: boolean
+      required:
+      - version
+x-refined-from:
+- opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json
+- opentravel-2020a-hotel-descriptive-content-resource-openapi.json
+x-otm-resource:
+  namespace: http://www.opentravel.org/OTM/resources/HospitalityResources/v1
+  localName: FacilityResource
