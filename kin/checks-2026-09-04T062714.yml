@@ -1,17 +1,17 @@
 ---
 kin_checks:
   slug: opentravel-alliance
-  schema_version: 0.17.2
-  scored_at: '2026-09-01'
-  run_ts: 2026-09-01T063623
+  schema_version: 0.18.2
+  scored_at: '2026-09-04'
+  run_ts: 2026-09-04T062714
   note: Actionable checks only (missed + partial). earned/na are every other check
-    in rubric/scoring-0.17.2.yml; counts below let you verify that.
+    in rubric/scoring-0.18.2.yml; counts below let you verify that.
   counts:
-    total: 130
+    total: 132
     earned: 44
     partial: 15
-    missed: 51
-    na: 20
+    missed: 48
+    na: 25
   checks:
   - id: base_url_per_api
     status: missed
@@ -47,6 +47,8 @@ kin_checks:
   - id: webhooks_or_callbacks
     status: missed
     detail: 0 of 6 openapi documents pass
+  - id: inbound_contract_published
+    status: missed
   - id: json_ld_present
     status: missed
   - id: json_ld_class_depth
@@ -96,14 +98,6 @@ kin_checks:
   - id: reg_vulnerability_disclosure
     status: missed
   - id: reg_compliance_published
-    status: missed
-  - id: os_security_policy
-    status: missed
-  - id: os_contribution_guide
-    status: missed
-  - id: os_releases
-    status: missed
-  - id: os_code_of_conduct
     status: missed
   - id: reversibility_documented
     status: missed
