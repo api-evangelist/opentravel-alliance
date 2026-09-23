@@ -1,0 +1,61 @@
+{
+  "provider": "opentravel-alliance",
+  "sources": [
+    "_original/opentravel-2018a-facility-resource-defs-openapi.json",
+    "_original/opentravel-2018a-hospitality-offers-resource-defs-openapi.json",
+    "_original/opentravel-2020a-facility-resource-defs-openapi.json",
+    "_original/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json"
+  ],
+  "outputs": [
+    "opentravel-alliance-facilities-api-openapi.yml",
+    "opentravel-alliance-hospitalityfindhospitalityavailability-api-openapi.yml",
+    "opentravel-alliance-hospitalityretrievefacilityavailability-api-openapi.yml",
+    "opentravel-alliance-hospitalityoffers-api-openapi.yml",
+    "opentravel-alliance-hospitalitypropertyoffers-api-openapi.yml",
+    "opentravel-alliance-hoteldescriptivecontents-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [
+    "opentravel-2018a-facility-resource-defs-openapi.json: dangling $ref: #/definitions/DayOfOperation"
+  ],
+  "warnings": [],
+  "notes": [
+    "4 archived document(s) dropped as subsets of other archived documents",
+    "sourced from openapi/_original/ (4 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "opentravel-2018a-facility-resource-defs-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "opentravel-2018a-facility-resource-defs-openapi.json: tagged paths POST /HospitalityFindHospitalityAvailability -> HospitalityFindHospitalityAvailability",
+    "opentravel-2018a-facility-resource-defs-openapi.json: tagged paths POST /HospitalityRetrieveFacilityAvailability -> HospitalityRetrieveFacilityAvailability",
+    "opentravel-2018a-facility-resource-defs-openapi.json: tagged paths POST /Facilities -> Facilities",
+    "opentravel-2018a-facility-resource-defs-openapi.json: declared missing tag: Facilities",
+    "opentravel-2018a-facility-resource-defs-openapi.json: declared missing tag: HospitalityFindHospitalityAvailability",
+    "opentravel-2018a-facility-resource-defs-openapi.json: declared missing tag: HospitalityRetrieveFacilityAvailability",
+    "opentravel-2018a-hospitality-offers-resource-defs-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "opentravel-2018a-hospitality-offers-resource-defs-openapi.json: tagged paths POST /HospitalityPropertyOffers -> HospitalityPropertyOffers",
+    "opentravel-2018a-hospitality-offers-resource-defs-openapi.json: tagged paths POST /HospitalityOffers -> HospitalityOffers",
+    "opentravel-2018a-hospitality-offers-resource-defs-openapi.json: declared missing tag: HospitalityOffers",
+    "opentravel-2018a-hospitality-offers-resource-defs-openapi.json: declared missing tag: HospitalityPropertyOffers",
+    "opentravel-2020a-facility-resource-defs-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "opentravel-2020a-facility-resource-defs-openapi.json: tagged paths POST /Facilities -> Facilities",
+    "opentravel-2020a-facility-resource-defs-openapi.json: tagged paths GET /Facilities/{Identifier} -> Facilities",
+    "opentravel-2020a-facility-resource-defs-openapi.json: declared missing tag: Facilities",
+    "opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json: tagged paths GET /HotelDescriptiveContents -> HotelDescriptiveContents",
+    "opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json: tagged paths POST /HotelDescriptiveContents/Notifications -> HotelDescriptiveContents",
+    "opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json: tagged paths POST /HotelDescriptiveContents/Query -> HotelDescriptiveContents",
+    "opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json: declared missing tag: HotelDescriptiveContents",
+    "tag 'Facilities' spans 2 source specs (opentravel-2018a-facility-resource-defs-openapi.json, opentravel-2020a-facility-resource-defs-openapi.json): per-path servers applied",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "_original/opentravel-2020a-hotel-descriptive-content-resource-openapi.json: archived document superseded by a larger archived document",
+    "_original/opentravel-2020a-facility-resource-openapi.json: archived document superseded by a larger archived document",
+    "_original/opentravel-2018a-hospitality-offers-resource-openapi.json: archived document superseded by a larger archived document",
+    "_original/opentravel-2018a-facility-resource-openapi.json: archived document superseded by a larger archived document",
+    "opentravel-alliance-facilities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opentravel-alliance-hospitalityfindhospitalityavailability-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opentravel-alliance-hospitalityoffers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opentravel-alliance-hospitalitypropertyoffers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opentravel-alliance-hospitalityretrievefacilityavailability-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "opentravel-alliance-hoteldescriptivecontents-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}
