@@ -64,7 +64,7 @@ tags:
 - Booking
 - Channels
 - XML
-- JSON-Schema
+- JSON Schema
 tags_raw:
 - Travel
 - United States
@@ -81,6 +81,7 @@ tags_raw:
 - Channel
 - XML
 - JSON Schema
+- JSON-Schema
 created: '2026-07-28'
 modified: '2026-07-28'
 specificationVersion: '0.23'
