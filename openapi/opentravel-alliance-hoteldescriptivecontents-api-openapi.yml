@@ -364,282 +364,6 @@ paths:
       - HotelDescriptiveContents
 components:
   schemas:
-    AffiliationInfoRequest:
-      x-otm-entity:
-        EntityType: ValueWithAttributes
-        EntityName: AffiliationInfoRequest
-      description: Used to indicated if affiliation information is being requested.
-      properties:
-        sendDistribSystemsInd:
-          description: When true, distribution system information is being requested.
-          type: boolean
-        sendBrandInd:
-          description: When true Brand information is being rquested.
-          type: boolean
-        sendLoyalProgramsInd:
-          description: When true, loyalty program information is being requested.
-          type: boolean
-        sendAwardsInd:
-          description: When true, award information is being requested.
-          type: boolean
-    ExtensionPoint: {}
-    HotelDescriptiveRequestInfo:
-      x-otm-entity:
-        EntityType: CoreObject
-        EntityName: HotelDescriptiveRequestInfo
-      properties:
-        '@type':
-          type: string
-        languageRequested:
-          description: The language in which the hotel property information should be returned.
-          type: string
-        BasicPropertyInfo:
-          type: array
-          items:
-            $ref: '#/components/schemas/BasicPropertyInfo'
-        HotelRequestInfo:
-          description: 'Assigned Type: orghs-0400:HotelRequestInfo'
-          $ref: '#/components/schemas/HotelRequestInfo'
-        FacilityRequestInfo:
-          description: 'Assigned Type: orghs-0400:FacilityRequestInfo'
-          $ref: '#/components/schemas/FacilityRequestInfo'
-        PolicyRequestInfo:
-          description: 'Assigned Type: orghs-0400:PolicyInfo'
-          $ref: '#/components/schemas/PolicyInfo'
-        AreaRequestInfo:
-          description: 'Assigned Type: orghs-0400:AreaInfo'
-          $ref: '#/components/schemas/AreaInfo'
-        AffiliationRequestInfo:
-          description: 'Assigned Type: orghs-0400:AffiliationInfoRequest'
-          $ref: '#/components/schemas/AffiliationInfoRequest'
-        ExtensionPoint:
-          $ref: '#/components/schemas/ExtensionPoint'
-      required:
-      - '@type'
-      discriminator:
-        propertyName: '@type'
-    PolicyInfo:
-      x-otm-entity:
-        EntityType: ValueWithAttributes
-        EntityName: PolicyInfo
-      description: Used to indicate if policy information is being requested.
-      properties:
-        sendPoliciesInd:
-          description: When true, policy information is being requested.
-          type: boolean
-    ExtensionPoint_Summary: {}
-    HotelRequestInfo:
-      x-otm-entity:
-        EntityType: CoreObject
-        EntityName: HotelRequestInfo
-      properties:
-        '@type':
-          type: string
-        hotelStatus:
-          description: 'Assigned Type: ota2-0500:StringShort'
-          type: string
-          maxLength: 128
-        HotelStatusCode:
-          description: 'Assigned Type: ota2-0400:PropertyStatus_Enum'
-          $ref: '#/components/schemas/PropertyStatus_Enum'
-        sendDataInd:
-          description: When true, send hotel property info data.
-          type: boolean
-        ExtensionPoint:
-          $ref: '#/components/schemas/ExtensionPoint'
-      required:
-      - '@type'
-      discriminator:
-        propertyName: '@type'
-    PropertyStatus_Enum:
-      x-otm-entity:
-        EntityType: EnumerationOpen
-        EntityName: PropertyStatus_Enum
-      properties:
-        value:
-          $ref: '#/components/schemas/PropertyStatus_Enum_Base'
-        extension:
-          type: string
-          maxLength: 128
-          minLength: 1
-    ProcessingInfo:
-      x-otm-entity:
-        EntityType: ValueWithAttributes
-        EntityName: ProcessingInfo
-      description: Transaction processing directives, including display currency overrides. If no display currency information is provided, the display and pricing currency will default to the value in POS\/Source\/@ISOCurrency.
-      x-otm-annotations:
-        documentation:
-          implementers:
-          - (Developer Notes) An agreement should be in place with your trading partners that specifies what information is summary versus detail.
-      properties:
-        displayCurrency:
-          description: 'Assigned Type: ota2-0500:CurrencyCode_ISO4217'
-          x-otm-annotations:
-            documentation:
-              references:
-              - http:\/\/www.opentraveldevelopersnetwork.com\/Supported_ISO_Standards.php
-              more-info:
-              - http:\/\/www.opentraveldevelopersnetwork.com\/2012A_SchemaDoc\/DisplayCurrency
-          type: string
-          pattern: '[a-zA-Z]{3}'
-        maxResponses:
-          description: The maximum quantity of search results in the response.
-          type: integer
-          format: int32
-        summaryResultsInd:
-          description: If true, summary information is requested in the search results.
-          type: boolean
-    FacilityRequestInfo:
-      x-otm-entity:
-        EntityType: ValueWithAttributes
-        EntityName: FacilityRequestInfo
-      properties:
-        sendMeetingRoomsInd:
-          description: When true, send meeting room information.
-          type: boolean
-        sendGuestRoomsInd:
-          description: When true, send guest room information.
-          type: boolean
-        sendRestaurantsInd:
-          description: When true, send restaurant information.
-          type: boolean
-    BasicPropertyInfo:
-      x-otm-entity:
-        EntityType: CoreObject
-        EntityName: BasicPropertyInfo
-      properties:
-        '@type':
-          type: string
-        code:
-          description: 'Assigned Type: ota2-0500:StringTiny'
-          x-otm-annotations:
-            examples:
-            - context: ph
-              value: WASJW
-          type: string
-          maxLength: 32
-        name:
-          description: 'Assigned Type: ota2-0500:StringShort'
-          x-otm-annotations:
-            examples:
-            - context: ph
-              value: JW Marriott Washington DC
-          type: string
-          maxLength: 128
-        chainCode:
-          description: 'Assigned Type: ota2-0500:StringTiny'
-          x-otm-annotations:
-            examples:
-            - context: ph
-              value: MC
-          type: string
-          maxLength: 32
-        brandCode:
-          description: 'Assigned Type: ota2-0500:StringTiny'
-          x-otm-annotations:
-            examples:
-            - context: ph
-              value: FS
-          type: string
-          maxLength: 32
-        cityCode:
-          description: 'Assigned Type: ota2-0500:StringTiny'
-          x-otm-annotations:
-            examples:
-            - context: ph
-              value: WAS
-          type: string
-          maxLength: 32
-        ExtensionPoint_Summary:
-          $ref: '#/components/schemas/ExtensionPoint_Summary'
-      required:
-      - '@type'
-      discriminator:
-        propertyName: '@type'
-    PropertyStatus_Enum_Base:
-      x-otm-entity:
-        EntityType: EnumerationOpen
-        EntityName: PropertyStatus_Enum
-      type: string
-      enum:
-      - Closed
-      - Deflagged
-      - Deleted
-      - Inactive
-      - Locked
-      - Open
-      - Pre-opening
-      - Reactivated
-      - Test
-      - Unlocked
-      - Other_
-    Identifier:
-      x-otm-entity:
-        EntityType: ValueWithAttributes
-        EntityName: Identifier
-      description: Identifier provides the ability to create a globally unique identifier.   This could be GUID a UUID or any other string that an organization that distinctly identifies the specific object.\n\nIdeally, for the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.\n\nThe URL, system and company attributes can be omitted only when the system context can be implied by a parent or ancestor element.
-      properties:
-        value:
-          type: string
-          maxLength: 128
-        url:
-          description: Uri of the creating system. The URI should be an URL and be globally unique. Should only be omitted when the context is clearly implied for the containing document.
-          x-otm-annotations:
-            documentation:
-              implementers:
-              - Identifier provides the ability to create a globally unique identifier. For the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.
-          type: string
-        system:
-          description: 'Assigned Type: ota2-0500:StringShort'
-          x-otm-annotations:
-            examples:
-            - context: Common
-              value: sysABC3344
-          type: string
-          maxLength: 128
-        organization:
-          description: 'Assigned Type: ota2-0500:StringShort'
-          x-otm-annotations:
-            examples:
-            - context: Common
-              value: Acme
-          type: string
-          maxLength: 128
-    Status_Enum_Base:
-      x-otm-entity:
-        EntityType: EnumerationOpen
-        EntityName: Status_Enum
-      description: The status condition.
-      type: string
-      enum:
-      - Complete
-      - Incomplete
-      - Not processed
-      - Unknown
-      - Other_
-    HotelDescriptiveContentListResponse:
-      x-otm-entity:
-        EntityType: CoreObject
-        EntityName: BaseResponse
-      properties:
-        '@type':
-          type: string
-        HotelDescriptiveContent:
-          type: array
-          items:
-            $ref: '#/components/schemas/HotelDescriptiveContentID'
-        PayloadStdAttributes:
-          description: 'Assigned Type: ota2-0500:PayloadStdAttributes'
-          $ref: '#/components/schemas/PayloadStdAttributes'
-        Result:
-          description: 'Assigned Type: ota2-0500:Result'
-          $ref: '#/components/schemas/Result'
-        ExtensionPoint:
-          $ref: '#/components/schemas/ExtensionPoint'
-      required:
-      - '@type'
-      discriminator:
-        propertyName: '@type'
     Result:
       x-otm-entity:
         EntityType: CoreObject
@@ -753,44 +477,24 @@ components:
           type: string
           maxLength: 128
           minLength: 1
-    HotelDescriptiveContentQueryInfo:
+    AffiliationInfoRequest:
       x-otm-entity:
-        EntityType: BusinessObject
-        EntityName: HotelDescriptiveContent
+        EntityType: ValueWithAttributes
+        EntityName: AffiliationInfoRequest
+      description: Used to indicated if affiliation information is being requested.
       properties:
-        '@type':
-          type: string
-        ProcessingInfo:
-          description: 'Assigned Type: ota2-0500:ProcessingInfo'
-          $ref: '#/components/schemas/ProcessingInfo'
-        HotelDescriptiveRequestInfo:
-          description: 'Assigned Type: orghs-0400:HotelDescriptiveRequestInfo'
-          $ref: '#/components/schemas/HotelDescriptiveRequestInfo'
-        ExtensionPoint:
-          $ref: '#/components/schemas/ExtensionPoint'
-      required:
-      - '@type'
-      discriminator:
-        propertyName: '@type'
-    ErrorWarningType_Enum_Base:
-      x-otm-entity:
-        EntityType: EnumerationOpen
-        EntityName: ErrorWarningType_Enum
-      description: Tthe category of error or warning.
-      type: string
-      enum:
-      - Advisory
-      - Application error
-      - Authentication
-      - Authentication timeout
-      - Authorization
-      - Business rule
-      - No implementation
-      - Processing exception
-      - Protocol violation
-      - Required field missing
-      - Unknown
-      - Other_
+        sendDistribSystemsInd:
+          description: When true, distribution system information is being requested.
+          type: boolean
+        sendBrandInd:
+          description: When true Brand information is being rquested.
+          type: boolean
+        sendLoyalProgramsInd:
+          description: When true, loyalty program information is being requested.
+          type: boolean
+        sendAwardsInd:
+          description: When true, award information is being requested.
+          type: boolean
     TransactionStatusCode_Enum:
       x-otm-entity:
         EntityType: EnumerationClosed
@@ -803,21 +507,6 @@ components:
       - InSeries
       - Continuation
       - Subsequent
-    AreaInfo:
-      x-otm-entity:
-        EntityType: ValueWithAttributes
-        EntityName: AreaInfo
-      description: Used to specifiy if area information is being requested.
-      properties:
-        sendRefPointsInd:
-          description: When true, reference point information is being requested.
-          type: boolean
-        sendAttractionsInd:
-          description: When true, attraction information is being requested.
-          type: boolean
-        sendRecreationsInd:
-          description: When true, recreation information is being requested.
-          type: boolean
     HotelDescriptiveContentID:
       x-otm-entity:
         EntityType: BusinessObject
@@ -838,25 +527,136 @@ components:
       - '@type'
       discriminator:
         propertyName: '@type'
-    Status_Enum:
+    Identifier:
       x-otm-entity:
-        EntityType: EnumerationOpen
-        EntityName: Status_Enum
-      description: The status condition.
+        EntityType: ValueWithAttributes
+        EntityName: Identifier
+      description: Identifier provides the ability to create a globally unique identifier.   This could be GUID a UUID or any other string that an organization that distinctly identifies the specific object.\n\nIdeally, for the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.\n\nThe URL, system and company attributes can be omitted only when the system context can be implied by a parent or ancestor element.
       properties:
         value:
-          $ref: '#/components/schemas/Status_Enum_Base'
-        extension:
           type: string
           maxLength: 128
-          minLength: 1
-    BaseResponse:
+        url:
+          description: Uri of the creating system. The URI should be an URL and be globally unique. Should only be omitted when the context is clearly implied for the containing document.
+          x-otm-annotations:
+            documentation:
+              implementers:
+              - Identifier provides the ability to create a globally unique identifier. For the identifier to be globally unique it must have a system provided identifier and the system must be identified using a global naming authority. System identification uses the domain naming system (DNS) to assure they are globally unique and should be an URL. The system provided ID will typically be a primary or surrogate key in a database.
+          type: string
+        system:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: sysABC3344
+          type: string
+          maxLength: 128
+        organization:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: Common
+              value: Acme
+          type: string
+          maxLength: 128
+    HotelDescriptiveContentQueryInfo:
+      x-otm-entity:
+        EntityType: BusinessObject
+        EntityName: HotelDescriptiveContent
+      properties:
+        '@type':
+          type: string
+        ProcessingInfo:
+          description: 'Assigned Type: ota2-0500:ProcessingInfo'
+          $ref: '#/components/schemas/ProcessingInfo'
+        HotelDescriptiveRequestInfo:
+          description: 'Assigned Type: orghs-0400:HotelDescriptiveRequestInfo'
+          $ref: '#/components/schemas/HotelDescriptiveRequestInfo'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    AreaInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: AreaInfo
+      description: Used to specifiy if area information is being requested.
+      properties:
+        sendRefPointsInd:
+          description: When true, reference point information is being requested.
+          type: boolean
+        sendAttractionsInd:
+          description: When true, attraction information is being requested.
+          type: boolean
+        sendRecreationsInd:
+          description: When true, recreation information is being requested.
+          type: boolean
+    PropertyStatus_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: PropertyStatus_Enum
+      type: string
+      enum:
+      - Closed
+      - Deflagged
+      - Deleted
+      - Inactive
+      - Locked
+      - Open
+      - Pre-opening
+      - Reactivated
+      - Test
+      - Unlocked
+      - Other_
+    HotelDescriptiveRequestInfo:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: HotelDescriptiveRequestInfo
+      properties:
+        '@type':
+          type: string
+        languageRequested:
+          description: The language in which the hotel property information should be returned.
+          type: string
+        BasicPropertyInfo:
+          type: array
+          items:
+            $ref: '#/components/schemas/BasicPropertyInfo'
+        HotelRequestInfo:
+          description: 'Assigned Type: orghs-0400:HotelRequestInfo'
+          $ref: '#/components/schemas/HotelRequestInfo'
+        FacilityRequestInfo:
+          description: 'Assigned Type: orghs-0400:FacilityRequestInfo'
+          $ref: '#/components/schemas/FacilityRequestInfo'
+        PolicyRequestInfo:
+          description: 'Assigned Type: orghs-0400:PolicyInfo'
+          $ref: '#/components/schemas/PolicyInfo'
+        AreaRequestInfo:
+          description: 'Assigned Type: orghs-0400:AreaInfo'
+          $ref: '#/components/schemas/AreaInfo'
+        AffiliationRequestInfo:
+          description: 'Assigned Type: orghs-0400:AffiliationInfoRequest'
+          $ref: '#/components/schemas/AffiliationInfoRequest'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    ExtensionPoint_Summary: {}
+    HotelDescriptiveContentListResponse:
       x-otm-entity:
         EntityType: CoreObject
         EntityName: BaseResponse
       properties:
         '@type':
           type: string
+        HotelDescriptiveContent:
+          type: array
+          items:
+            $ref: '#/components/schemas/HotelDescriptiveContentID'
         PayloadStdAttributes:
           description: 'Assigned Type: ota2-0500:PayloadStdAttributes'
           $ref: '#/components/schemas/PayloadStdAttributes'
@@ -1009,6 +809,206 @@ components:
           type: boolean
       required:
       - version
+    FacilityRequestInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: FacilityRequestInfo
+      properties:
+        sendMeetingRoomsInd:
+          description: When true, send meeting room information.
+          type: boolean
+        sendGuestRoomsInd:
+          description: When true, send guest room information.
+          type: boolean
+        sendRestaurantsInd:
+          description: When true, send restaurant information.
+          type: boolean
+    ProcessingInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: ProcessingInfo
+      description: Transaction processing directives, including display currency overrides. If no display currency information is provided, the display and pricing currency will default to the value in POS\/Source\/@ISOCurrency.
+      x-otm-annotations:
+        documentation:
+          implementers:
+          - (Developer Notes) An agreement should be in place with your trading partners that specifies what information is summary versus detail.
+      properties:
+        displayCurrency:
+          description: 'Assigned Type: ota2-0500:CurrencyCode_ISO4217'
+          x-otm-annotations:
+            documentation:
+              references:
+              - http:\/\/www.opentraveldevelopersnetwork.com\/Supported_ISO_Standards.php
+              more-info:
+              - http:\/\/www.opentraveldevelopersnetwork.com\/2012A_SchemaDoc\/DisplayCurrency
+          type: string
+          pattern: '[a-zA-Z]{3}'
+        maxResponses:
+          description: The maximum quantity of search results in the response.
+          type: integer
+          format: int32
+        summaryResultsInd:
+          description: If true, summary information is requested in the search results.
+          type: boolean
+    Status_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: Status_Enum
+      description: The status condition.
+      properties:
+        value:
+          $ref: '#/components/schemas/Status_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
+    PolicyInfo:
+      x-otm-entity:
+        EntityType: ValueWithAttributes
+        EntityName: PolicyInfo
+      description: Used to indicate if policy information is being requested.
+      properties:
+        sendPoliciesInd:
+          description: When true, policy information is being requested.
+          type: boolean
+    BasicPropertyInfo:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BasicPropertyInfo
+      properties:
+        '@type':
+          type: string
+        code:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: WASJW
+          type: string
+          maxLength: 32
+        name:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: JW Marriott Washington DC
+          type: string
+          maxLength: 128
+        chainCode:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: MC
+          type: string
+          maxLength: 32
+        brandCode:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: FS
+          type: string
+          maxLength: 32
+        cityCode:
+          description: 'Assigned Type: ota2-0500:StringTiny'
+          x-otm-annotations:
+            examples:
+            - context: ph
+              value: WAS
+          type: string
+          maxLength: 32
+        ExtensionPoint_Summary:
+          $ref: '#/components/schemas/ExtensionPoint_Summary'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    BaseResponse:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: BaseResponse
+      properties:
+        '@type':
+          type: string
+        PayloadStdAttributes:
+          description: 'Assigned Type: ota2-0500:PayloadStdAttributes'
+          $ref: '#/components/schemas/PayloadStdAttributes'
+        Result:
+          description: 'Assigned Type: ota2-0500:Result'
+          $ref: '#/components/schemas/Result'
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    HotelRequestInfo:
+      x-otm-entity:
+        EntityType: CoreObject
+        EntityName: HotelRequestInfo
+      properties:
+        '@type':
+          type: string
+        hotelStatus:
+          description: 'Assigned Type: ota2-0500:StringShort'
+          type: string
+          maxLength: 128
+        HotelStatusCode:
+          description: 'Assigned Type: ota2-0400:PropertyStatus_Enum'
+          $ref: '#/components/schemas/PropertyStatus_Enum'
+        sendDataInd:
+          description: When true, send hotel property info data.
+          type: boolean
+        ExtensionPoint:
+          $ref: '#/components/schemas/ExtensionPoint'
+      required:
+      - '@type'
+      discriminator:
+        propertyName: '@type'
+    Status_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: Status_Enum
+      description: The status condition.
+      type: string
+      enum:
+      - Complete
+      - Incomplete
+      - Not processed
+      - Unknown
+      - Other_
+    ErrorWarningType_Enum_Base:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: ErrorWarningType_Enum
+      description: Tthe category of error or warning.
+      type: string
+      enum:
+      - Advisory
+      - Application error
+      - Authentication
+      - Authentication timeout
+      - Authorization
+      - Business rule
+      - No implementation
+      - Processing exception
+      - Protocol violation
+      - Required field missing
+      - Unknown
+      - Other_
+    ExtensionPoint: {}
+    PropertyStatus_Enum:
+      x-otm-entity:
+        EntityType: EnumerationOpen
+        EntityName: PropertyStatus_Enum
+      properties:
+        value:
+          $ref: '#/components/schemas/PropertyStatus_Enum_Base'
+        extension:
+          type: string
+          maxLength: 128
+          minLength: 1
 x-otm-resource:
   namespace: http://www.opentravel.org/OTM/resources/HospitalityResources/v1
   localName: HotelDescriptiveContentResource
