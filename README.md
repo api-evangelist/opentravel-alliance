@@ -1,4 +1,4 @@
-# OpenTravel Alliance (opentravel-alliance)
+# OpenTravel Alliance
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,153 +64,180 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-The OpenTravel Alliance is a volunteer, non-profit travel technology standards body headquartered in Melbourne, Florida, United States. Since 1999 it has published the OpenTravel Specification — the OTA 1.0 XML message suite (releases 2001A through 2024A) and the model-driven OpenTravel 2.0 Object Model (OTM), which generates XML Schema, JSON Schema and Swagger 2.0 resource contracts — plus the OpenTravel Code Lists used across air, hospitality, car rental, cruise, rail, GDS, channel and technology-provider systems. OpenTravel does not operate a booking service or sit in the distribution chain itself; it supplies the message vocabulary that suppliers, GDSs, channel managers and OTAs implement between each other, which makes it a switching-cost reducer rather than a switching-cost holder. Its API posture is honest but thin: there is no self-serve developer portal, no OpenTravel-operated runtime API and no public certification registry. Specifications are royalty-free and free of charge, but the canonical download is behind a name/company/email lead-capture form with terms acceptance, and the OTM repository and member review periods are membership-gated ($950–$11,250/yr by revenue band). A public, unlicensed GitHub mirror at github.com/OpenTravel/OpenTravel-Specifications carries the bulk of the corpus — including eight Swagger 2.0 resource contracts — and is the only ungated route to machine-readable artifacts. The organization has announced work with the Linux Foundation to form an Open Travel Foundation.
+The OpenTravel Alliance is a volunteer, non-profit travel technology standards body headquartered in Melbourne, Florida, United States. Since 1999 it has published the OpenTravel Specification — the OTA 1.0 XML message suite (releases 2001A through 2024A) and the model-driven OpenTravel 2.0 Object Model (OTM), which generates XML Schema, JSON Schema and Swagger 2.0 resource contracts — plus the OpenTravel Code Lists used across air, hospitality, car rental, cruise, rail, GDS, channel and technology-provider systems. OpenTravel does not operate a booking service or sit in the distribution chain itself; it supplies the message vocabulary that suppliers, GDSs, channel managers and OTAs implement between each other, which makes it a switching-cost reducer rather than a switching-cost holder. Its API posture is honest but thin: there is no OpenTravel-operated runtime API and no public certification registry, though it does run a free self-serve developer portal — the OpenTravel Developers Network at opentraveldevelopersnetwork.com — and, as of 2026, an OAuth 2.1 protected Model Context Protocol server on opentravel.org. Specifications are royalty-free and free of charge, but the canonical download is behind a name/company/email lead-capture form with terms acceptance, and the OTM repository and member review periods are membership-gated ($950–$11,250/yr by revenue band). A public, unlicensed GitHub mirror at github.com/OpenTravel/OpenTravel-Specifications carries the bulk of the corpus — including eight Swagger 2.0 resource contracts — and is the only ungated route to machine-readable artifacts. The organization has announced work with the Linux Foundation to form an Open Travel Foundation.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/opentravel-alliance/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/opentravel-alliance/refs/heads/main/apis.yml)
+**Areas:** Travel · United States · Standards · Aviation · Hospitality · Hotels · Car Rental · Rail · Cruise · Distribution · GDS · Booking
 
-## Tags
+## OpenTravel Alliance on APIs.io
 
-- Travel
-- United States
-- Standards
-- Aviation
-- Hospitality
-- Hotels
-- Car Rental
-- Rail
-- Cruise
-- Distribution
-- GDS
-- Booking
-- Channel
-- XML
-- JSON Schema
+Everything profiled for OpenTravel Alliance is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/opentravel-alliance/](https://apis.io/providers/opentravel-alliance/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (6)
 
-- **Created:** 2026-07-28
-- **Modified:** 2026-07-28
+- [OpenTravel Alliance Facilities API](https://apis.io/apis/opentravel-alliance/opentravel-alliance-facilities-api/) — The Facilities API from OpenTravel Alliance — 2 operation(s) for facilities.
+- [OpenTravel Alliance Hospitality Find Hospitality Availability API](https://apis.io/apis/opentravel-alliance/opentravel-alliance-hospitalityfindhospitalityavailability-api/) — The HospitalityFindHospitalityAvailability API from OpenTravel Alliance — 1 operation(s) for hospitalityfindhospitalityavailability.
+- [OpenTravel Alliance Hospitality Offers API](https://apis.io/apis/opentravel-alliance/opentravel-alliance-hospitalityoffers-api/) — The HospitalityOffers API from OpenTravel Alliance — 1 operation(s) for hospitalityoffers.
+- [OpenTravel Alliance Hospitality Property Offers API](https://apis.io/apis/opentravel-alliance/opentravel-alliance-hospitalitypropertyoffers-api/) — The HospitalityPropertyOffers API from OpenTravel Alliance — 1 operation(s) for hospitalitypropertyoffers.
+- [OpenTravel Alliance Hospitality Retrieve Facility Availability API](https://apis.io/apis/opentravel-alliance/opentravel-alliance-hospitalityretrievefacilityavailability-api/) — The HospitalityRetrieveFacilityAvailability API from OpenTravel Alliance — 1 operation(s) for hospitalityretrievefacilityavailability.
+- [OpenTravel Alliance Hotel Descriptive Contents API](https://apis.io/apis/opentravel-alliance/opentravel-alliance-hoteldescriptivecontents-api/) — The HotelDescriptiveContents API from OpenTravel Alliance — 3 operation(s) for hoteldescriptivecontents.
 
-## APIs
+### Published properties
 
-### OpenTravel 2020A Hotel Descriptive Content Resource
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2020A Object Suite. Defines three operations for hotel descriptive content — `GET /HotelDescriptiveContents`, `POST /HotelDescriptiveContents/Query` and `POST /HotelDescriptiveContents/Notifications` — with 337 model definitions. This is a specification artifact published by the standards body for implementers to host themselves; the document declares host `127.0.0.1` and basePath `/v1_0` and OpenTravel operates no runtime endpoint for it.
+#### AsyncAPI (1)
 
-- **Human URL:** [https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite](https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite)
+Event-driven and webhook contracts.
 
-#### Tags
+- [Opentravel Alliance Notifications Webhooks](https://apis.io/asyncapis/opentravel-alliance/opentravel-alliance-notifications-webhooks/)
 
-- Hospitality
-- Hotels
-- Content
-- OpenTravel 2.0
+#### MCP servers (1)
 
-#### Properties
+Model Context Protocol servers that expose the API to agents.
 
-- [OpenAPI](openapi/opentravel-2020a-hotel-descriptive-content-resource-defs-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/opentravel-2020a-hotel-descriptive-content-resource-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://opentravel.org/about-2-0-object-model/)
-- [Repository](https://github.com/OpenTravel/OpenTravel-Specifications)
+- [OAuth 2.1 protected MCP server at https://opentravel.org/wp-json/mcp/mcp-oauth-server](https://apis.io/servers/opentravel-alliance/oauth-2-1-protected-mcp-server-at-https-opentravel-org-wp-json-mcp-mcp-oauth-server/)
 
-### OpenTravel 2020A Facility Resource
+#### Agentic access (1)
 
-Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2020A Object Suite. Defines `POST /Facilities` and `GET /Facilities/{Identifier}` with 232 model definitions covering hospitality and golf facility description. Published as a specification artifact with host `example.com` and basePath `/resource/v1_0`; OpenTravel operates no runtime endpoint for it.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- **Human URL:** [https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite](https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2020A_ObjectSuite)
+- [Opentravel Alliance Agentic Access](https://apis.io/agentic-access/opentravel-alliance/opentravel-alliance-agentic-access/)
 
-#### Tags
+#### JSON Schema (10)
 
-- Hospitality
-- Facilities
-- OpenTravel 2.0
+The data models the API reads and writes.
 
-#### Properties
+- [CodeList](https://apis.io/schemas/opentravel-alliance/opentravel-2018a-codelist-3-0-0.schema/)
+- [HospitalityFacility](https://apis.io/schemas/opentravel-alliance/opentravel-2018a-hospitality-facility-trim.schema/)
+- [HospitalityOffers](https://apis.io/schemas/opentravel-alliance/opentravel-2018a-hospitality-offers-trim.schema/)
+- [CodeList](https://apis.io/schemas/opentravel-alliance/opentravel-2020a-codelist-4-0-0.schema/)
+- [CodeList](https://apis.io/schemas/opentravel-alliance/opentravel-2020a-codelist-4-1-0.schema/)
+- [Common](https://apis.io/schemas/opentravel-alliance/opentravel-2020a-common-5-0-0-trim.schema/)
+- [FacilityResource](https://apis.io/schemas/opentravel-alliance/opentravel-2020a-facility-resource-trim.schema/)
+- [HospitalityContent](https://apis.io/schemas/opentravel-alliance/opentravel-2020a-hospitality-content-hospitality-resources-trim.schema/)
+- [Organization](https://apis.io/schemas/opentravel-alliance/opentravel-2020a-organization-4-1-0-trim.schema/)
+- [OrganizationHospitality](https://apis.io/schemas/opentravel-alliance/opentravel-2020a-organization-hospitality-4-0-0-trim.schema/)
 
-- [OpenAPI](openapi/opentravel-2020a-facility-resource-defs-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/opentravel-2020a-facility-resource-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://opentravel.org/about-2-0-object-model/)
-- [Repository](https://github.com/OpenTravel/OpenTravel-Specifications)
+#### Vocabulary (1)
 
-### OpenTravel 2018A Hospitality Offers Resource
+The provider's domain terms, defined.
 
-Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2018A Object Suite. Defines `POST /HospitalityOffers` and `POST /HospitalityPropertyOffers` with 372 model definitions covering hotel offer search and property-level offers. Specification artifact only — host `127.0.0.1`, basePath `/`; the definitions variant of this file is Latin-1 encoded rather than UTF-8 as published upstream.
+- [OpenTravel Code Lists Vocabulary](https://apis.io/vocabularies/opentravel-alliance/opentravel-alliance-vocabulary/)
 
-- **Human URL:** [https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite](https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite)
+#### Examples (7)
 
-#### Tags
+Example requests and responses.
 
-- Hospitality
-- Hotels
-- Offers
-- OpenTravel 2.0
+- [Opentravel 2018A Hospitality Facility Facilityqueryfacilitysearch](https://apis.io/examples/opentravel-alliance/opentravel-2018a-hospitality-facility-facilityqueryfacilitysearch/)
+- [Opentravel 2018A Hospitality Facility Facilityqueryfindhospitalityavailability](https://apis.io/examples/opentravel-alliance/opentravel-2018a-hospitality-facility-facilityqueryfindhospitalityavailability/)
+- [Opentravel 2018A Hospitality Facility Facilityqueryretrievehospitalityavailability](https://apis.io/examples/opentravel-alliance/opentravel-2018a-hospitality-facility-facilityqueryretrievehospitalityavailability/)
+- [Opentravel 2018A Hospitality Facility Hospitalityfacilities](https://apis.io/examples/opentravel-alliance/opentravel-2018a-hospitality-facility-hospitalityfacilities/)
+- [Opentravel 2018A Hospitality Offers Hospitalityoffersqueryfindhospitalityoffers](https://apis.io/examples/opentravel-alliance/opentravel-2018a-hospitality-offers-hospitalityoffersqueryfindhospitalityoffers/)
+- [Opentravel 2018A Hospitality Offers Multipropertyhospitalityoffers](https://apis.io/examples/opentravel-alliance/opentravel-2018a-hospitality-offers-multipropertyhospitalityoffers/)
+- [Opentravel 2018A Hospitality Offers Singlepropertyhospitalityoffers](https://apis.io/examples/opentravel-alliance/opentravel-2018a-hospitality-offers-singlepropertyhospitalityoffers/)
 
-#### Properties
+#### Collections (8)
 
-- [OpenAPI](openapi/opentravel-2018a-hospitality-offers-resource-defs-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/opentravel-2018a-hospitality-offers-resource-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://opentravel.org/about-2-0-object-model/)
-- [Repository](https://github.com/OpenTravel/OpenTravel-Specifications)
+Postman and Open Collection request collections.
 
-### OpenTravel 2018A Facility Resource
+- [FacilityResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2018a-facility-resource/)
+- [FacilityResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2018a-facility-resource-defs/)
+- [HospitalityOffersResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2018a-hospitality-offers-resource/)
+- [HospitalityOffersResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2018a-hospitality-offers-resource-defs/)
+- [FacilityResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2020a-facility-resource/)
+- [FacilityResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2020a-facility-resource-defs/)
+- [HotelDescriptiveContentResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2020a-hotel-descriptive-content-resource/)
+- [HotelDescriptiveContentResource](https://apis.io/collections/opentravel-alliance/open-opentravel-2020a-hotel-descriptive-content-resource-defs/)
 
-Swagger 2.0 resource contract generated from the OpenTravel 2.0 Object Model, 2018A Object Suite. Defines `POST /Facilities`, `POST /HospitalityFindHospitalityAvailability` and `POST /HospitalityRetrieveFacilityAvailability` with 187 model definitions. Specification artifact only — host `127.0.0.1`, basePath `/`; the definitions variant of this file is Latin-1 encoded rather than UTF-8 as published upstream.
+#### Overlays (4)
 
-- **Human URL:** [https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite](https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite)
+OpenAPI overlays, including conversational phrasing for each operation.
 
-#### Tags
+- [Opentravel Alliance 2018A Facility Resource Overlay](https://apis.io/overlays/opentravel-alliance/opentravel-alliance-2018a-facility-resource-overlay/)
+- [Opentravel Alliance 2018A Hospitality Offers Resource Overlay](https://apis.io/overlays/opentravel-alliance/opentravel-alliance-2018a-hospitality-offers-resource-overlay/)
+- [Opentravel Alliance 2020A Facility Resource Overlay](https://apis.io/overlays/opentravel-alliance/opentravel-alliance-2020a-facility-resource-overlay/)
+- [Opentravel Alliance 2020A Hotel Descriptive Content Resource Overlay](https://apis.io/overlays/opentravel-alliance/opentravel-alliance-2020a-hotel-descriptive-content-resource-overlay/)
 
-- Hospitality
-- Facilities
-- Availability
-- OpenTravel 2.0
+#### Security (2)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [OpenAPI](openapi/opentravel-2018a-facility-resource-defs-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [OpenAPI](openapi/opentravel-2018a-facility-resource-openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://opentravel.org/about-2-0-object-model/)
-- [Repository](https://github.com/OpenTravel/OpenTravel-Specifications)
+- [Opentravel Alliance Authentication](https://apis.io/security/opentravel-alliance/opentravel-alliance-authentication/)
+- [Opentravel Alliance Domain Security](https://apis.io/security/opentravel-alliance/opentravel-alliance-domain-security/)
 
-## Common Properties
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Opentravel Alliance Scopes](https://apis.io/scopes/opentravel-alliance/opentravel-alliance-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://opentravel.org/)
-- [About](https://opentravel.org/about-us/)
-- [Specifications](https://opentravel.org/specifications/)
-- [Documentation — About the OpenTravel 2.0 Object Model](https://opentravel.org/about-2-0-object-model/)
-- [Download — the OpenTravel Specification (lead-capture form)](https://opentravel.org/download-the-opentravel-specification/)
-- [Download — the OpenTravel Code List](https://opentravel.org/download-code-list/)
-- [Download — the OTM Development Environment (DEx)](https://opentravel.org/download-otm-tool/)
-- [Repository — OpenTravel-Specifications public GitHub mirror](https://github.com/OpenTravel/OpenTravel-Specifications)
-- [GitHub Organization](https://github.com/OpenTravel)
-- [Registry — OTM Library Repository console (login required)](https://opentravelmodel.net/)
-- [Directory — OpenTravel Message Adopters and Integrators](https://opentravel.org/opentravel-message-adopters-integrators/)
-- [Pricing — membership dues by revenue band](https://opentravel.org/membership/)
-- [Sign Up](https://opentravel.org/join-opentravel/)
-- [Terms of Service](https://opentravel.org/terms-and-conditions/)
-- [Privacy Policy](https://opentravel.org/privacy-policy/)
-- [License — OpenTravel Intellectual Property Policy](https://opentravel.org/intellectual-property/)
-- [Governance](https://opentravel.org/governance/)
-- [Partners](https://opentravel.org/partners/)
+- [Documentation](https://opentravel.org/about-2-0-object-model/)
+- [Getting started](https://opentravel.org/download-otm-tool/)
+- [API reference](https://github.com/OpenTravel/OpenTravel-Specifications/tree/master/OTA2.0/OTA2.0_2018A_ObjectSuite/OpenTravel_2018A_ObjectSuite_Resources/documentation)
+- [Pricing](https://opentravel.org/membership/)
+- [Sign up](https://opentravel.org/join-opentravel/)
+- [Support](https://opentravel.org/spec-assistance/)
 - [Blog](https://opentravel.org/announcements/)
-- [Contact](https://opentravel.org/contact-us/)
-- [FAQ](https://opentravel.org/frequently-asked-questions/)
+- [Terms of service](https://opentravel.org/terms-and-conditions/)
+- [Privacy policy](https://opentravel.org/privacy-policy/)
+- [GitHub](https://github.com/OpenTravel)
 
-## Switching Cost
+## API Evangelist rating
 
-Recorded in full in [`review.yml`](review.yml).
+**Kin Score 45.7** — developing · rubric 0.25.0 · scored 2026-10-23
 
-- **Interface shape:** `open-standard` — the OpenTravel Specification (OTA 1.0 XML message suite, OpenTravel 2.0 Object Model). The interface *is* the product, and it is royalty-free and multi-implementer.
-- **Second source:** `alternatives-with-migration` — IATA NDC, IATA ONE Order, HTNG, GDS-proprietary formats and direct supplier REST APIs all address overlapping ground. Swapping OpenTravel for HTNG is a schema-mapping project; swapping air messaging for NDC is a rebuild.
-- **Exit path:** `not-applicable` — OpenTravel holds no customer data and operates no runtime. A copy of a member's OTM repository can be requested for use with GitHub.
-- **Identifier portability:** IATA airline and airport codes, hotel chain and brand codes, ISO country and currency codes carried in the OpenTravel Code Lists and OTM CodeList schema modules. No PNR locators, no GDS record IDs, no OpenTravel-owned opaque identifiers.
-- **Contractual lock-in:** none published beyond a terminable, attribution-bearing specification licence. Immediate termination on breach requires ceasing all use and distribution. The membership agreement — the one document that would settle the member-side commitment — is not published.
-- **Access gate:** `application-approval` — a name/company/email form plus terms acceptance for the specification; a justified request form for the OTM repository and the LinksRez portal; $950–$11,250/yr membership to extend the model or influence priorities. The public GitHub mirror is the one ungated route, and it carries no LICENSE file.
-- **Distribution model:** `not-applicable` — OpenTravel is the vocabulary that GDS-intermediated, channel-manager and direct-connect distribution all speak, not a distributor.
-- **NDC posture:** not applicable — OpenTravel is a peer of IATA, runs its own Offer/Order workgroup, claims no NDC certification level and publishes no NDC endpoint.
+| Facet | Score |
+|---|---|
+| Discoverability | 65.0 |
+| Contract quality | 53.6 |
+| Contract governance | 19.7 |
+| Operational transparency | 31.6 |
+| Developer ergonomics | 54.2 |
+| Access clarity | 32.9 |
 
-## Specifications Harvested
+**Agent readiness 41.5** — agent-ready (gated down from agent-native)
 
-Eight Swagger 2.0 documents, fetched verbatim on 2026-07-28 from `raw.githubusercontent.com` (HTTP 200 on each), all from the public `OpenTravel/OpenTravel-Specifications` mirror at commit "Initial commit" (2024-11-26). Full provenance in [`review.yml`](review.yml).
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-The mirror carries 19,066 files in total: 10,848 XSD, 5,823 XML, 1,255 HTML, 543 JSON Schema, 181 PDF, 39 ZIP, 22 WSDL and 8 Swagger. Its OTA 1.0 tree stops at release 2017B while the website download form offers releases through 2024A — the public mirror is seven years behind the gated one.
+**Regulatory alignment 32.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/opentravel-alliance/](https://apis.io/providers/opentravel-alliance/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for OpenTravel Alliance: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/opentravel-alliance/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
